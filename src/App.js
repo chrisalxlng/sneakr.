@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = {
+        products: [
+            { id: 0, name: "Couch", price: "69,99€", quantity: 0 },
+            { id: 1, name: "Table", price: "29,99€", quantity: 0 },
+            { id: 2, name: "Chair", price: "11,99€", quantity: 0 },
+        ],
+    };
+
+    handleIncrement = (product) => {
+        const products = [...this.state.products];
+        const index = products.indexOf(product);
+        products[index] = { ...product };
+        products[index].quantity++;
+        this.setState({ products });
+    };
+
+    render() {
+        const { products } = this.state;
+
+        return (
+            <div className="App">
+                <Navbar
+                    itemsBought={products
+                        .map((item) => item.quantity)
+                        .reduce((prev, next) => prev + next)}
+                />
+                <Content
+                    products={products}
+                    onIncrement={this.handleIncrement}
+                />
+            </div>
+        );
+    }
 }
 
 export default App;
