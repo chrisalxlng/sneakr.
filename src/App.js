@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import products from "./data/products.json";
+import { HashRouter } from "react-router-dom";
 
 class App extends Component {
     state = {};
@@ -37,16 +38,18 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Navbar
-                    itemsBought={products
-                        .map((item) => item.quantity)
-                        .reduce((prev, next) => prev + next)}
-                />
-                <Content
-                    products={products}
-                    onBuy={this.handleBuy}
-                    onFavorite={this.handleFavorite}
-                />
+                <HashRouter>
+                    <Navbar
+                        itemsBought={products
+                            .map((item) => item.quantity)
+                            .reduce((prev, next) => prev + next)}
+                    />
+                    <Content
+                        products={products}
+                        onBuy={this.handleBuy}
+                        onFavorite={this.handleFavorite}
+                    />
+                </HashRouter>
             </div>
         );
     }
