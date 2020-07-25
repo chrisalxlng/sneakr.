@@ -8,7 +8,8 @@ function ProductCard(props) {
         <div>
             <p>{name}</p>
             <p>{price}</p>
-            <button onClick={() => props.onIncrement(product)}>Buy</button>
+            <button onClick={() => props.onBuy(product)}>Buy</button>
+            <button onClick={() => props.onFavorite(product)}>Favorite</button>
         </div>
     );
 }

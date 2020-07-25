@@ -10,7 +10,8 @@ function ProductCardContainer(props) {
                     <ProductCard
                         key={item.id}
                         product={item}
-                        onIncrement={props.onIncrement}
+                        onBuy={props.onBuy}
+                        onFavorite={props.onFavorite}
                     />
                 );
             })}

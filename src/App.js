@@ -1,21 +1,34 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
+import products from "./data/products.json";
 
 class App extends Component {
-    state = {
-        products: [
-            { id: 0, name: "Couch", price: "69,99€", quantity: 0 },
-            { id: 1, name: "Table", price: "29,99€", quantity: 0 },
-            { id: 2, name: "Chair", price: "11,99€", quantity: 0 },
-        ],
-    };
+    state = {};
 
-    handleIncrement = (product) => {
+    constructor(props) {
+        super(props);
+        this.state = {
+            products: products,
+        };
+    }
+
+    handleBuy = (product) => {
         const products = [...this.state.products];
         const index = products.indexOf(product);
         products[index] = { ...product };
         products[index].quantity++;
+        this.setState({ products });
+    };
+
+    handleFavorite = (product) => {
+        const products = [...this.state.products];
+        const index = products.indexOf(product);
+        products[index] = { ...product };
+
+        if (products[index].isFavorite) products[index].isFavorite = false;
+        else products[index].isFavorite = true;
+
         this.setState({ products });
     };
 
@@ -31,7 +44,8 @@ class App extends Component {
                 />
                 <Content
                     products={products}
-                    onIncrement={this.handleIncrement}
+                    onBuy={this.handleBuy}
+                    onFavorite={this.handleFavorite}
                 />
             </div>
         );
