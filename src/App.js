@@ -15,6 +15,7 @@ class App extends Component {
                 items: [],
                 total: 0,
             },
+            favorites: [],
         };
     }
 
@@ -26,7 +27,7 @@ class App extends Component {
         // Copying cart.items from current state
         const cartItems = [...this.state.cart.items];
 
-        // If an item isn't already in cart, create one; otherwise copy from current state
+        // If an item isn't already in cart, create one and push it to the array; otherwise copy from current state
         if (cartItems.filter((p) => p.productID === product.id).length !== 1) {
             cartItems.push({
                 cartID: cartItems.length,
@@ -34,16 +35,18 @@ class App extends Component {
                 quantity: 0,
             });
         } else {
-            const index = cartItems.filter((p) => p.productID === product.id)[0]
-                .cartID;
+            const index = cartItems.indexOf(
+                cartItems.filter((item) => item.productID === product.id)[0]
+            );
             cartItems[index] = {
                 ...this.state.cart.items[index],
             };
         }
 
         // Determine index of cartItem
-        const index = cartItems.filter((p) => p.productID === product.id)[0]
-            .cartID;
+        const index = cartItems.indexOf(
+            cartItems.filter((item) => item.productID === product.id)[0]
+        );
 
         // Increment quantity of cartItem
         cartItems[index].quantity++;
@@ -68,14 +71,23 @@ class App extends Component {
     };
 
     handleFavorite = (product) => {
-        const products = [...this.state.products];
-        const index = products.indexOf(product);
-        products[index] = { ...product };
+        // Copying favorites from current state
+        const favorites = [...this.state.favorites];
 
-        if (products[index].isFavorite) products[index].isFavorite = false;
-        else products[index].isFavorite = true;
+        // If an item isn't already a favorite, create one and push it to the array; otherwise remove it from the array
+        if (favorites.filter((p) => p.productID === product.id).length !== 1) {
+            favorites.push({
+                favoriteID: favorites.length,
+                productID: product.id,
+            });
+        } else {
+            const index = favorites.indexOf(
+                favorites.filter((item) => item.productID === product.id)[0]
+            );
+            favorites.splice(index, 1);
+        }
 
-        this.setState({ products });
+        this.setState({ favorites });
     };
 
     render() {
