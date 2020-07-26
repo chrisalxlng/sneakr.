@@ -5,7 +5,7 @@ import ShoppingCart from "./ShoppingCart";
 import Favorites from "./Favorites";
 
 function Content(props) {
-    const { products, cart, onBuy, onFavorite } = props;
+    const { products, cart, favorites, onBuy, onFavorite } = props;
 
     return (
         <div>
@@ -29,11 +29,7 @@ function Content(props) {
             <Route
                 path="/favorites"
                 component={() => (
-                    <Favorites
-                        favoriteItems={products.filter(
-                            (p) => p.isFavorite === true
-                        )}
-                    />
+                    <Favorites products={products} favorites={favorites} />
                 )}
             />
         </div>

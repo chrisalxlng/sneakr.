@@ -1,7 +1,8 @@
 import React from "react";
 
 function FavoriteItem(props) {
-    const { name, price } = props.favoriteItem;
+    const { name, price } = props.product;
+    console.log(name, price);
 
     return (
         <div>

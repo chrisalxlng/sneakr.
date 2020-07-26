@@ -91,7 +91,7 @@ class App extends Component {
     };
 
     render() {
-        const { products, cart } = this.state;
+        const { products, cart, favorites } = this.state;
 
         return (
             <div className="App">
@@ -104,6 +104,7 @@ class App extends Component {
                     <Content
                         products={products}
                         cart={cart}
+                        favorites={favorites}
                         onBuy={this.handleBuy}
                         onFavorite={this.handleFavorite}
                     />
