@@ -2,16 +2,18 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 function ProductCardContainer(props) {
+    const { products, onBuy, onFavorite } = props;
+
     return (
         <div>
-            <h1>Shop our products!</h1>
-            {props.products.map((item) => {
+            <h2>Shop our products!</h2>
+            {products.map((item) => {
                 return (
                     <ProductCard
                         key={item.id}
                         product={item}
-                        onBuy={props.onBuy}
-                        onFavorite={props.onFavorite}
+                        onBuy={onBuy}
+                        onFavorite={onFavorite}
                     />
                 );
             })}

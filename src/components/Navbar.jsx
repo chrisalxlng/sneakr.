@@ -10,6 +10,9 @@ function Navbar(props) {
             <h1>
                 <NavLink to="cart">Cart {props.itemsBought}</NavLink>
             </h1>
+            <h1>
+                <NavLink to="favorites">Favorites</NavLink>
+            </h1>
         </div>
     );
 }
