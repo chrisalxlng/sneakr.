@@ -5,7 +5,7 @@ import ShoppingCart from "./ShoppingCart";
 import Favorites from "./Favorites";
 
 function Content(props) {
-    const { products, onBuy, onFavorite } = props;
+    const { products, cart, onBuy, onFavorite } = props;
 
     return (
         <div>
@@ -23,9 +23,7 @@ function Content(props) {
             <Route
                 path="/cart"
                 component={() => (
-                    <ShoppingCart
-                        cartItems={products.filter((p) => p.quantity > 0)}
-                    />
+                    <ShoppingCart products={products} cart={cart} />
                 )}
             />
             <Route

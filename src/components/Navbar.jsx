@@ -8,7 +8,7 @@ function Navbar(props) {
                 <NavLink to="/">Home</NavLink>
             </h1>
             <h1>
-                <NavLink to="cart">Cart {props.itemsBought}</NavLink>
+                <NavLink to="cart">Cart {props.cartItemsCount}</NavLink>
             </h1>
             <h1>
                 <NavLink to="favorites">Favorites</NavLink>

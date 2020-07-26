@@ -1,7 +1,10 @@
 import React from "react";
 
 function CartItem(props) {
-    const { quantity, name, price } = props.cartItem;
+    const { quantity } = props.item;
+    const { name, price } = props.product;
+
+    console.log(props);
 
     return (
         <div>
