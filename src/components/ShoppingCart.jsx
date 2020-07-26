@@ -2,7 +2,12 @@ import React from "react";
 import CartItem from "./CartItem";
 
 function ShoppingCart(props) {
-    const { products } = props;
+    const {
+        products,
+        onProductIncrement,
+        onProductDecrement,
+        onProductRemove,
+    } = props;
     const { items, total } = props.cart;
 
     return (
@@ -16,10 +21,13 @@ function ShoppingCart(props) {
                         product={
                             products.filter((p) => p.id === item.productID)[0]
                         }
+                        onProductIncrement={onProductIncrement}
+                        onProductDecrement={onProductDecrement}
+                        onProductRemove={onProductRemove}
                     />
                 );
             })}
-            <h3>Total: {total.toFixed(2)}</h3>
+            <h3>Total: {total.toFixed(2).replace("-0", "0")}</h3>
         </div>
     );
 }

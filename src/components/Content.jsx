@@ -5,7 +5,15 @@ import ShoppingCart from "./ShoppingCart";
 import Favorites from "./Favorites";
 
 function Content(props) {
-    const { products, cart, favorites, onBuy, onFavorite } = props;
+    const {
+        products,
+        cart,
+        favorites,
+        onProductIncrement,
+        onProductDecrement,
+        onFavorite,
+        onProductRemove,
+    } = props;
 
     return (
         <div>
@@ -15,7 +23,7 @@ function Content(props) {
                 component={() => (
                     <Home
                         products={products}
-                        onBuy={onBuy}
+                        onProductIncrement={onProductIncrement}
                         onFavorite={onFavorite}
                     />
                 )}
@@ -23,13 +31,23 @@ function Content(props) {
             <Route
                 path="/cart"
                 component={() => (
-                    <ShoppingCart products={products} cart={cart} />
+                    <ShoppingCart
+                        products={products}
+                        cart={cart}
+                        onProductIncrement={onProductIncrement}
+                        onProductDecrement={onProductDecrement}
+                        onProductRemove={onProductRemove}
+                    />
                 )}
             />
             <Route
                 path="/favorites"
                 component={() => (
-                    <Favorites products={products} favorites={favorites} />
+                    <Favorites
+                        products={products}
+                        favorites={favorites}
+                        onFavorite={onFavorite}
+                    />
                 )}
             />
         </div>

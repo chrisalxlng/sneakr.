@@ -19,7 +19,7 @@ class App extends Component {
         };
     }
 
-    handleBuy = (product) => {
+    handleProductIncrement = (product) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -70,6 +70,86 @@ class App extends Component {
         this.setState({ cart: cart });
     };
 
+    handleProductDecrement = (product) => {
+        // Copying cart from current state
+        const cart = { ...this.state.cart };
+
+        /* START - Adjusting array of cart.items */
+        // Copying cart.items from current state
+        const cartItems = [...this.state.cart.items];
+
+        // Determine index of cartItem
+        const index = cartItems.indexOf(
+            cartItems.filter((item) => item.productID === product.id)[0]
+        );
+
+        // If an item has only one quantity in cart remaining, remove it from the array; otherwise decrement cartItem
+        if (cartItems[index].quantity === 1) {
+            cartItems.splice(index, 1);
+        } else {
+            // Decrement quantity of cartItem
+            cartItems[index].quantity--;
+        }
+
+        // Replace old items array with new one
+        cart.items = cartItems;
+        /* END - Adjusting array of cart.items */
+
+        /* START - Adjusting value of cart.total */
+        // Copying cart.total from current state
+        let cartTotal = this.state.cart.total;
+
+        // Decrease cartTotal by price of bought product
+        cartTotal -= product.price;
+
+        // Replace old total value with new one
+        cart.total = cartTotal;
+        /* END - Adjusting value of cart.total */
+
+        // Setting the new state
+        this.setState({ cart: cart });
+    };
+
+    handleProductRemove = (product) => {
+        // Copying cart from current state
+        const cart = { ...this.state.cart };
+
+        /* START - Adjusting array of cart.items */
+        // Copying cart.items from current state
+        const cartItems = [...this.state.cart.items];
+
+        // Determine index of cartItem
+        const index = cartItems.indexOf(
+            cartItems.filter((item) => item.productID === product.id)[0]
+        );
+
+        // Determine quantity of cartItem in cart
+        const quantity = cartItems.filter(
+            (item) => item.productID === product.id
+        )[0].quantity;
+
+        // Remove cartItem
+        cartItems.splice(index, 1);
+
+        // Replace old items array with new one
+        cart.items = cartItems;
+        /* END - Adjusting array of cart.items */
+
+        /* START - Adjusting value of cart.total */
+        // Copying cart.total from current state
+        let cartTotal = this.state.cart.total;
+
+        // Decrease cartTotal by price of bought product
+        cartTotal -= product.price * quantity;
+
+        // Replace old total value with new one
+        cart.total = cartTotal;
+        /* END - Adjusting value of cart.total */
+
+        // Setting the new state
+        this.setState({ cart: cart });
+    };
+
     handleFavorite = (product) => {
         // Copying favorites from current state
         const favorites = [...this.state.favorites];
@@ -105,7 +185,9 @@ class App extends Component {
                         products={products}
                         cart={cart}
                         favorites={favorites}
-                        onBuy={this.handleBuy}
+                        onProductIncrement={this.handleProductIncrement}
+                        onProductDecrement={this.handleProductDecrement}
+                        onProductRemove={this.handleProductRemove}
                         onFavorite={this.handleFavorite}
                     />
                 </HashRouter>
