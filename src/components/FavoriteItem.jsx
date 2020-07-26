@@ -3,7 +3,6 @@ import React from "react";
 function FavoriteItem(props) {
     const { product, onFavorite } = props;
     const { name, price } = product;
-    console.log(name, price);
 
     return (
         <div>
