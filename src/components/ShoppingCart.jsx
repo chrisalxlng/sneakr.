@@ -4,15 +4,19 @@ import CartItem from "./CartItem";
 function ShoppingCart(props) {
     const {
         products,
-        onProductIncrement,
-        onProductDecrement,
-        onProductRemove,
+        onIncrementProduct,
+        onDecrementProduct,
+        onRemoveProduct,
+        onRemoveAllProducts,
     } = props;
     const { items, total } = props.cart;
 
     return (
         <div>
             <h2>Shopping Cart</h2>
+            <button onClick={() => onRemoveAllProducts()}>
+                Remove all items
+            </button>
             {items.map((item) => {
                 return (
                     <CartItem
@@ -21,9 +25,9 @@ function ShoppingCart(props) {
                         product={
                             products.filter((p) => p.id === item.productID)[0]
                         }
-                        onProductIncrement={onProductIncrement}
-                        onProductDecrement={onProductDecrement}
-                        onProductRemove={onProductRemove}
+                        onIncrementProduct={onIncrementProduct}
+                        onDecrementProduct={onDecrementProduct}
+                        onRemoveProduct={onRemoveProduct}
                     />
                 );
             })}

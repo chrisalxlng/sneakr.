@@ -9,10 +9,11 @@ function Content(props) {
         products,
         cart,
         favorites,
-        onProductIncrement,
-        onProductDecrement,
+        onIncrementProduct,
+        onDecrementProduct,
         onFavorite,
-        onProductRemove,
+        onRemoveProduct,
+        onRemoveAllProducts,
     } = props;
 
     return (
@@ -23,7 +24,7 @@ function Content(props) {
                 component={() => (
                     <Home
                         products={products}
-                        onProductIncrement={onProductIncrement}
+                        onIncrementProduct={onIncrementProduct}
                         onFavorite={onFavorite}
                     />
                 )}
@@ -34,9 +35,10 @@ function Content(props) {
                     <ShoppingCart
                         products={products}
                         cart={cart}
-                        onProductIncrement={onProductIncrement}
-                        onProductDecrement={onProductDecrement}
-                        onProductRemove={onProductRemove}
+                        onIncrementProduct={onIncrementProduct}
+                        onDecrementProduct={onDecrementProduct}
+                        onRemoveProduct={onRemoveProduct}
+                        onRemoveAllProducts={onRemoveAllProducts}
                     />
                 )}
             />

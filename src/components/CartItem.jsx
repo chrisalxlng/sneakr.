@@ -4,9 +4,9 @@ function CartItem(props) {
     const {
         item,
         product,
-        onProductIncrement,
-        onProductDecrement,
-        onProductRemove,
+        onIncrementProduct,
+        onDecrementProduct,
+        onRemoveProduct,
     } = props;
     const { quantity } = item;
     const { name, price } = product;
@@ -16,9 +16,9 @@ function CartItem(props) {
             <p>{quantity}</p>
             <p>{name}</p>
             <p>{(price * quantity).toFixed(2)}</p>
-            <button onClick={() => onProductIncrement(product)}>+</button>
-            <button onClick={() => onProductDecrement(product)}>-</button>
-            <button onClick={() => onProductRemove(product)}>Remove</button>
+            <button onClick={() => onIncrementProduct(product)}>+</button>
+            <button onClick={() => onDecrementProduct(product)}>-</button>
+            <button onClick={() => onRemoveProduct(product)}>Remove</button>
         </div>
     );
 }

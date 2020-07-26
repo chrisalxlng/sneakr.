@@ -19,7 +19,7 @@ class App extends Component {
         };
     }
 
-    handleProductIncrement = (product) => {
+    handleIncrementProduct = (product) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -70,7 +70,7 @@ class App extends Component {
         this.setState({ cart: cart });
     };
 
-    handleProductDecrement = (product) => {
+    handleDecrementProduct = (product) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -110,7 +110,7 @@ class App extends Component {
         this.setState({ cart: cart });
     };
 
-    handleProductRemove = (product) => {
+    handleRemoveProduct = (product) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -141,6 +141,31 @@ class App extends Component {
 
         // Decrease cartTotal by price of bought product
         cartTotal -= product.price * quantity;
+
+        // Replace old total value with new one
+        cart.total = cartTotal;
+        /* END - Adjusting value of cart.total */
+
+        // Setting the new state
+        this.setState({ cart: cart });
+    };
+
+    handleRemoveAllProducts = () => {
+        // Copying cart from current state
+        const cart = { ...this.state.cart };
+
+        /* START - Adjusting array of cart.items */
+
+        // Remove cartItem
+        const cartItems = [];
+
+        // Replace old items array with new one
+        cart.items = cartItems;
+        /* END - Adjusting array of cart.items */
+
+        /* START - Adjusting value of cart.total */
+        // Decrease cartTotal by price of bought product
+        const cartTotal = 0;
 
         // Replace old total value with new one
         cart.total = cartTotal;
@@ -185,9 +210,10 @@ class App extends Component {
                         products={products}
                         cart={cart}
                         favorites={favorites}
-                        onProductIncrement={this.handleProductIncrement}
-                        onProductDecrement={this.handleProductDecrement}
-                        onProductRemove={this.handleProductRemove}
+                        onIncrementProduct={this.handleIncrementProduct}
+                        onDecrementProduct={this.handleDecrementProduct}
+                        onRemoveProduct={this.handleRemoveProduct}
+                        onRemoveAllProducts={this.handleRemoveAllProducts}
                         onFavorite={this.handleFavorite}
                     />
                 </HashRouter>
