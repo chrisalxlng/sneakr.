@@ -19,7 +19,7 @@ class App extends Component {
         };
     }
 
-    handleIncrementProduct = (product) => {
+    handleIncrementProduct = (product, quantity = 1) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -49,7 +49,7 @@ class App extends Component {
         );
 
         // Increment quantity of cartItem
-        cartItems[index].quantity++;
+        cartItems[index].quantity += quantity;
 
         // Replace old items array with new one
         cart.items = cartItems;
@@ -60,7 +60,7 @@ class App extends Component {
         let cartTotal = this.state.cart.total;
 
         // Increase cartTotal by price of bought product
-        cartTotal += product.price;
+        cartTotal += product.price * quantity;
 
         // Replace old total value with new one
         cart.total = cartTotal;
@@ -192,6 +192,7 @@ class App extends Component {
             favorites.splice(index, 1);
         }
 
+        // Setting the new state
         this.setState({ favorites });
     };
 
