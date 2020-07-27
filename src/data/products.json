@@ -2,19 +2,16 @@
     {
         "id": 0,
         "name": "Couch",
-        "price": 69.99,
-        "isFavorite": false
+        "price": 69.99
     },
     {
         "id": 1,
         "name": "Table",
-        "price": 29.99,
-        "isFavorite": false
+        "price": 29.99
     },
     {
         "id": 2,
         "name": "Chair",
-        "price": 11.99,
-        "isFavorite": false
+        "price": 11.99
     }
 ]

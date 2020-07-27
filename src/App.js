@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import products from "./data/products.json";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 class App extends Component {
     state = {};
@@ -200,7 +200,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <HashRouter>
+                <BrowserRouter>
                     <Navbar
                         cartItemsCount={cart.items
                             .map((item) => item.quantity)
@@ -216,7 +216,7 @@ class App extends Component {
                         onRemoveAllProducts={this.handleRemoveAllProducts}
                         onFavorite={this.handleFavorite}
                     />
-                </HashRouter>
+                </BrowserRouter>
             </div>
         );
     }

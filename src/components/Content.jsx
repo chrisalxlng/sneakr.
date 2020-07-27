@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import Home from "./Home";
 import ShoppingCart from "./ShoppingCart";
 import Favorites from "./Favorites";
+import ProductPage from "./ProductPage";
 
 function Content(props) {
     const {
@@ -49,6 +50,22 @@ function Content(props) {
                         products={products}
                         favorites={favorites}
                         onFavorite={onFavorite}
+                    />
+                )}
+            />
+            <Route
+                path="/product=:productID"
+                render={(routerProps) => (
+                    <ProductPage
+                        product={
+                            products.filter(
+                                (p) =>
+                                    p.id.toString() ===
+                                    routerProps.match.params.productID.toString()
+                            )[0]
+                        }
+                        onFavorite={onFavorite}
+                        onIncrementProduct={onIncrementProduct}
                     />
                 )}
             />
