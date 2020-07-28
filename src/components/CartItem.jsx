@@ -9,7 +9,7 @@ function CartItem(props) {
         onDecrementProduct,
         onRemoveProduct,
     } = props;
-    const { quantity } = item;
+    const { quantity, selectedValue } = item;
     const { id, name, price } = product;
 
     return (
@@ -18,10 +18,17 @@ function CartItem(props) {
             <NavLink to={`/product=${id}`}>
                 <p>{name}</p>
             </NavLink>
+            <p>{selectedValue}</p>
             <p>{(price * quantity).toFixed(2)}</p>
-            <button onClick={() => onIncrementProduct(product)}>+</button>
-            <button onClick={() => onDecrementProduct(product)}>-</button>
-            <button onClick={() => onRemoveProduct(product)}>Remove</button>
+            <button onClick={() => onIncrementProduct(product, selectedValue)}>
+                +
+            </button>
+            <button onClick={() => onDecrementProduct(product, selectedValue)}>
+                -
+            </button>
+            <button onClick={() => onRemoveProduct(product, selectedValue)}>
+                Remove
+            </button>
         </div>
     );
 }

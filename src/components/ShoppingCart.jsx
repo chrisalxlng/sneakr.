@@ -20,7 +20,7 @@ function ShoppingCart(props) {
             {items.map((item) => {
                 return (
                     <CartItem
-                        key={item.productID}
+                        key={item.cartID}
                         item={item}
                         product={
                             products.filter((p) => p.id === item.productID)[0]

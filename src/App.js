@@ -19,7 +19,11 @@ class App extends Component {
         };
     }
 
-    handleIncrementProduct = (product, quantity = 1) => {
+    handleIncrementProduct = (
+        product,
+        selectedValue = product.colors[0],
+        quantity = 1
+    ) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -27,16 +31,37 @@ class App extends Component {
         // Copying cart.items from current state
         const cartItems = [...this.state.cart.items];
 
-        // If an item isn't already in cart, create one and push it to the array; otherwise copy from current state
-        if (cartItems.filter((p) => p.productID === product.id).length !== 1) {
+        // If an item with the selected value isn't already in cart, create one and push it to the array; otherwise copy from current state
+        if (cartItems.filter((p) => p.productID === product.id).length === 0) {
             cartItems.push({
                 cartID: cartItems.length,
                 productID: product.id,
                 quantity: 0,
+                selectedValue: selectedValue,
+            });
+        } else if (
+            cartItems.filter((p) => p.productID === product.id).length > 0 &&
+            cartItems
+                .filter(
+                    (p) =>
+                        p.productID === product.id &&
+                        p.selectedValue === selectedValue
+                )
+                .map((p) => p.selectedValue)[0] !== selectedValue
+        ) {
+            cartItems.push({
+                cartID: cartItems.length,
+                productID: product.id,
+                quantity: 0,
+                selectedValue: selectedValue,
             });
         } else {
             const index = cartItems.indexOf(
-                cartItems.filter((item) => item.productID === product.id)[0]
+                cartItems.filter(
+                    (item) =>
+                        item.productID === product.id &&
+                        item.selectedValue === selectedValue
+                )[0]
             );
             cartItems[index] = {
                 ...this.state.cart.items[index],
@@ -45,7 +70,11 @@ class App extends Component {
 
         // Determine index of cartItem
         const index = cartItems.indexOf(
-            cartItems.filter((item) => item.productID === product.id)[0]
+            cartItems.filter(
+                (item) =>
+                    item.productID === product.id &&
+                    item.selectedValue === selectedValue
+            )[0]
         );
 
         // Increment quantity of cartItem
@@ -70,7 +99,7 @@ class App extends Component {
         this.setState({ cart: cart });
     };
 
-    handleDecrementProduct = (product) => {
+    handleDecrementProduct = (product, selectedValue) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -80,7 +109,11 @@ class App extends Component {
 
         // Determine index of cartItem
         const index = cartItems.indexOf(
-            cartItems.filter((item) => item.productID === product.id)[0]
+            cartItems.filter(
+                (item) =>
+                    item.productID === product.id &&
+                    item.selectedValue === selectedValue
+            )[0]
         );
 
         // If an item has only one quantity in cart remaining, remove it from the array; otherwise decrement cartItem
@@ -110,7 +143,7 @@ class App extends Component {
         this.setState({ cart: cart });
     };
 
-    handleRemoveProduct = (product) => {
+    handleRemoveProduct = (product, selectedValue) => {
         // Copying cart from current state
         const cart = { ...this.state.cart };
 
@@ -120,13 +153,15 @@ class App extends Component {
 
         // Determine index of cartItem
         const index = cartItems.indexOf(
-            cartItems.filter((item) => item.productID === product.id)[0]
+            cartItems.filter(
+                (item) =>
+                    item.productID === product.id &&
+                    item.selectedValue === selectedValue
+            )[0]
         );
 
         // Determine quantity of cartItem in cart
-        const quantity = cartItems.filter(
-            (item) => item.productID === product.id
-        )[0].quantity;
+        const quantity = cartItems[index].quantity;
 
         // Remove cartItem
         cartItems.splice(index, 1);
