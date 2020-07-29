@@ -10,7 +10,6 @@ class ProductsOverview extends Component {
             categorie: props.categorie,
             onIncrementProduct: props.onIncrementProduct,
             onFavorite: props.onFavorite,
-            product: props.products[0],
             showPopup: false,
         };
     }
