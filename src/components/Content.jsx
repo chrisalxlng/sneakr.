@@ -4,12 +4,14 @@ import Home from "./Home";
 import ShoppingCart from "./ShoppingCart";
 import Favorites from "./Favorites";
 import ProductPage from "./ProductPage";
+import ProductsOverview from "./ProductsOverview";
 
 function Content(props) {
     const {
         products,
         cart,
         favorites,
+        categories,
         onIncrementProduct,
         onDecrementProduct,
         onFavorite,
@@ -25,6 +27,7 @@ function Content(props) {
                 component={() => (
                     <Home
                         products={products}
+                        categories={categories}
                         onIncrementProduct={onIncrementProduct}
                         onFavorite={onFavorite}
                     />
@@ -66,6 +69,28 @@ function Content(props) {
                         }
                         onFavorite={onFavorite}
                         onIncrementProduct={onIncrementProduct}
+                    />
+                )}
+            />
+            <Route
+                path="/:categorie"
+                render={(routerProps) => (
+                    <ProductsOverview
+                        categorie={
+                            categories.filter(
+                                (c) => c === routerProps.match.params.categorie
+                            )[0]
+                        }
+                        products={products.filter((product) =>
+                            product.categories.includes(
+                                categories.filter(
+                                    (c) =>
+                                        c === routerProps.match.params.categorie
+                                )[0]
+                            )
+                        )}
+                        onIncrementProduct={onIncrementProduct}
+                        onFavorite={onFavorite}
                     />
                 )}
             />

@@ -1,16 +1,19 @@
 import React from "react";
-import ProductCardContainer from "./ProductCardContainer";
+import { NavLink } from "react-router-dom";
 
 function Home(props) {
-    const { products, onIncrementProduct, onFavorite } = props;
+    const { categories } = props;
 
     return (
         <div>
-            <ProductCardContainer
-                products={products}
-                onIncrementProduct={onIncrementProduct}
-                onFavorite={onFavorite}
-            />
+            <h2>Browse in Categories:</h2>
+            {categories.map((categorie) => {
+                return (
+                    <NavLink key={categorie} to={`/${categorie}`}>
+                        <h3>{categorie}</h3>
+                    </NavLink>
+                );
+            })}
         </div>
     );
 }

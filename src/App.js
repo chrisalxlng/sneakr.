@@ -5,10 +5,19 @@ import products from "./data/products.json";
 import { BrowserRouter } from "react-router-dom";
 
 class App extends Component {
-    state = {};
-
     constructor(props) {
         super(props);
+
+        // Merging the categorie arrays from products and removing duplicats
+        var categories = [
+            ...new Set(
+                [].concat.apply(
+                    [],
+                    products.map((item) => item.categories)
+                )
+            ),
+        ];
+
         this.state = {
             products: products,
             cart: {
@@ -16,6 +25,7 @@ class App extends Component {
                 total: 0,
             },
             favorites: [],
+            categories: categories,
         };
     }
 
@@ -232,7 +242,7 @@ class App extends Component {
     };
 
     render() {
-        const { products, cart, favorites } = this.state;
+        const { products, cart, favorites, categories } = this.state;
 
         return (
             <div className="App">
@@ -246,6 +256,7 @@ class App extends Component {
                         products={products}
                         cart={cart}
                         favorites={favorites}
+                        categories={categories}
                         onIncrementProduct={this.handleIncrementProduct}
                         onDecrementProduct={this.handleDecrementProduct}
                         onRemoveProduct={this.handleRemoveProduct}

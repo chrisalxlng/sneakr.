@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { render } from "@testing-library/react";
 
 class ProductPage extends Component {
     constructor(props) {

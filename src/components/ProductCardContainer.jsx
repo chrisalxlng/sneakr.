@@ -6,7 +6,6 @@ function ProductCardContainer(props) {
 
     return (
         <div>
-            <h2>Shop our products!</h2>
             {products.map((item) => {
                 return (
                     <ProductCard
