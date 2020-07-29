@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CartItem(props) {
     const {
@@ -15,9 +15,9 @@ function CartItem(props) {
     return (
         <div>
             <p>{quantity}</p>
-            <NavLink to={`/product=${id}`}>
+            <Link to={`/product=${id}`}>
                 <p>{name}</p>
-            </NavLink>
+            </Link>
             <p>{selectedValue}</p>
             <p>{(price * quantity).toFixed(2)}</p>
             <button onClick={() => onIncrementProduct(product, selectedValue)}>

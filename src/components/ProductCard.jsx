@@ -1,17 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ProductCard(props) {
-    const { product, onIncrementProduct, onFavorite } = props;
+    const { product, onOpenPopup, onFavorite } = props;
     const { id, name, price } = product;
 
     return (
         <div>
-            <NavLink to={`/product=${id}`}>
+            <Link to={`/product=${id}`}>
                 <p>{name}</p>
                 <p>{price}</p>
-            </NavLink>
-            <button onClick={() => onIncrementProduct(product)}>Buy</button>
+            </Link>
+            <button onClick={() => onOpenPopup(product)}>Buy</button>
             <button onClick={() => onFavorite(product)}>Favorite</button>
         </div>
     );

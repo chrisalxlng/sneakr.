@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 function ProductCardContainer(props) {
-    const { products, onIncrementProduct, onFavorite } = props;
+    const { products, onOpenPopup, onFavorite } = props;
 
     return (
         <div>
@@ -11,7 +11,7 @@ function ProductCardContainer(props) {
                     <ProductCard
                         key={item.id}
                         product={item}
-                        onIncrementProduct={onIncrementProduct}
+                        onOpenPopup={onOpenPopup}
                         onFavorite={onFavorite}
                     />
                 );

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home(props) {
     const { categories } = props;
@@ -9,14 +9,14 @@ function Home(props) {
             <h2>Browse in Categories:</h2>
             {categories.map((categorie) => {
                 return (
-                    <NavLink key={categorie} to={`/${categorie}`}>
+                    <Link key={categorie} to={`/${categorie}`}>
                         <h3>{categorie}</h3>
-                    </NavLink>
+                    </Link>
                 );
             })}
-            <NavLink key="All Products" to={`/products`}>
+            <Link key="All Products" to="/products">
                 <h3>All Products</h3>
-            </NavLink>
+            </Link>
         </div>
     );
 }

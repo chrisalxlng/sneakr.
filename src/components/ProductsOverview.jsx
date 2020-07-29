@@ -1,19 +1,55 @@
-import React from "react";
+import React, { Component } from "react";
 import ProductCardContainer from "./ProductCardContainer";
+import OnBuyPopup from "./OnBuyPopup";
 
-function ProductsOverview(props) {
-    const { products, categorie, onIncrementProduct, onFavorite } = props;
+class ProductsOverview extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            products: props.products,
+            categorie: props.categorie,
+            onIncrementProduct: props.onIncrementProduct,
+            onFavorite: props.onFavorite,
+            product: props.products[0],
+            showPopup: false,
+        };
+    }
 
-    return (
-        <div>
-            <h2>{categorie}</h2>
-            <ProductCardContainer
-                products={products}
-                onIncrementProduct={onIncrementProduct}
-                onFavorite={onFavorite}
-            />
-        </div>
-    );
+    handleOpenPopup = (product) => {
+        this.setState({
+            popupProduct: product,
+            showPopup: !this.state.showPopup,
+        });
+    };
+
+    render() {
+        const {
+            products,
+            categorie,
+            onFavorite,
+            onIncrementProduct,
+            showPopup,
+            popupProduct,
+        } = this.state;
+
+        return (
+            <div>
+                <h2>{categorie}</h2>
+                <ProductCardContainer
+                    products={products}
+                    onOpenPopup={this.handleOpenPopup}
+                    onFavorite={onFavorite}
+                />
+                {showPopup ? (
+                    <OnBuyPopup
+                        product={popupProduct}
+                        onFavorite={onFavorite}
+                        onIncrementProduct={onIncrementProduct}
+                    />
+                ) : null}
+            </div>
+        );
+    }
 }
 
 export default ProductsOverview;
