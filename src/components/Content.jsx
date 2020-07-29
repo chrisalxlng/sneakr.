@@ -94,6 +94,17 @@ function Content(props) {
                     />
                 )}
             />
+            <Route
+                path="/products"
+                component={() => (
+                    <ProductsOverview
+                        categorie="All Products"
+                        products={products}
+                        onIncrementProduct={onIncrementProduct}
+                        onFavorite={onFavorite}
+                    />
+                )}
+            />
         </div>
     );
 }

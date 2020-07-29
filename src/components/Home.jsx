@@ -14,6 +14,9 @@ function Home(props) {
                     </NavLink>
                 );
             })}
+            <NavLink key="All Products" to={`/products`}>
+                <h3>All Products</h3>
+            </NavLink>
         </div>
     );
 }
