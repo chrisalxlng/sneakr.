@@ -3,6 +3,7 @@
         "id": 0,
         "name": "Couch",
         "price": 27.99,
+        "sale": 23.99,
         "colors": ["Black", "White", "Brown", "Red", "Blue", "Green"],
         "categories": ["Furniture", "Living Room"]
     },
@@ -10,6 +11,7 @@
         "id": 1,
         "name": "Balcony Table",
         "price": 39.99,
+        "sale": null,
         "colors": ["Black", "White", "Brown"],
         "categories": ["Furniture", "Balcony Furniture"]
     },
@@ -17,6 +19,7 @@
         "id": 2,
         "name": "Plant",
         "price": 11.99,
+        "sale": null,
         "colors": ["Black", "Brown", "Green"],
         "categories": ["Plants"]
     }

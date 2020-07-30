@@ -8,16 +8,6 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        // Merging the categorie arrays from products and removing duplicats
-        var categories = [
-            ...new Set(
-                [].concat.apply(
-                    [],
-                    products.map((item) => item.categories)
-                )
-            ),
-        ];
-
         this.state = {
             products: products,
             cart: {
@@ -25,9 +15,37 @@ class App extends Component {
                 total: 0,
             },
             favorites: [],
-            categories: categories,
+            categories: [],
             currency: "€",
         };
+    }
+
+    componentDidMount() {
+        // Copying products from current state
+        const products = [...this.state.products];
+
+        // Each product that is on sale, add the category "Sale"
+        products.forEach((product) => {
+            if (product.sale !== null) {
+                product.categories.push("Sale");
+            }
+        });
+
+        // Setting the new state
+        this.setState({ products: products });
+
+        // Merging the categorie arrays from products and removing duplicats
+        const categories = [
+            ...new Set(
+                [].concat.apply(
+                    [],
+                    this.state.products.map((item) => item.categories)
+                )
+            ),
+        ];
+
+        // Setting the state for categories
+        this.setState({ categories: categories });
     }
 
     handleIncrementProduct = (

@@ -11,7 +11,7 @@ function CartItem(props) {
         onRemoveProduct,
     } = props;
     const { quantity, selectedValue } = item;
-    const { id, name, price } = product;
+    const { id, name, price, sale } = product;
 
     return (
         <div>
@@ -20,7 +20,18 @@ function CartItem(props) {
                 <p>{name}</p>
             </Link>
             <p>{selectedValue}</p>
-            <p>{(price * quantity).toFixed(2) + currency}</p>
+            {sale ? (
+                <p className="sale-strike-through">
+                    {(price * quantity).toFixed(2) + currency}
+                </p>
+            ) : (
+                <p>{(price * quantity).toFixed(2) + currency}</p>
+            )}
+            {sale ? (
+                <p className="sale">
+                    {(sale * quantity).toFixed(2) + currency}
+                </p>
+            ) : null}
             <button onClick={() => onIncrementProduct(product, selectedValue)}>
                 +
             </button>

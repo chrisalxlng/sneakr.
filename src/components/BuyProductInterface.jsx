@@ -60,12 +60,17 @@ class BuyProductInterface extends Component {
             quantity,
             selectedValue,
         } = this.state;
-        const { name, price, colors } = product;
+        const { name, price, sale, colors } = product;
 
         return (
             <div>
                 <p>{name}</p>
-                <p>{price + currency}</p>
+                {sale ? (
+                    <p className="sale-strike-through">{price + currency}</p>
+                ) : (
+                    <p>{price + currency}</p>
+                )}
+                {sale ? <p className="sale">{sale + currency}</p> : null}
                 <label htmlFor="colors-select">Select a color:</label>
                 <select
                     onChange={this.handleChange}
