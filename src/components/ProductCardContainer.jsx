@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import NoUiSlider from "nouislider-react";
+import "nouislider/distribute/nouislider.css";
 import ProductCard from "./ProductCard";
 
 class ProductCardContainer extends Component {
@@ -8,22 +10,21 @@ class ProductCardContainer extends Component {
             products: props.products,
             onOpenPopup: props.onOpenPopup,
             onFavorite: props.onFavorite,
-            defaultProducts: props.products,
+            copyOfProducts: props.products,
+            sortBy: "default",
+            sliderValues: [5, 100],
         };
     }
 
-    handleSort = (event) => {
-        // Assigning the selected value for sorting the array
-        const sortBy = event.target.value;
-        let products;
-
+    handleSort = (sortBy, products) => {
+        // Sorting by default order
         if (sortBy === "default") {
-            // Copying products in default order from current state
-            products = [...this.state.defaultProducts];
+            products.sort((prev, next) => {
+                if (prev.id > next.id) return 1;
+                else if (prev.id < next.id) return -1;
+                else return 0;
+            });
         } else {
-            // Copying products from current state
-            products = [...this.state.products];
-
             // Declaring the sortValue
             let sortValue;
 
@@ -42,17 +43,52 @@ class ProductCardContainer extends Component {
         // Setting the new state
         this.setState({
             products: products,
+            sortBy: sortBy,
         });
+
+        return products;
+    };
+
+    handleSliderChange = (sliderValueSpan, products) => {
+        // Filtering the products regarding to price span
+        products = products.filter(
+            (product) =>
+                product.price >= sliderValueSpan[0] &&
+                product.price <= sliderValueSpan[1]
+        );
+
+        // Setting the new state
+        this.setState({
+            products: products,
+            sliderValues: sliderValueSpan,
+        });
+
+        return products;
     };
 
     render() {
-        const { products, onOpenPopup, onFavorite } = this.state;
+        const {
+            products,
+            onOpenPopup,
+            onFavorite,
+            sliderValues,
+            copyOfProducts,
+        } = this.state;
 
         return (
             <div>
                 <label htmlFor="sort-select">Sort by:</label>
                 <select
-                    onChange={this.handleSort}
+                    onChange={(event) => {
+                        let products = this.handleSort(
+                            event.target.value,
+                            copyOfProducts
+                        );
+                        this.handleSliderChange(
+                            this.state.sliderValues,
+                            products
+                        );
+                    }}
                     name="sort"
                     id="sort-select"
                     defaultValue="default"
@@ -68,6 +104,25 @@ class ProductCardContainer extends Component {
                     </option>
                     ))
                 </select>
+
+                <div className="slider">
+                    <p>{Math.floor(sliderValues[0])}</p>
+                    <p>{Math.floor(sliderValues[1])}</p>
+                    <NoUiSlider
+                        range={{ min: 5, max: 100 }}
+                        start={sliderValues}
+                        step={5}
+                        onUpdate={(event) => {
+                            let products = this.handleSort(
+                                this.state.sortBy,
+                                copyOfProducts
+                            );
+                            this.handleSliderChange(event, products);
+                        }}
+                        connect
+                    />
+                </div>
+
                 {products.map((item) => {
                     return (
                         <ProductCard
