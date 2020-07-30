@@ -8,29 +8,36 @@ class ProductCardContainer extends Component {
             products: props.products,
             onOpenPopup: props.onOpenPopup,
             onFavorite: props.onFavorite,
+            defaultProducts: props.products,
         };
     }
 
     handleSort = (event) => {
         // Assigning the selected value for sorting the array
         const sortBy = event.target.value;
+        let products;
 
-        // Copying products from current state
-        const products = [...this.state.products];
+        if (sortBy === "default") {
+            // Copying products in default order from current state
+            products = [...this.state.defaultProducts];
+        } else {
+            // Copying products from current state
+            products = [...this.state.products];
 
-        // Declaring the sortValue
-        let sortValue;
+            // Declaring the sortValue
+            let sortValue;
 
-        // Defining the sortValue
-        if (sortBy === "ascending") sortValue = 1;
-        else if (sortBy === "descending") sortValue = -1;
+            // Defining the sortValue
+            if (sortBy === "ascending") sortValue = 1;
+            else if (sortBy === "descending") sortValue = -1;
 
-        // Sorting the products array in regards to sortValue
-        products.sort((prev, next) => {
-            if (prev.price > next.price) return sortValue;
-            else if (prev.price < next.price) return -sortValue;
-            else return 0;
-        });
+            // Sorting the products array in regards to sortValue
+            products.sort((prev, next) => {
+                if (prev.price > next.price) return sortValue;
+                else if (prev.price < next.price) return -sortValue;
+                else return 0;
+            });
+        }
 
         // Setting the new state
         this.setState({
@@ -43,20 +50,21 @@ class ProductCardContainer extends Component {
 
         return (
             <div>
+                <label htmlFor="sort-select">Sort by:</label>
                 <select
                     onChange={this.handleSort}
                     name="sort"
                     id="sort-select"
                     defaultValue="default"
                 >
-                    <option disabled value="default">
-                        Sort by Pricing
+                    <option key="sort-pricing-default" value="default">
+                        Our Favorites
                     </option>
                     <option key="sort-pricing-ascending" value="ascending">
-                        Ascending
+                        Lowest Prices first
                     </option>
                     <option key="sort-pricing-descending" value="descending">
-                        Descending
+                        Highest Prices first
                     </option>
                     ))
                 </select>
