@@ -8,6 +8,7 @@ class ProductCardContainer extends Component {
         super(props);
         this.state = {
             products: props.products,
+            currency: props.currency,
             onOpenPopup: props.onOpenPopup,
             onFavorite: props.onFavorite,
             copyOfProducts: props.products,
@@ -69,6 +70,7 @@ class ProductCardContainer extends Component {
     render() {
         const {
             products,
+            currency,
             onOpenPopup,
             onFavorite,
             sliderValues,
@@ -106,8 +108,8 @@ class ProductCardContainer extends Component {
                 </select>
 
                 <div className="slider">
-                    <p>{Math.floor(sliderValues[0])}</p>
-                    <p>{Math.floor(sliderValues[1])}</p>
+                    <p>{Math.floor(sliderValues[0]) + currency}</p>
+                    <p>{Math.floor(sliderValues[1]) + currency}</p>
                     <NoUiSlider
                         range={{ min: 5, max: 100 }}
                         start={sliderValues}
@@ -128,6 +130,7 @@ class ProductCardContainer extends Component {
                         <ProductCard
                             key={item.id}
                             product={item}
+                            currency={currency}
                             onOpenPopup={onOpenPopup}
                             onFavorite={onFavorite}
                         />

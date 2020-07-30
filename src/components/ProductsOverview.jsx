@@ -8,6 +8,7 @@ class ProductsOverview extends Component {
         this.state = {
             products: props.products,
             categorie: props.categorie,
+            currency: props.currency,
             onIncrementProduct: props.onIncrementProduct,
             onFavorite: props.onFavorite,
             showPopup: false,
@@ -25,6 +26,7 @@ class ProductsOverview extends Component {
         const {
             products,
             categorie,
+            currency,
             onFavorite,
             onIncrementProduct,
             showPopup,
@@ -36,12 +38,14 @@ class ProductsOverview extends Component {
                 <h2>{categorie}</h2>
                 <ProductCardContainer
                     products={products}
+                    currency={currency}
                     onOpenPopup={this.handleOpenPopup}
                     onFavorite={onFavorite}
                 />
                 {showPopup ? (
                     <OnBuyPopup
                         product={popupProduct}
+                        currency={currency}
                         onFavorite={onFavorite}
                         onIncrementProduct={onIncrementProduct}
                     />

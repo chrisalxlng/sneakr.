@@ -7,6 +7,7 @@ class BuyProductInterface extends Component {
             quantity: 1,
             selectedValue: props.product.colors[0],
             product: props.product,
+            currency: props.currency,
             onFavorite: props.onFavorite,
             onIncrementProduct: props.onIncrementProduct,
         };
@@ -51,14 +52,20 @@ class BuyProductInterface extends Component {
     };
 
     render() {
-        const { product, onFavorite, onIncrementProduct } = this.state;
+        const {
+            product,
+            currency,
+            onFavorite,
+            onIncrementProduct,
+            quantity,
+            selectedValue,
+        } = this.state;
         const { name, price, colors } = product;
-        const { quantity, selectedValue } = this.state;
 
         return (
             <div>
                 <p>{name}</p>
-                <p>{price}</p>
+                <p>{price + currency}</p>
                 <label htmlFor="colors-select">Select a color:</label>
                 <select
                     onChange={this.handleChange}

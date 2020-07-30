@@ -26,6 +26,7 @@ class App extends Component {
             },
             favorites: [],
             categories: categories,
+            currency: "€",
         };
     }
 
@@ -242,7 +243,7 @@ class App extends Component {
     };
 
     render() {
-        const { products, cart, favorites, categories } = this.state;
+        const { products, cart, favorites, categories, currency } = this.state;
 
         return (
             <div className="App">
@@ -257,6 +258,7 @@ class App extends Component {
                         cart={cart}
                         favorites={favorites}
                         categories={categories}
+                        currency={currency}
                         onIncrementProduct={this.handleIncrementProduct}
                         onDecrementProduct={this.handleDecrementProduct}
                         onRemoveProduct={this.handleRemoveProduct}

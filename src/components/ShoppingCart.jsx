@@ -4,6 +4,7 @@ import CartItem from "./CartItem";
 function ShoppingCart(props) {
     const {
         products,
+        currency,
         onIncrementProduct,
         onDecrementProduct,
         onRemoveProduct,
@@ -25,13 +26,14 @@ function ShoppingCart(props) {
                         product={
                             products.filter((p) => p.id === item.productID)[0]
                         }
+                        currency={currency}
                         onIncrementProduct={onIncrementProduct}
                         onDecrementProduct={onDecrementProduct}
                         onRemoveProduct={onRemoveProduct}
                     />
                 );
             })}
-            <h3>Total: {total.toFixed(2).replace("-0", "0")}</h3>
+            <h3>Total: {total.toFixed(2).replace("-0", "0") + currency}</h3>
         </div>
     );
 }

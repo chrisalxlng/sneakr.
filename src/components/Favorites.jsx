@@ -2,7 +2,7 @@ import React from "react";
 import FavoriteItem from "./FavoriteItem";
 
 function Favorites(props) {
-    const { products, favorites, onFavorite } = props;
+    const { products, favorites, currency, onFavorite } = props;
 
     return (
         <div>
@@ -14,6 +14,7 @@ function Favorites(props) {
                         product={
                             products.filter((i) => i.id === item.productID)[0]
                         }
+                        currency={currency}
                         onFavorite={onFavorite}
                     />
                 );

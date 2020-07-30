@@ -5,6 +5,7 @@ function CartItem(props) {
     const {
         item,
         product,
+        currency,
         onIncrementProduct,
         onDecrementProduct,
         onRemoveProduct,
@@ -19,7 +20,7 @@ function CartItem(props) {
                 <p>{name}</p>
             </Link>
             <p>{selectedValue}</p>
-            <p>{(price * quantity).toFixed(2)}</p>
+            <p>{(price * quantity).toFixed(2) + currency}</p>
             <button onClick={() => onIncrementProduct(product, selectedValue)}>
                 +
             </button>

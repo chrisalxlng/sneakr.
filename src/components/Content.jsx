@@ -12,6 +12,7 @@ function Content(props) {
         cart,
         favorites,
         categories,
+        currency,
         onIncrementProduct,
         onDecrementProduct,
         onFavorite,
@@ -40,6 +41,7 @@ function Content(props) {
                         <ShoppingCart
                             products={products}
                             cart={cart}
+                            currency={currency}
                             onIncrementProduct={onIncrementProduct}
                             onDecrementProduct={onDecrementProduct}
                             onRemoveProduct={onRemoveProduct}
@@ -53,6 +55,7 @@ function Content(props) {
                         <Favorites
                             products={products}
                             favorites={favorites}
+                            currency={currency}
                             onFavorite={onFavorite}
                         />
                     )}
@@ -63,6 +66,7 @@ function Content(props) {
                         <ProductsOverview
                             categorie="All Products"
                             products={products}
+                            currency={currency}
                             onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}
                         />
@@ -79,6 +83,7 @@ function Content(props) {
                                         routerProps.match.params.productID.toString()
                                 )[0]
                             }
+                            currency={currency}
                             onFavorite={onFavorite}
                             onIncrementProduct={onIncrementProduct}
                         />
@@ -103,6 +108,7 @@ function Content(props) {
                                     )[0]
                                 )
                             )}
+                            currency={currency}
                             onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}
                         />
