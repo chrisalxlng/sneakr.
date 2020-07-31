@@ -117,7 +117,7 @@ class App extends Component {
         let cartTotal = this.state.cart.total;
 
         // Increase cartTotal by price of bought product
-        cartTotal += product.price * quantity;
+        cartTotal += (product.sale ? product.sale : product.price) * quantity;
 
         // Replace old total value with new one
         cart.total = cartTotal;
@@ -161,7 +161,7 @@ class App extends Component {
         let cartTotal = this.state.cart.total;
 
         // Decrease cartTotal by price of bought product
-        cartTotal -= product.price;
+        cartTotal -= product.sale ? product.sale : product.price;
 
         // Replace old total value with new one
         cart.total = cartTotal;
@@ -203,7 +203,7 @@ class App extends Component {
         let cartTotal = this.state.cart.total;
 
         // Decrease cartTotal by price of bought product
-        cartTotal -= product.price * quantity;
+        cartTotal -= (product.sale ? product.sale : product.price) * quantity;
 
         // Replace old total value with new one
         cart.total = cartTotal;
