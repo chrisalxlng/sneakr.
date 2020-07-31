@@ -35,8 +35,16 @@ class ProductCardContainer extends Component {
 
             // Sorting the products array in regards to sortValue
             products.sort((prev, next) => {
-                if (prev.price > next.price) return sortValue;
-                else if (prev.price < next.price) return -sortValue;
+                if (
+                    (prev.sale ? prev.sale : prev.price) >
+                    (next.sale ? next.sale : next.price)
+                )
+                    return sortValue;
+                else if (
+                    (prev.sale ? prev.sale : prev.price) <
+                    (next.sale ? next.sale : next.price)
+                )
+                    return -sortValue;
                 else return 0;
             });
         }
@@ -54,8 +62,10 @@ class ProductCardContainer extends Component {
         // Filtering the products regarding to price span
         products = products.filter(
             (product) =>
-                product.price >= sliderValueSpan[0] &&
-                product.price <= sliderValueSpan[1]
+                (product.sale ? product.sale : product.price) >=
+                    sliderValueSpan[0] &&
+                (product.sale ? product.sale : product.price) <=
+                    sliderValueSpan[1]
         );
 
         // Setting the new state
