@@ -13,7 +13,7 @@ class ProductCardContainer extends Component {
             onFavorite: props.onFavorite,
             copyOfProducts: props.products,
             sortBy: "default",
-            sliderValues: [5, 100],
+            sliderValues: [0, 180],
         };
     }
 
@@ -111,7 +111,7 @@ class ProductCardContainer extends Component {
                     <p>{Math.floor(sliderValues[0]) + currency}</p>
                     <p>{Math.floor(sliderValues[1]) + currency}</p>
                     <NoUiSlider
-                        range={{ min: 5, max: 100 }}
+                        range={{ min: 0, max: 180 }}
                         start={sliderValues}
                         step={5}
                         onUpdate={(event) => {

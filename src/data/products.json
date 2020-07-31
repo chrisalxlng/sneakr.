@@ -1,26 +1,1410 @@
 [
     {
         "id": 0,
-        "name": "Couch",
-        "price": 27.99,
-        "sale": 23.99,
-        "colors": ["Black", "White", "Brown", "Red", "Blue", "Green"],
-        "categories": ["Furniture", "Living Room"]
+        "name": "Outdoor Boots in Beige",
+        "description": [
+            "High-top design",
+            "Slip-on style",
+            "You'll want to take care of these",
+            "So fresh and so clean",
+            "Chunky sole"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": "product-large-0",
+        "price": 144.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": ["Outdoor", "Boots"]
     },
     {
         "id": 1,
-        "name": "Balcony Table",
-        "price": 39.99,
+        "name": "Nike AirMax Blue",
+        "description": [
+            "Waffle-textured tread",
+            "Padded cuff",
+            "Lace-up fastening",
+            "Slip-on style"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": "product-large-1",
+        "price": 130.99,
         "sale": null,
-        "colors": ["Black", "White", "Brown"],
-        "categories": ["Furniture", "Balcony Furniture"]
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": ["Sneaker", "Nike"]
     },
     {
         "id": 2,
-        "name": "Plant",
-        "price": 11.99,
+        "name": "Nike Sport Shoes in Black",
+        "description": [
+            "Classic design",
+            "Switch up your rotation",
+            "So fresh and so clean",
+            "High-top design"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": "product-large-2",
+        "price": 91.99,
         "sale": null,
-        "colors": ["Black", "Brown", "Green"],
-        "categories": ["Plants"]
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": ["Nike"]
+    },
+    {
+        "id": 3,
+        "name": "AirJordan 1 Blue/Black",
+        "description": [
+            "That ‘new shoe’ feeling",
+            "Classic design",
+            "Pull tabs for easy entry"
+        ],
+        "materials": "60% Rubber, 40% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": "product-large-3",
+        "price": 173.99,
+        "sale": 162.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": ["Nike", "Jordan"]
+    },
+    {
+        "id": 4,
+        "name": "Leather High Heels",
+        "description": ["High-top design", "Lugged tread", "Chunky sole"],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": "product-large-4",
+        "price": 33.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": ["High Heels"]
+    },
+    {
+        "id": 5,
+        "name": null,
+        "description": [
+            "Waffle-textured tread",
+            "Chunky sole",
+            "Classic design",
+            "You'll want to take care of these"
+        ],
+        "materials": "60% Textile, 40% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 102.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 6,
+        "name": null,
+        "description": [
+            "You'll want to take care of these",
+            "Waffle-textured tread",
+            "Lugged tread"
+        ],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 140.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 7,
+        "name": null,
+        "description": [
+            "Switch up your rotation",
+            "Lace-up fastening",
+            "So fresh and so clean"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 151.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 8,
+        "name": null,
+        "description": [
+            "Signature branding",
+            "Pull tabs for easy entry",
+            "Classic design"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 41.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 9,
+        "name": null,
+        "description": [
+            "High-top design",
+            "You'll want to take care of these",
+            "Slip-on style",
+            "Chunky sole"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 34.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 10,
+        "name": null,
+        "description": [
+            "So fresh and so clean",
+            "Padded cuff",
+            "That ‘new shoe’ feeling",
+            "Lace-up fastening"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 29.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 11,
+        "name": null,
+        "description": [
+            "Signature branding",
+            "Waffle-textured tread",
+            "High-top design"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 175.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 12,
+        "name": null,
+        "description": [
+            "Lugged tread",
+            "Classic design",
+            "Chunky sole",
+            "Signature branding"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 34.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 13,
+        "name": null,
+        "description": [
+            "High-top design",
+            "Classic design",
+            "Slip-on style",
+            "You'll want to take care of these",
+            "That ‘new shoe’ feeling"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 89.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 14,
+        "name": null,
+        "description": [
+            "Switch up your rotation",
+            "You'll want to take care of these",
+            "Waffle-textured tread"
+        ],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 93.99,
+        "sale": 81.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 15,
+        "name": null,
+        "description": [
+            "Padded cuff",
+            "Lugged tread",
+            "That ‘new shoe’ feeling"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 93.99,
+        "sale": 82.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 16,
+        "name": null,
+        "description": [
+            "Classic design",
+            "High-top design",
+            "Pull tabs for easy entry"
+        ],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 32.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 17,
+        "name": null,
+        "description": ["Slip-on style", "Padded cuff", "Signature branding"],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 96.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 18,
+        "name": null,
+        "description": [
+            "That ‘new shoe’ feeling",
+            "Lugged tread",
+            "Padded cuff"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Wipe clean with a soft dry cloth",
+        "image-small": null,
+        "image-large": null,
+        "price": 145.99,
+        "sale": 139.99,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 19,
+        "name": null,
+        "description": [
+            "Switch up your rotation",
+            "Waffle-textured tread",
+            "That ‘new shoe’ feeling",
+            "High-top design",
+            "Lace-up fastening"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 136.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 20,
+        "name": null,
+        "description": [
+            "High-top design",
+            "Round toe",
+            "Lugged tread",
+            "Slip-on style"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 75.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 21,
+        "name": null,
+        "description": [
+            "Padded cuff",
+            "High-top design",
+            "Waffle-textured tread"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 53.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 22,
+        "name": null,
+        "description": [
+            "Waffle-textured tread",
+            "Pull tabs for easy entry",
+            "You'll want to take care of these",
+            "Switch up your rotation"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 89.99,
+        "sale": 77.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 23,
+        "name": null,
+        "description": [
+            "Lugged tread",
+            "Signature branding",
+            "Switch up your rotation"
+        ],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 114.99,
+        "sale": 106.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 24,
+        "name": null,
+        "description": [
+            "You'll want to take care of these",
+            "Pull tabs for easy entry",
+            "Switch up your rotation",
+            "High-top design"
+        ],
+        "materials": "60% Rubber, 40% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 62.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 25,
+        "name": null,
+        "description": [
+            "Slip-on style",
+            "Pull tabs for easy entry",
+            "That ‘new shoe’ feeling",
+            "Lugged tread"
+        ],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 147.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 26,
+        "name": null,
+        "description": [
+            "Slip-on style",
+            "Round toe",
+            "Switch up your rotation"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Wipe clean with a soft dry cloth",
+        "image-small": null,
+        "image-large": null,
+        "price": 35.99,
+        "sale": 29.99,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 27,
+        "name": null,
+        "description": ["Classic design", "Lace-up fastening", "Lugged tread"],
+        "materials": "60% Rubber, 40% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 104.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 28,
+        "name": null,
+        "description": [
+            "Lace-up fastening",
+            "Round toe",
+            "That ‘new shoe’ feeling",
+            "High-top design"
+        ],
+        "materials": "60% Textile, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 143.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 29,
+        "name": null,
+        "description": [
+            "That ‘new shoe’ feeling",
+            "Signature branding",
+            "Waffle-textured tread",
+            "Slip-on style"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 113.99,
+        "sale": 105.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 30,
+        "name": null,
+        "description": [
+            "That ‘new shoe’ feeling",
+            "You'll want to take care of these",
+            "Round toe",
+            "Padded cuff"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 131.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 31,
+        "name": null,
+        "description": [
+            "Classic design",
+            "Signature branding",
+            "Lace-up fastening"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 108.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 32,
+        "name": null,
+        "description": ["Padded cuff", "Waffle-textured tread", "Chunky sole"],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 41.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 33,
+        "name": null,
+        "description": [
+            "Slip-on style",
+            "You'll want to take care of these",
+            "Classic design"
+        ],
+        "materials": "60% Textile, 40% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 75.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 34,
+        "name": null,
+        "description": [
+            "Padded cuff",
+            "Lugged tread",
+            "Round toe",
+            "Chunky sole",
+            "Classic design"
+        ],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 61.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 35,
+        "name": null,
+        "description": [
+            "You'll want to take care of these",
+            "That ‘new shoe’ feeling",
+            "Round toe"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 143.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 36,
+        "name": null,
+        "description": [
+            "Round toe",
+            "High-top design",
+            "So fresh and so clean",
+            "Padded cuff",
+            "Chunky sole"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean with a soft dry cloth",
+        "image-small": null,
+        "image-large": null,
+        "price": 55.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 37,
+        "name": null,
+        "description": ["Lugged tread", "Round toe", "Switch up your rotation"],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 45.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 38,
+        "name": null,
+        "description": [
+            "Slip-on style",
+            "So fresh and so clean",
+            "Padded cuff",
+            "Waffle-textured tread",
+            "High-top design"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 150.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 39,
+        "name": null,
+        "description": ["Classic design", "Slip-on style", "Lugged tread"],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 32.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 40,
+        "name": null,
+        "description": [
+            "Signature branding",
+            "Waffle-textured tread",
+            "High-top design",
+            "Classic design"
+        ],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 85.99,
+        "sale": 68.99,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 41,
+        "name": null,
+        "description": [
+            "So fresh and so clean",
+            "Switch up your rotation",
+            "Padded cuff",
+            "Lace-up fastening",
+            "Slip-on style"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 71.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 42,
+        "name": null,
+        "description": [
+            "So fresh and so clean",
+            "Pull tabs for easy entry",
+            "You'll want to take care of these",
+            "Chunky sole",
+            "Signature branding"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 115.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 43,
+        "name": null,
+        "description": [
+            "Pull tabs for easy entry",
+            "You'll want to take care of these",
+            "Padded cuff",
+            "Waffle-textured tread",
+            "Lugged tread"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 103.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 44,
+        "name": null,
+        "description": [
+            "Signature branding",
+            "Lugged tread",
+            "Chunky sole",
+            "High-top design",
+            "Waffle-textured tread"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 95.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 45,
+        "name": null,
+        "description": [
+            "Round toe",
+            "Padded cuff",
+            "So fresh and so clean",
+            "Classic design"
+        ],
+        "materials": "80% Suede, 20% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 170.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 46,
+        "name": null,
+        "description": [
+            "Lugged tread",
+            "Signature branding",
+            "Switch up your rotation",
+            "Pull tabs for easy entry",
+            "Waffle-textured tread"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 139.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 47,
+        "name": null,
+        "description": [
+            "Lace-up fastening",
+            "Slip-on style",
+            "You'll want to take care of these"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Wipe clean with a soft dry cloth",
+        "image-small": null,
+        "image-large": null,
+        "price": 91.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 48,
+        "name": null,
+        "description": [
+            "That ‘new shoe’ feeling",
+            "Classic design",
+            "Signature branding",
+            "Chunky sole"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 62.99,
+        "sale": 48.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 49,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "Lace-up fastening",
+            "Slip-on style",
+            "High-top design",
+            "Switch up your rotation"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 172.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 50,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "Round toe",
+            "You'll want to take care of these",
+            "So fresh and so clean"
+        ],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 154.99,
+        "sale": 134.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 51,
+        "name": null,
+        "description": [
+            "Lugged tread",
+            "So fresh and so clean",
+            "Slip-on style",
+            "Signature branding",
+            "Lace-up fastening"
+        ],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 49.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 52,
+        "name": null,
+        "description": [
+            "Switch up your rotation",
+            "Waffle-textured tread",
+            "You'll want to take care of these"
+        ],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 42.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 53,
+        "name": null,
+        "description": [
+            "High-top design",
+            "So fresh and so clean",
+            "Slip-on style",
+            "Lace-up fastening",
+            "You'll want to take care of these"
+        ],
+        "materials": "70% Suede, 30% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 179.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 54,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "Signature branding",
+            "Padded cuff",
+            "That ‘new shoe’ feeling"
+        ],
+        "materials": "60% Rubber, 40% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 138.99,
+        "sale": 119.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 55,
+        "name": null,
+        "description": [
+            "Padded cuff",
+            "Lace-up fastening",
+            "Chunky sole",
+            "Classic design",
+            "Switch up your rotation"
+        ],
+        "materials": "60% Textile, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 62.99,
+        "sale": 52.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 56,
+        "name": null,
+        "description": [
+            "Slip-on style",
+            "High-top design",
+            "Round toe",
+            "Lugged tread",
+            "So fresh and so clean"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 36.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 57,
+        "name": null,
+        "description": [
+            "Pull tabs for easy entry",
+            "Padded cuff",
+            "So fresh and so clean"
+        ],
+        "materials": "60% Rubber, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 149.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 58,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "Classic design",
+            "Pull tabs for easy entry"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 154.99,
+        "sale": 140.99,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 59,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "You'll want to take care of these",
+            "Waffle-textured tread"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 157.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 60,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "Switch up your rotation",
+            "Waffle-textured tread",
+            "High-top design"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 49.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 61,
+        "name": null,
+        "description": [
+            "High-top design",
+            "Pull tabs for easy entry",
+            "So fresh and so clean"
+        ],
+        "materials": "60% Rubber, 40% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 138.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 62,
+        "name": null,
+        "description": [
+            "Signature branding",
+            "Lace-up fastening",
+            "Pull tabs for easy entry",
+            "Slip-on style",
+            "Chunky sole"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 51.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 63,
+        "name": null,
+        "description": [
+            "Lace-up fastening",
+            "Lugged tread",
+            "That ‘new shoe’ feeling",
+            "Signature branding",
+            "Padded cuff"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 127.99,
+        "sale": 117.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
+    },
+    {
+        "id": 64,
+        "name": null,
+        "description": [
+            "Signature branding",
+            "So fresh and so clean",
+            "Lace-up fastening",
+            "That ‘new shoe’ feeling",
+            "Classic design"
+        ],
+        "materials": "70% Textile, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 140.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 65,
+        "name": null,
+        "description": [
+            "High-top design",
+            "So fresh and so clean",
+            "Classic design",
+            "Padded cuff",
+            "Waffle-textured tread"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 165.99,
+        "sale": 152.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 66,
+        "name": null,
+        "description": [
+            "Round toe",
+            "Switch up your rotation",
+            "Padded cuff",
+            "Lace-up fastening",
+            "Signature branding"
+        ],
+        "materials": "60% Textile, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 60.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 67,
+        "name": null,
+        "description": [
+            "High-top design",
+            "Round toe",
+            "Signature branding",
+            "Classic design",
+            "You'll want to take care of these"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Wipe clean with a soft dry cloth",
+        "image-small": null,
+        "image-large": null,
+        "price": 129.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 68,
+        "name": null,
+        "description": [
+            "Waffle-textured tread",
+            "You'll want to take care of these",
+            "Switch up your rotation",
+            "Slip-on style",
+            "Signature branding"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Wipe clean with a soft dry cloth",
+        "image-small": null,
+        "image-large": null,
+        "price": 112.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 69,
+        "name": null,
+        "description": [
+            "Signature branding",
+            "Pull tabs for easy entry",
+            "Chunky sole",
+            "Padded cuff",
+            "That ‘new shoe’ feeling"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 176.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 70,
+        "name": null,
+        "description": ["Round toe", "So fresh and so clean", "Classic design"],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 153.99,
+        "sale": 147.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
+        "categories": [null]
+    },
+    {
+        "id": 71,
+        "name": null,
+        "description": [
+            "Pull tabs for easy entry",
+            "Switch up your rotation",
+            "Slip-on style",
+            "You'll want to take care of these"
+        ],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 88.99,
+        "sale": 76.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 72,
+        "name": null,
+        "description": [
+            "Lace-up fastening",
+            "You'll want to take care of these",
+            "That ‘new shoe’ feeling"
+        ],
+        "materials": "60% Suede, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 45.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 73,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "Switch up your rotation",
+            "High-top design",
+            "Padded cuff",
+            "So fresh and so clean"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 121.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 74,
+        "name": null,
+        "description": [
+            "Waffle-textured tread",
+            "High-top design",
+            "Pull tabs for easy entry"
+        ],
+        "materials": "60% Textile, 40% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 133.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 75,
+        "name": null,
+        "description": [
+            "Chunky sole",
+            "Padded cuff",
+            "You'll want to take care of these",
+            "So fresh and so clean",
+            "Waffle-textured tread"
+        ],
+        "materials": "60% Rubber, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 174.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 76,
+        "name": null,
+        "description": [
+            "High-top design",
+            "Slip-on style",
+            "Lace-up fastening"
+        ],
+        "materials": "60% Textile, 40% other materials",
+        "cleaning": "Wipe clean only",
+        "image-small": null,
+        "image-large": null,
+        "price": 75.99,
+        "sale": 55.99,
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": [null]
+    },
+    {
+        "id": 77,
+        "name": null,
+        "description": [
+            "High-top design",
+            "Signature branding",
+            "Classic design",
+            "Lace-up fastening",
+            "You'll want to take care of these"
+        ],
+        "materials": "80% Textile, 20% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 173.99,
+        "sale": 158.99,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": [null]
+    },
+    {
+        "id": 78,
+        "name": null,
+        "description": [
+            "Slip-on style",
+            "Waffle-textured tread",
+            "Chunky sole"
+        ],
+        "materials": "70% Rubber, 30% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
+        "image-small": null,
+        "image-large": null,
+        "price": 175.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": [null]
+    },
+    {
+        "id": 79,
+        "name": null,
+        "description": [
+            "Slip-on style",
+            "That ‘new shoe’ feeling",
+            "Classic design",
+            "Padded cuff",
+            "So fresh and so clean"
+        ],
+        "materials": "80% Rubber, 20% other materials",
+        "cleaning": "Remove light marks with a clean damp sponge",
+        "image-small": null,
+        "image-large": null,
+        "price": 41.99,
+        "sale": null,
+        "sizes": [37, 38, 39, 40, 41, 42, 43],
+        "categories": [null]
     }
 ]

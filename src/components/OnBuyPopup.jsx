@@ -9,6 +9,7 @@ function onBuyPopup(props) {
             <div className="popup">
                 <BuyProductInterface
                     product={product}
+                    image={product["image-small"]}
                     currency={currency}
                     onFavorite={onFavorite}
                     onIncrementProduct={onIncrementProduct}

@@ -5,8 +5,9 @@ class BuyProductInterface extends Component {
         super(props);
         this.state = {
             quantity: 1,
-            selectedValue: props.product.colors[0],
+            selectedValue: props.product.sizes[0],
             product: props.product,
+            image: props.image,
             currency: props.currency,
             onFavorite: props.onFavorite,
             onIncrementProduct: props.onIncrementProduct,
@@ -54,16 +55,18 @@ class BuyProductInterface extends Component {
     render() {
         const {
             product,
+            image,
             currency,
             onFavorite,
             onIncrementProduct,
             quantity,
             selectedValue,
         } = this.state;
-        const { name, price, sale, colors } = product;
+        const { name, price, sale, sizes } = product;
 
         return (
             <div>
+                <img src={"/img/" + image + ".jpg"} alt="Product" />
                 <p>{name}</p>
                 {sale ? (
                     <p className="sale-strike-through">{price + currency}</p>
@@ -71,13 +74,13 @@ class BuyProductInterface extends Component {
                     <p>{price + currency}</p>
                 )}
                 {sale ? <p className="sale">{sale + currency}</p> : null}
-                <label htmlFor="colors-select">Select a color:</label>
+                <label htmlFor="sizes-select">Select a size:</label>
                 <select
                     onChange={this.handleChange}
-                    name="colors"
-                    id="colors-select"
+                    name="sizes"
+                    id="sizes-select"
                 >
-                    {colors.map((item) => (
+                    {sizes.map((item) => (
                         <option key={item} value={item}>
                             {item}
                         </option>

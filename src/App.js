@@ -23,7 +23,6 @@ class App extends Component {
     componentDidMount() {
         // Copying products from current state
         const products = [...this.state.products];
-
         // Each product that is on sale, add the category "Sale"
         products.forEach((product) => {
             if (product.sale !== null) {
@@ -50,7 +49,7 @@ class App extends Component {
 
     handleIncrementProduct = (
         product,
-        selectedValue = product.colors[0],
+        selectedValue = product.sizes[0],
         quantity = 1
     ) => {
         // Copying cart from current state
