@@ -66,6 +66,7 @@ function Content(props) {
                         <ProductsOverview
                             categorie="All Products"
                             products={products}
+                            favorites={favorites}
                             currency={currency}
                             onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}

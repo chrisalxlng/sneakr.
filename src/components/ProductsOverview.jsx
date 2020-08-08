@@ -7,6 +7,7 @@ class ProductsOverview extends Component {
         super(props);
         this.state = {
             products: props.products,
+            favorites: props.favorites,
             categorie: props.categorie,
             currency: props.currency,
             onIncrementProduct: props.onIncrementProduct,
@@ -15,7 +16,7 @@ class ProductsOverview extends Component {
         };
     }
 
-    handleOpenPopup = (product) => {
+    handleTogglePopup = (product) => {
         this.setState({
             popupProduct: product,
             showPopup: !this.state.showPopup,
@@ -25,6 +26,7 @@ class ProductsOverview extends Component {
     render() {
         const {
             products,
+            favorites,
             categorie,
             currency,
             onFavorite,
@@ -38,8 +40,9 @@ class ProductsOverview extends Component {
                 <h2>{categorie}</h2>
                 <ProductCardContainer
                     products={products}
+                    favorites={favorites}
                     currency={currency}
-                    onOpenPopup={this.handleOpenPopup}
+                    onOpenPopup={this.handleTogglePopup}
                     onFavorite={onFavorite}
                 />
                 {showPopup ? (

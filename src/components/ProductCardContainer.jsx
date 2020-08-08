@@ -8,6 +8,7 @@ class ProductCardContainer extends Component {
         super(props);
         this.state = {
             products: props.products,
+            favorites: props.favorites,
             currency: props.currency,
             onOpenPopup: props.onOpenPopup,
             onFavorite: props.onFavorite,
@@ -80,6 +81,7 @@ class ProductCardContainer extends Component {
     render() {
         const {
             products,
+            favorites,
             currency,
             onOpenPopup,
             onFavorite,
@@ -140,6 +142,7 @@ class ProductCardContainer extends Component {
                         <ProductCard
                             key={item.id}
                             product={item}
+                            favorites={favorites}
                             currency={currency}
                             onOpenPopup={onOpenPopup}
                             onFavorite={onFavorite}

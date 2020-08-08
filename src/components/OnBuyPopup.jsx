@@ -1,7 +1,7 @@
 import React from "react";
 import BuyProductInterface from "./BuyProductInterface";
 
-function onBuyPopup(props) {
+function OnBuyPopup(props) {
     const { product, currency, onFavorite, onIncrementProduct } = props;
 
     return (
@@ -19,4 +19,4 @@ function onBuyPopup(props) {
     );
 }
 
-export default onBuyPopup;
+export default OnBuyPopup;
