@@ -114,15 +114,18 @@ function ProductCard(props) {
                     </NamePriceContainer>
                 </Link>
                 <BuyButton as="button" onClick={() => onOpenPopup(product)}>
-                    <img src="/icons/cart.svg" />
+                    <img alt="Buy" src="/icons/cart.svg" />
                 </BuyButton>
                 <FavoriteButton as="button" onClick={() => onFavorite(product)}>
                     {favorites
                         .map((item) => item.productID)
                         .includes(product.id) ? (
-                        <img src="/icons/heart-full.svg" />
+                        <img
+                            alt="Remove Favorite"
+                            src="/icons/heart-full.svg"
+                        />
                     ) : (
-                        <img src="/icons/heart.svg" />
+                        <img alt="Add Favorite" src="/icons/heart.svg" />
                     )}
                 </FavoriteButton>
             </Card>

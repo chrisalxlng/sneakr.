@@ -1,10 +1,15 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import styled from "styled-components";
 import Home from "./Home";
 import ShoppingCart from "./ShoppingCart";
 import Favorites from "./Favorites";
 import ProductPage from "./ProductPage";
 import ProductsOverview from "./ProductsOverview";
+
+const Wrapper = styled.div`
+    padding-top: 50px;
+`;
 
 function Content(props) {
     const {
@@ -21,7 +26,7 @@ function Content(props) {
     } = props;
 
     return (
-        <div>
+        <Wrapper>
             <Switch>
                 <Route
                     exact
@@ -116,7 +121,7 @@ function Content(props) {
                     )}
                 />
             </Switch>
-        </div>
+        </Wrapper>
     );
 }
 
