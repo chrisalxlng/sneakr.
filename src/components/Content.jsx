@@ -8,7 +8,9 @@ import ProductPage from "./ProductPage";
 import ProductsOverview from "./ProductsOverview";
 
 const Wrapper = styled.div`
+    padding: 0 40px;
     padding-top: 50px;
+    background-color: #f5f4f4;
 `;
 
 function Content(props) {

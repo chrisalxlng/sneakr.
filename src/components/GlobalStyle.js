@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
 
+    *:focus {
+        outline: none;
+    }
+
     a {
         text-decoration: none;
     }
