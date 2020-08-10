@@ -10,8 +10,13 @@ class ProductsOverview extends Component {
             favorites: props.favorites,
             categorie: props.categorie,
             currency: props.currency,
+            displayedProducts: props.displayedProducts,
+            productsSortBy: props.productsSortBy,
+            productsFilterSliderValues: props.productsFilterSliderValues,
             onIncrementProduct: props.onIncrementProduct,
             onFavorite: props.onFavorite,
+            onSort: props.onSort,
+            onSliderChange: props.onSliderChange,
             showPopup: false,
         };
     }
@@ -29,8 +34,13 @@ class ProductsOverview extends Component {
             favorites,
             categorie,
             currency,
+            displayedProducts,
+            productsSortBy,
+            productsFilterSliderValues,
             onFavorite,
             onIncrementProduct,
+            onSort,
+            onSliderChange,
             showPopup,
             popupProduct,
         } = this.state;
@@ -39,11 +49,17 @@ class ProductsOverview extends Component {
             <div>
                 <h2>{categorie}</h2>
                 <ProductCardContainer
-                    products={products}
+                    products={products.filter((product) =>
+                        displayedProducts.includes(product.id)
+                    )}
                     favorites={favorites}
                     currency={currency}
+                    productsSortBy={productsSortBy}
+                    productsFilterSliderValues={productsFilterSliderValues}
                     onOpenPopup={this.handleTogglePopup}
                     onFavorite={onFavorite}
+                    onSort={onSort}
+                    onSliderChange={onSliderChange}
                 />
                 {showPopup ? (
                     <OnBuyPopup

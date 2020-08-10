@@ -17,6 +17,9 @@ class App extends Component {
             favorites: [],
             categories: [],
             currency: "€",
+            displayedProducts: products.map((product) => product.id),
+            productsSortBy: "default",
+            productsFilterSliderValues: [0, 180],
         };
     }
 
@@ -259,8 +262,83 @@ class App extends Component {
         this.setState({ favorites });
     };
 
+    handleSort = (sortBy) => {
+        // Copying products and productsSortBy from current state
+        const products = [...this.state.products];
+        const productsSortBy = sortBy;
+
+        // Sorting by default order
+        if (productsSortBy === "default") {
+            products.sort((prev, next) => {
+                if (prev.id > next.id) return 1;
+                else if (prev.id < next.id) return -1;
+                else return 0;
+            });
+        } else {
+            // Declaring the sortValue
+            let sortValue;
+
+            // Defining the sortValue
+            if (productsSortBy === "ascending") sortValue = 1;
+            else if (productsSortBy === "descending") sortValue = -1;
+
+            // Sorting the products array in regards to sortValue
+            products.sort((prev, next) => {
+                if (
+                    (prev.sale ? prev.sale : prev.price) >
+                    (next.sale ? next.sale : next.price)
+                )
+                    return sortValue;
+                else if (
+                    (prev.sale ? prev.sale : prev.price) <
+                    (next.sale ? next.sale : next.price)
+                )
+                    return -sortValue;
+                else return 0;
+            });
+        }
+
+        // Setting the new state
+        this.setState({
+            products: products,
+            productsSortBy: productsSortBy,
+        });
+    };
+
+    handleSliderChange = (sliderValues) => {
+        // Copying products and productsFilterSliderValues from current state
+        let products = [...this.state.products];
+        const productsFilterSliderValues = sliderValues;
+
+        // Filtering the products regarding to price span
+        const displayedProducts = products
+            .filter(
+                (product) =>
+                    (product.sale ? product.sale : product.price) >=
+                        productsFilterSliderValues[0] &&
+                    (product.sale ? product.sale : product.price) <=
+                        productsFilterSliderValues[1]
+            )
+            .map((product) => product.id);
+
+        // Setting the new state
+        this.setState({
+            displayedProducts: displayedProducts,
+            productsFilterSliderValues: productsFilterSliderValues,
+        });
+    };
+
     render() {
-        const { products, cart, favorites, categories, currency } = this.state;
+        const {
+            products,
+            cart,
+            favorites,
+            categories,
+            currency,
+            displayedProducts,
+            productsSortBy,
+            productsFilterSliderValues,
+        } = this.state;
 
         return (
             <div className="App">
@@ -276,11 +354,16 @@ class App extends Component {
                         favorites={favorites}
                         categories={categories}
                         currency={currency}
+                        displayedProducts={displayedProducts}
+                        productsSortBy={productsSortBy}
+                        productsFilterSliderValues={productsFilterSliderValues}
                         onIncrementProduct={this.handleIncrementProduct}
                         onDecrementProduct={this.handleDecrementProduct}
                         onRemoveProduct={this.handleRemoveProduct}
                         onRemoveAllProducts={this.handleRemoveAllProducts}
                         onFavorite={this.handleFavorite}
+                        onSort={this.handleSort}
+                        onSliderChange={this.handleSliderChange}
                     />
                 </BrowserRouter>
             </div>

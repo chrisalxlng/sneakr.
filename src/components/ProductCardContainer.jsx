@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import NoUiSlider from "nouislider-react";
 import "nouislider/distribute/nouislider.css";
@@ -104,184 +104,92 @@ const ProductGrid = styled.div`
     justify-content: space-between;
 `;
 
-class ProductCardContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            products: props.products,
-            favorites: props.favorites,
-            currency: props.currency,
-            onOpenPopup: props.onOpenPopup,
-            onFavorite: props.onFavorite,
-            copyOfProducts: props.products,
-            sortBy: "default",
-            sliderValues: [0, 180],
-        };
-    }
+function ProductCardContainer(props) {
+    const {
+        products,
+        favorites,
+        currency,
+        productsSortBy,
+        productsFilterSliderValues,
+        onOpenPopup,
+        onFavorite,
+        onSort,
+        onSliderChange,
+    } = props;
 
-    handleSort = (sortBy, products) => {
-        // Sorting by default order
-        if (sortBy === "default") {
-            products.sort((prev, next) => {
-                if (prev.id > next.id) return 1;
-                else if (prev.id < next.id) return -1;
-                else return 0;
-            });
-        } else {
-            // Declaring the sortValue
-            let sortValue;
+    return (
+        <div>
+            <GlobalStyle />
+            <Container>
+                <div>
+                    <UiContainerLabel>Sort by:</UiContainerLabel>
 
-            // Defining the sortValue
-            if (sortBy === "ascending") sortValue = 1;
-            else if (sortBy === "descending") sortValue = -1;
-
-            // Sorting the products array in regards to sortValue
-            products.sort((prev, next) => {
-                if (
-                    (prev.sale ? prev.sale : prev.price) >
-                    (next.sale ? next.sale : next.price)
-                )
-                    return sortValue;
-                else if (
-                    (prev.sale ? prev.sale : prev.price) <
-                    (next.sale ? next.sale : next.price)
-                )
-                    return -sortValue;
-                else return 0;
-            });
-        }
-
-        // Setting the new state
-        this.setState({
-            products: products,
-            sortBy: sortBy,
-        });
-
-        return products;
-    };
-
-    handleSliderChange = (sliderValueSpan, products) => {
-        // Filtering the products regarding to price span
-        products = products.filter(
-            (product) =>
-                (product.sale ? product.sale : product.price) >=
-                    sliderValueSpan[0] &&
-                (product.sale ? product.sale : product.price) <=
-                    sliderValueSpan[1]
-        );
-
-        // Setting the new state
-        this.setState({
-            products: products,
-            sliderValues: sliderValueSpan,
-        });
-
-        return products;
-    };
-
-    render() {
-        const {
-            products,
-            favorites,
-            currency,
-            onOpenPopup,
-            onFavorite,
-            sliderValues,
-            copyOfProducts,
-        } = this.state;
-
-        return (
-            <div>
-                <GlobalStyle />
-                <Container>
-                    <div>
-                        <UiContainerLabel>Sort by:</UiContainerLabel>
-
-                        <Select>
-                            <select
-                                onChange={(event) => {
-                                    let products = this.handleSort(
-                                        event.target.value,
-                                        copyOfProducts
-                                    );
-                                    this.handleSliderChange(
-                                        this.state.sliderValues,
-                                        products
-                                    );
-                                }}
-                                name="sort"
-                                id="sort-select"
-                                defaultValue="default"
+                    <Select>
+                        <select
+                            onChange={(event) => onSort(event.target.value)}
+                            name="sort"
+                            id="sort-select"
+                            defaultValue={productsSortBy}
+                        >
+                            <option key="sort-pricing-default" value="default">
+                                Our Favorites
+                            </option>
+                            <option
+                                key="sort-pricing-ascending"
+                                value="ascending"
                             >
-                                <option
-                                    key="sort-pricing-default"
-                                    value="default"
-                                >
-                                    Our Favorites
-                                </option>
-                                <option
-                                    key="sort-pricing-ascending"
-                                    value="ascending"
-                                >
-                                    Lowest Prices first
-                                </option>
-                                <option
-                                    key="sort-pricing-descending"
-                                    value="descending"
-                                >
-                                    Highest Prices first
-                                </option>
-                                ))
-                            </select>
-                            <img src="/icons/down-arrow.svg" alt="" />
-                        </Select>
-                    </div>
+                                Lowest Prices first
+                            </option>
+                            <option
+                                key="sort-pricing-descending"
+                                value="descending"
+                            >
+                                Highest Prices first
+                            </option>
+                            ))
+                        </select>
+                        <img src="/icons/down-arrow.svg" alt="" />
+                    </Select>
+                </div>
 
-                    <SliderWrapper>
-                        <UiContainerLabel>
-                            Filter by price span:
-                        </UiContainerLabel>
-                        <Slider>
-                            <span className="price-label">
-                                {Math.floor(sliderValues[0]) + currency}
-                            </span>
-                            <NoUiSlider
-                                range={{ min: 0, max: 180 }}
-                                start={sliderValues}
-                                step={5}
-                                onUpdate={(event) => {
-                                    let products = this.handleSort(
-                                        this.state.sortBy,
-                                        copyOfProducts
-                                    );
-                                    this.handleSliderChange(event, products);
-                                }}
-                                connect
-                            />
-                            <span className="price-label">
-                                {Math.floor(sliderValues[1]) + currency}
-                            </span>
-                        </Slider>
-                    </SliderWrapper>
-                </Container>
+                <SliderWrapper>
+                    <UiContainerLabel>Filter by price span:</UiContainerLabel>
+                    <Slider>
+                        <span className="price-label">
+                            {Math.floor(productsFilterSliderValues[0]) +
+                                currency}
+                        </span>
+                        <NoUiSlider
+                            range={{ min: 0, max: 180 }}
+                            start={productsFilterSliderValues}
+                            step={5}
+                            onChange={(event) => onSliderChange(event)}
+                            connect
+                        />
+                        <span className="price-label">
+                            {Math.floor(productsFilterSliderValues[1]) +
+                                currency}
+                        </span>
+                    </Slider>
+                </SliderWrapper>
+            </Container>
 
-                <ProductGrid>
-                    {products.map((item) => {
-                        return (
-                            <ProductCard
-                                key={item.id}
-                                product={item}
-                                favorites={favorites}
-                                currency={currency}
-                                onOpenPopup={onOpenPopup}
-                                onFavorite={onFavorite}
-                            />
-                        );
-                    })}
-                </ProductGrid>
-            </div>
-        );
-    }
+            <ProductGrid>
+                {products.map((item) => {
+                    return (
+                        <ProductCard
+                            key={item.id}
+                            product={item}
+                            favorites={favorites}
+                            currency={currency}
+                            onOpenPopup={onOpenPopup}
+                            onFavorite={onFavorite}
+                        />
+                    );
+                })}
+            </ProductGrid>
+        </div>
+    );
 }
 
 export default ProductCardContainer;

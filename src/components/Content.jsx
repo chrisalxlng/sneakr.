@@ -20,11 +20,16 @@ function Content(props) {
         favorites,
         categories,
         currency,
+        displayedProducts,
+        productsSortBy,
+        productsFilterSliderValues,
         onIncrementProduct,
         onDecrementProduct,
         onFavorite,
         onRemoveProduct,
         onRemoveAllProducts,
+        onSort,
+        onSliderChange,
     } = props;
 
     return (
@@ -75,8 +80,15 @@ function Content(props) {
                             products={products}
                             favorites={favorites}
                             currency={currency}
+                            displayedProducts={displayedProducts}
+                            productsSortBy={productsSortBy}
+                            productsFilterSliderValues={
+                                productsFilterSliderValues
+                            }
                             onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}
+                            onSort={onSort}
+                            onSliderChange={onSliderChange}
                         />
                     )}
                 />
@@ -116,9 +128,17 @@ function Content(props) {
                                     )[0]
                                 )
                             )}
+                            favorites={favorites}
                             currency={currency}
+                            displayedProducts={displayedProducts}
+                            productsSortBy={productsSortBy}
+                            productsFilterSliderValues={
+                                productsFilterSliderValues
+                            }
                             onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}
+                            onSort={onSort}
+                            onSliderChange={onSliderChange}
                         />
                     )}
                 />
