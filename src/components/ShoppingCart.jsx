@@ -76,6 +76,8 @@ class ShoppingCart extends Component {
                                 .includes(product.id)
                         )}
                         cart={cart}
+                        showPopup={showPopup}
+                        onTogglePopup={this.handleTogglePopup}
                     />
                 ) : null}
             </div>

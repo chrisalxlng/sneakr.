@@ -329,9 +329,12 @@ class App extends Component {
         });
     };
 
-    handleTogglePopup = (product) => {
+    handleTogglePopup = (product = null) => {
         this.setState({
-            popupOnBuyProduct: { showPopup: true, product: product },
+            popupOnBuyProduct: {
+                showPopup: !this.state.popupOnBuyProduct.showPopup,
+                product: product,
+            },
         });
     };
 

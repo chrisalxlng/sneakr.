@@ -19,6 +19,13 @@ function ProductsOverview(props) {
         onTogglePopup,
     } = props;
 
+    // Prevent scrolling of app if popup is open
+    if (popupOnBuyProduct.showPopup) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "unset";
+    }
+
     return (
         <div>
             <h2>{categorie}</h2>
@@ -41,6 +48,7 @@ function ProductsOverview(props) {
                     currency={currency}
                     onFavorite={onFavorite}
                     onIncrementProduct={onIncrementProduct}
+                    onTogglePopup={onTogglePopup}
                 />
             ) : null}
         </div>
