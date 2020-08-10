@@ -20,6 +20,7 @@ class App extends Component {
             displayedProducts: products.map((product) => product.id),
             productsSortBy: "default",
             productsFilterSliderValues: [0, 180],
+            popupOnBuyProduct: { showPopup: false, product: null },
         };
     }
 
@@ -328,6 +329,12 @@ class App extends Component {
         });
     };
 
+    handleTogglePopup = (product) => {
+        this.setState({
+            popupOnBuyProduct: { showPopup: true, product: product },
+        });
+    };
+
     render() {
         const {
             products,
@@ -338,6 +345,7 @@ class App extends Component {
             displayedProducts,
             productsSortBy,
             productsFilterSliderValues,
+            popupOnBuyProduct,
         } = this.state;
 
         return (
@@ -357,6 +365,7 @@ class App extends Component {
                         displayedProducts={displayedProducts}
                         productsSortBy={productsSortBy}
                         productsFilterSliderValues={productsFilterSliderValues}
+                        popupOnBuyProduct={popupOnBuyProduct}
                         onIncrementProduct={this.handleIncrementProduct}
                         onDecrementProduct={this.handleDecrementProduct}
                         onRemoveProduct={this.handleRemoveProduct}
@@ -364,6 +373,7 @@ class App extends Component {
                         onFavorite={this.handleFavorite}
                         onSort={this.handleSort}
                         onSliderChange={this.handleSliderChange}
+                        onTogglePopup={this.handleTogglePopup}
                     />
                 </BrowserRouter>
             </div>

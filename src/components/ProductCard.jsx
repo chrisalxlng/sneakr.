@@ -90,7 +90,7 @@ const BuyButton = styled(Button)`
 `;
 
 function ProductCard(props) {
-    const { product, favorites, currency, onOpenPopup, onFavorite } = props;
+    const { product, favorites, currency, onTogglePopup, onFavorite } = props;
     const { id, name, price, sale } = product;
     const image = product["image-small"];
 
@@ -113,7 +113,7 @@ function ProductCard(props) {
                         )}
                     </NamePriceContainer>
                 </Link>
-                <BuyButton as="button" onClick={() => onOpenPopup(product)}>
+                <BuyButton as="button" onClick={() => onTogglePopup(product)}>
                     <img alt="Buy" src="/icons/cart.svg" />
                 </BuyButton>
                 <FavoriteButton as="button" onClick={() => onFavorite(product)}>

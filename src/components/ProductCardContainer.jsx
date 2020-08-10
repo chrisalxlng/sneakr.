@@ -111,7 +111,7 @@ function ProductCardContainer(props) {
         currency,
         productsSortBy,
         productsFilterSliderValues,
-        onOpenPopup,
+        onTogglePopup,
         onFavorite,
         onSort,
         onSliderChange,
@@ -182,7 +182,7 @@ function ProductCardContainer(props) {
                             product={item}
                             favorites={favorites}
                             currency={currency}
-                            onOpenPopup={onOpenPopup}
+                            onTogglePopup={onTogglePopup}
                             onFavorite={onFavorite}
                         />
                     );
