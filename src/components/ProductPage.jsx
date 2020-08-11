@@ -2,7 +2,17 @@ import React from "react";
 import BuyProductInterface from "./BuyProductInterface";
 
 function ProductPage(props) {
-    const { product, currency, onFavorite, onIncrementProduct } = props;
+    const {
+        product,
+        currency,
+        buyProductInterface,
+        onFavorite,
+        onIncrementProduct,
+        onInterfaceIncrementQuantity,
+        onInterfaceDecrementQuantity,
+        onInterfaceReset,
+        onInterfaceSelectChange,
+    } = props;
     const { description, materials, cleaning } = product;
 
     return (
@@ -19,8 +29,13 @@ function ProductPage(props) {
                 product={product}
                 image={product["image-large"]}
                 currency={currency}
+                buyProductInterface={buyProductInterface}
                 onFavorite={onFavorite}
                 onIncrementProduct={onIncrementProduct}
+                onInterfaceIncrementQuantity={onInterfaceIncrementQuantity}
+                onInterfaceDecrementQuantity={onInterfaceDecrementQuantity}
+                onInterfaceReset={onInterfaceReset}
+                onInterfaceSelectChange={onInterfaceSelectChange}
             />
         </div>
     );

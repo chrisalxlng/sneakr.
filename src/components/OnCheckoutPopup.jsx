@@ -23,6 +23,7 @@ const Popup = styled.div`
     border-radius: 10px;
     width: 75vw;
     height: 75vh;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
 `;
 
 function OnCheckoutPopup(props) {

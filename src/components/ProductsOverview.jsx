@@ -12,11 +12,16 @@ function ProductsOverview(props) {
         productsSortBy,
         productsFilterSliderValues,
         popupOnBuyProduct,
+        buyProductInterface,
         onIncrementProduct,
         onFavorite,
         onSort,
         onSliderChange,
         onTogglePopup,
+        onInterfaceIncrementQuantity,
+        onInterfaceDecrementQuantity,
+        onInterfaceReset,
+        onInterfaceSelectChange,
     } = props;
 
     // Prevent scrolling of app if popup is open
@@ -46,9 +51,14 @@ function ProductsOverview(props) {
                 <OnBuyPopup
                     product={popupOnBuyProduct.product}
                     currency={currency}
+                    buyProductInterface={buyProductInterface}
                     onFavorite={onFavorite}
                     onIncrementProduct={onIncrementProduct}
                     onTogglePopup={onTogglePopup}
+                    onInterfaceIncrementQuantity={onInterfaceIncrementQuantity}
+                    onInterfaceDecrementQuantity={onInterfaceDecrementQuantity}
+                    onInterfaceReset={onInterfaceReset}
+                    onInterfaceSelectChange={onInterfaceSelectChange}
                 />
             ) : null}
         </div>

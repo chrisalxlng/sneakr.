@@ -21,6 +21,7 @@ class App extends Component {
             productsSortBy: "default",
             productsFilterSliderValues: [0, 180],
             popupOnBuyProduct: { showPopup: false, product: null },
+            buyProductInterface: { quantity: 1, selectedValue: null },
         };
     }
 
@@ -338,6 +339,51 @@ class App extends Component {
         });
     };
 
+    handleInterfaceIncrementQuantity = () => {
+        // Copying buyProductInterface from current state
+        const buyProductInterface = { ...this.state.buyProductInterface };
+
+        // Increment quantity
+        buyProductInterface.quantity++;
+
+        // Setting the new state
+        this.setState({ buyProductInterface: buyProductInterface });
+    };
+
+    handleInterfaceDecrementQuantity = () => {
+        // Copying buyProductInterface from current state
+        const buyProductInterface = { ...this.state.buyProductInterface };
+
+        // If quantity > 1, decrement quantity
+        if (buyProductInterface.quantity > 1) buyProductInterface.quantity--;
+
+        // Setting the new state
+        this.setState({ buyProductInterface: buyProductInterface });
+    };
+
+    handleInterfaceReset = () => {
+        // Copying buyProductInterface from current state
+        const buyProductInterface = { ...this.state.buyProductInterface };
+
+        // Setting quantity to 1
+        buyProductInterface.quantity = 1;
+        buyProductInterface.selectedValue = null;
+
+        // Setting the new state
+        this.setState({ buyProductInterface: buyProductInterface });
+    };
+
+    handleInterfaceSelectChange = (value) => {
+        // Copying buyProductInterface from current state
+        const buyProductInterface = { ...this.state.buyProductInterface };
+
+        // Setting selectValue to the changed value
+        buyProductInterface.selectedValue = value;
+
+        // Setting the state with the new selected value
+        this.setState({ buyProductInterface: buyProductInterface });
+    };
+
     render() {
         const {
             products,
@@ -349,6 +395,7 @@ class App extends Component {
             productsSortBy,
             productsFilterSliderValues,
             popupOnBuyProduct,
+            buyProductInterface,
         } = this.state;
 
         return (
@@ -369,6 +416,7 @@ class App extends Component {
                         productsSortBy={productsSortBy}
                         productsFilterSliderValues={productsFilterSliderValues}
                         popupOnBuyProduct={popupOnBuyProduct}
+                        buyProductInterface={buyProductInterface}
                         onIncrementProduct={this.handleIncrementProduct}
                         onDecrementProduct={this.handleDecrementProduct}
                         onRemoveProduct={this.handleRemoveProduct}
@@ -377,6 +425,16 @@ class App extends Component {
                         onSort={this.handleSort}
                         onSliderChange={this.handleSliderChange}
                         onTogglePopup={this.handleTogglePopup}
+                        onInterfaceIncrementQuantity={
+                            this.handleInterfaceIncrementQuantity
+                        }
+                        onInterfaceDecrementQuantity={
+                            this.handleInterfaceDecrementQuantity
+                        }
+                        onInterfaceReset={this.handleInterfaceReset}
+                        onInterfaceSelectChange={
+                            this.handleInterfaceSelectChange
+                        }
                     />
                 </BrowserRouter>
             </div>

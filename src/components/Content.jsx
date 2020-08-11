@@ -24,6 +24,7 @@ function Content(props) {
         productsSortBy,
         productsFilterSliderValues,
         popupOnBuyProduct,
+        buyProductInterface,
         onIncrementProduct,
         onDecrementProduct,
         onFavorite,
@@ -32,6 +33,10 @@ function Content(props) {
         onSort,
         onSliderChange,
         onTogglePopup,
+        onInterfaceIncrementQuantity,
+        onInterfaceDecrementQuantity,
+        onInterfaceReset,
+        onInterfaceSelectChange,
     } = props;
 
     return (
@@ -88,11 +93,20 @@ function Content(props) {
                                 productsFilterSliderValues
                             }
                             popupOnBuyProduct={popupOnBuyProduct}
+                            buyProductInterface={buyProductInterface}
                             onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}
                             onSort={onSort}
                             onSliderChange={onSliderChange}
                             onTogglePopup={onTogglePopup}
+                            onInterfaceIncrementQuantity={
+                                onInterfaceIncrementQuantity
+                            }
+                            onInterfaceDecrementQuantity={
+                                onInterfaceDecrementQuantity
+                            }
+                            onInterfaceReset={onInterfaceReset}
+                            onInterfaceSelectChange={onInterfaceSelectChange}
                         />
                     )}
                 />
@@ -108,8 +122,17 @@ function Content(props) {
                                 )[0]
                             }
                             currency={currency}
+                            buyProductInterface={buyProductInterface}
                             onFavorite={onFavorite}
                             onIncrementProduct={onIncrementProduct}
+                            onInterfaceIncrementQuantity={
+                                onInterfaceIncrementQuantity
+                            }
+                            onInterfaceDecrementQuantity={
+                                onInterfaceDecrementQuantity
+                            }
+                            onInterfaceReset={onInterfaceReset}
+                            onInterfaceSelectChange={onInterfaceSelectChange}
                         />
                     )}
                 />
@@ -140,11 +163,20 @@ function Content(props) {
                                 productsFilterSliderValues
                             }
                             popupOnBuyProduct={popupOnBuyProduct}
+                            buyProductInterface={buyProductInterface}
                             onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}
                             onSort={onSort}
                             onSliderChange={onSliderChange}
                             onTogglePopup={onTogglePopup}
+                            onInterfaceIncrementQuantity={
+                                onInterfaceIncrementQuantity
+                            }
+                            onInterfaceDecrementQuantity={
+                                onInterfaceDecrementQuantity
+                            }
+                            onInterfaceReset={onInterfaceReset}
+                            onInterfaceSelectChange={onInterfaceSelectChange}
                         />
                     )}
                 />

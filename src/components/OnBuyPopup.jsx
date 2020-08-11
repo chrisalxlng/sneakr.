@@ -24,15 +24,21 @@ const Popup = styled.div`
     border-radius: 10px;
     width: 75vw;
     height: 75vh;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
 `;
 
 function OnBuyPopup(props) {
     const {
         product,
         currency,
+        buyProductInterface,
         onFavorite,
         onIncrementProduct,
         onTogglePopup,
+        onInterfaceIncrementQuantity,
+        onInterfaceDecrementQuantity,
+        onInterfaceReset,
+        onInterfaceSelectChange,
     } = props;
 
     return ReactDom.createPortal(
@@ -42,8 +48,13 @@ function OnBuyPopup(props) {
                     product={product}
                     image={product["image-small"]}
                     currency={currency}
+                    buyProductInterface={buyProductInterface}
                     onFavorite={onFavorite}
                     onIncrementProduct={onIncrementProduct}
+                    onInterfaceIncrementQuantity={onInterfaceIncrementQuantity}
+                    onInterfaceDecrementQuantity={onInterfaceDecrementQuantity}
+                    onInterfaceReset={onInterfaceReset}
+                    onInterfaceSelectChange={onInterfaceSelectChange}
                 />
             </Popup>
         </PopupBackground>,
