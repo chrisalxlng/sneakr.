@@ -26,7 +26,7 @@ const NamePriceContainer = styled(Container)`
     position: absolute;
     bottom: 5%;
     left: 5%;
-    max-width: 55%;
+    max-width: 65%;
     border-radius: 10px;
     padding: 0.5em 1em;
 
@@ -48,12 +48,12 @@ const NamePriceContainer = styled(Container)`
         color: black;
         display: inline-block;
         font-size: 12px;
+        margin-right: 5px;
     }
 
     .sale-strike-through {
         color: black;
         display: inline-block;
-        margin-left: 5px;
         font-size: 12px;
         text-decoration: line-through;
     }

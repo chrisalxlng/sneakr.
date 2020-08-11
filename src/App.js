@@ -365,7 +365,7 @@ class App extends Component {
         // Copying buyProductInterface from current state
         const buyProductInterface = { ...this.state.buyProductInterface };
 
-        // Setting quantity to 1
+        // Resetting values of buyProductInterface
         buyProductInterface.quantity = 1;
         buyProductInterface.selectedValue = null;
 

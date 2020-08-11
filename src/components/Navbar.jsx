@@ -81,7 +81,7 @@ function Navbar(props) {
                 <NavLink to="/">
                     <Link>Home</Link>
                 </NavLink>
-                <NavLink to="/">
+                <NavLink to="/Sale">
                     <Link>Sale</Link>
                 </NavLink>
                 <NavLink to="/">
