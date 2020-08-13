@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Range } from "rc-slider";
 import ProductCard from "./ProductCard";
+import RangeSlider from "./RangeSlider";
 import GlobalStyle from "./GlobalStyle";
-import "rc-slider/assets/index.css";
 
 const Container = styled.div`
     display: flex;
@@ -52,31 +51,6 @@ const Slider = styled(UiContainer)`
     width: 100%;
     padding: 10px 10px;
 `;
-
-const SliderLabel = styled.span`
-    font-size: 12px;
-    line-height: 0;
-    margin: 0 10px;
-`;
-
-const Track = {
-    backgroundColor: "black",
-    height: "2px",
-    top: "6px",
-};
-
-const Rail = {
-    height: "2px",
-    top: "6px",
-};
-
-const Handle = {
-    backgroundColor: "white",
-    border: "2px solid black",
-    height: "10px",
-    width: "10px",
-    top: "7px",
-};
 
 const UiContainerLabel = styled.p`
     padding-bottom: 5px;
@@ -141,23 +115,14 @@ function ProductCardContainer(props) {
                 <SliderWrapper>
                     <UiContainerLabel>Filter by price span:</UiContainerLabel>
                     <Slider>
-                        <SliderLabel>
-                            {Math.floor(productsFilterSliderValues[0]) +
-                                currency}
-                        </SliderLabel>
-                        <Range
-                            max={180}
-                            step={5}
-                            defaultValue={productsFilterSliderValues}
-                            onAfterChange={(event) => onSliderChange(event)}
-                            handleStyle={[Handle, Handle]}
-                            trackStyle={[Track]}
-                            railStyle={Rail}
+                        <RangeSlider
+                            onSliderChange={onSliderChange}
+                            values={productsFilterSliderValues}
+                            productsFilterSliderValues={
+                                productsFilterSliderValues
+                            }
+                            currency={currency}
                         />
-                        <SliderLabel>
-                            {Math.floor(productsFilterSliderValues[1]) +
-                                currency}
-                        </SliderLabel>
                     </Slider>
                 </SliderWrapper>
             </Container>
