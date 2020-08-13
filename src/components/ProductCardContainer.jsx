@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import NoUiSlider from "nouislider-react";
-import "nouislider/distribute/nouislider.css";
+import { Range } from "rc-slider";
 import ProductCard from "./ProductCard";
 import GlobalStyle from "./GlobalStyle";
+import "rc-slider/assets/index.css";
 
 const Container = styled.div`
     display: flex;
@@ -44,53 +44,39 @@ const Select = styled(UiContainer)`
     }
 `;
 
-const Slider = styled(UiContainer)`
-    width: 100%;
-    padding: 10px 20px;
-
-    .price-label {
-        font-size: 12px;
-    }
-
-    .noUi-horizontal {
-        margin: 0 10px;
-        height: 5px;
-        width: 100%;
-    }
-
-    .noUi-target {
-        background: #efa7a7;
-        border-radius: 50px;
-        border: none;
-        box-shadow: none;
-    }
-
-    .noUi-connect {
-        background: red;
-    }
-
-    .noUi-horizontal .noUi-handle {
-        border-radius: 50%;
-        border: none;
-        box-shadow: none;
-        cursor: pointer;
-        background-color: red;
-        height: 10px;
-        width: 10px;
-        top: -3px;
-        right: -5px;
-
-        :before,
-        :after {
-            content: "";
-            display: none;
-        }
-    }
-`;
-
 const SliderWrapper = styled.div`
     width: 300px;
 `;
+
+const Slider = styled(UiContainer)`
+    width: 100%;
+    padding: 10px 10px;
+`;
+
+const SliderLabel = styled.span`
+    font-size: 12px;
+    line-height: 0;
+    margin: 0 10px;
+`;
+
+const Track = {
+    backgroundColor: "black",
+    height: "2px",
+    top: "6px",
+};
+
+const Rail = {
+    height: "2px",
+    top: "6px",
+};
+
+const Handle = {
+    backgroundColor: "white",
+    border: "2px solid black",
+    height: "10px",
+    width: "10px",
+    top: "7px",
+};
 
 const UiContainerLabel = styled.p`
     padding-bottom: 5px;
@@ -155,21 +141,23 @@ function ProductCardContainer(props) {
                 <SliderWrapper>
                     <UiContainerLabel>Filter by price span:</UiContainerLabel>
                     <Slider>
-                        <span className="price-label">
+                        <SliderLabel>
                             {Math.floor(productsFilterSliderValues[0]) +
                                 currency}
-                        </span>
-                        <NoUiSlider
-                            range={{ min: 0, max: 180 }}
-                            start={productsFilterSliderValues}
+                        </SliderLabel>
+                        <Range
+                            max={180}
                             step={5}
-                            onChange={(event) => onSliderChange(event)}
-                            connect
+                            defaultValue={productsFilterSliderValues}
+                            onAfterChange={(event) => onSliderChange(event)}
+                            handleStyle={[Handle, Handle]}
+                            trackStyle={[Track]}
+                            railStyle={Rail}
                         />
-                        <span className="price-label">
+                        <SliderLabel>
                             {Math.floor(productsFilterSliderValues[1]) +
                                 currency}
-                        </span>
+                        </SliderLabel>
                     </Slider>
                 </SliderWrapper>
             </Container>
