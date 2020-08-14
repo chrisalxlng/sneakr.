@@ -50,6 +50,7 @@ function ProductsOverview(props) {
             {popupOnBuyProduct.showPopup ? (
                 <OnBuyPopup
                     product={popupOnBuyProduct.product}
+                    favorites={favorites}
                     currency={currency}
                     buyProductInterface={buyProductInterface}
                     onFavorite={onFavorite}

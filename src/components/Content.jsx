@@ -122,6 +122,7 @@ function Content(props) {
                                 )[0]
                             }
                             currency={currency}
+                            favorites={favorites}
                             buyProductInterface={buyProductInterface}
                             onFavorite={onFavorite}
                             onIncrementProduct={onIncrementProduct}

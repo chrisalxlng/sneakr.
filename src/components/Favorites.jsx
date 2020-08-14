@@ -9,14 +9,18 @@ function Favorites(props) {
             <h2>Favorites</h2>
             {favorites.map((item) => {
                 return (
-                    <FavoriteItem
-                        key={item.favoriteID}
-                        product={
-                            products.filter((i) => i.id === item.productID)[0]
-                        }
-                        currency={currency}
-                        onFavorite={onFavorite}
-                    />
+                    <>
+                        <FavoriteItem
+                            key={item.favoriteID}
+                            product={
+                                products.filter(
+                                    (i) => i.id === item.productID
+                                )[0]
+                            }
+                            currency={currency}
+                            onFavorite={onFavorite}
+                        />
+                    </>
                 );
             })}
         </div>

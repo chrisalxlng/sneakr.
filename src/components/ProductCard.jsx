@@ -81,12 +81,12 @@ const Button = styled(Container)`
     }
 `;
 
-const FavoriteButton = styled(Button)`
-    top: 5%;
-`;
-
 const BuyButton = styled(Button)`
     bottom: 5%;
+`;
+
+const FavoriteButton = styled(Button)`
+    top: 5%;
 `;
 
 function ProductCard(props) {

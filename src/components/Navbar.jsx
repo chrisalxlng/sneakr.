@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import GlobalStyle from "./GlobalStyle";
 
 const Container = styled.div`
     display: flex;
@@ -71,7 +70,6 @@ const CartItemsIndicator = styled.div`
 function Navbar(props) {
     return (
         <Nav>
-            <GlobalStyle />
             <LinkContainer>
                 <NavLink to="/">
                     <Logo>

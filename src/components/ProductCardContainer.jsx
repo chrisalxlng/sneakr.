@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import ProductCard from "./ProductCard";
 import RangeSlider from "./RangeSlider";
-import GlobalStyle from "./GlobalStyle";
 
 const Container = styled.div`
     display: flex;
@@ -79,7 +78,6 @@ function ProductCardContainer(props) {
 
     return (
         <div>
-            <GlobalStyle />
             <Container>
                 <div>
                     <UiContainerLabel>Sort by:</UiContainerLabel>
