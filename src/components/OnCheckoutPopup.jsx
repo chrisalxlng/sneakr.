@@ -1,30 +1,5 @@
 import React from "react";
 import ReactDom from "react-dom";
-import styled from "styled-components";
-
-const PopupBackground = styled.div`
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-`;
-
-const Popup = styled.div`
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    overflow: scroll;
-    border-radius: 10px;
-    width: 75vw;
-    height: 75vh;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-`;
 
 function OnCheckoutPopup(props) {
     const { products, cart, showPopup, onTogglePopup } = props;
@@ -37,8 +12,8 @@ function OnCheckoutPopup(props) {
     }
 
     return ReactDom.createPortal(
-        <PopupBackground onClick={onTogglePopup}>
-            <Popup onClick={(event) => event.stopPropagation()}>
+        <div className="popup__bg" onClick={onTogglePopup}>
+            <div className="popup" onClick={(event) => event.stopPropagation()}>
                 <h2>Checkout successful!</h2>
                 <p>You have bought:</p>
                 <ul>
@@ -51,8 +26,14 @@ function OnCheckoutPopup(props) {
                         );
                     })}
                 </ul>
-            </Popup>
-        </PopupBackground>,
+                <button
+                    className="btn btn--circular popup__close-btn"
+                    onClick={onTogglePopup}
+                >
+                    <img src="/icons/cancel.svg" alt="Cancel" />
+                </button>
+            </div>
+        </div>,
         document.getElementById("portal")
     );
 }

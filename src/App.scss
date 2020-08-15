@@ -1,0 +1,132 @@
+@import "styles/_config";
+@import "styles/global"; //Global styles
+@import "styles/buttons";
+@import "styles/cards";
+@import "styles/navbar";
+
+.product-card-container {
+    &__product-grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 230px);
+        grid-gap: 20px;
+        justify-content: space-between;
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__container-label {
+        padding-bottom: 5px;
+    }
+
+    &__btn {
+        height: 40px;
+    }
+}
+
+.popup {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f4f4;
+    overflow: scroll;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 30px;
+
+    h1 {
+        margin-bottom: 30px;
+        line-height: 20px;
+    }
+
+    &__bg {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__close-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+.buy-interface {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 10%;
+    width: 800px;
+    max-width: 80vw;
+    max-height: 70vh;
+
+    @media (max-width: 630px) {
+        grid-template-columns: 100%;
+    }
+
+    &__label {
+        margin-bottom: 5px;
+    }
+
+    &__image {
+        padding-top: 100%;
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 10px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__price {
+        font-size: 12px;
+        color: black;
+
+        &--sale {
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 5px;
+            color: red;
+            font-weight: 500;
+        }
+
+        &--strike-through {
+            font-size: 10px;
+            display: inline-block;
+            color: grey;
+            text-decoration: line-through;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.content {
+    padding: 0 40px;
+    padding-top: 50px;
+    background-color: #f5f4f4;
+}

@@ -1,67 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import ProductCard from "./ProductCard";
 import RangeSlider from "./RangeSlider";
-
-const Container = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
-
-const UiContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    height: 40px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-`;
-
-const Select = styled(UiContainer)`
-    margin-right: 20px;
-    width: min-content;
-    position: relative;
-    overflow: hidden;
-
-    select  {
-        appearance: none;
-        border: none;
-        padding: 10px 40px 10px 20px;
-        cursor: pointer;
-    }
-
-    img {
-        position: absolute;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 25px;
-        width: 25px;
-        pointer-events: none;
-    }
-`;
-
-const SliderWrapper = styled.div`
-    width: 300px;
-`;
-
-const Slider = styled(UiContainer)`
-    width: 100%;
-    padding: 10px 10px;
-`;
-
-const UiContainerLabel = styled.p`
-    padding-bottom: 5px;
-`;
-
-const ProductGrid = styled.div`
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 230px);
-    grid-gap: 20px;
-    justify-content: space-between;
-`;
 
 function ProductCardContainer(props) {
     const {
@@ -78,11 +17,13 @@ function ProductCardContainer(props) {
 
     return (
         <div>
-            <Container>
+            <div className="product-card-container__btn-container">
                 <div>
-                    <UiContainerLabel>Sort by:</UiContainerLabel>
+                    <p className="product-card-container__container-label">
+                        Sort by:
+                    </p>
 
-                    <Select>
+                    <div className="btn btn--select product-card-container__btn">
                         <select
                             onChange={(event) => onSort(event.target.value)}
                             name="sort"
@@ -107,25 +48,29 @@ function ProductCardContainer(props) {
                             ))
                         </select>
                         <img src="/icons/down-arrow.svg" alt="" />
-                    </Select>
+                    </div>
                 </div>
 
-                <SliderWrapper>
-                    <UiContainerLabel>Filter by price span:</UiContainerLabel>
-                    <Slider>
-                        <RangeSlider
-                            onSliderChange={onSliderChange}
-                            values={productsFilterSliderValues}
-                            productsFilterSliderValues={
-                                productsFilterSliderValues
-                            }
-                            currency={currency}
-                        />
-                    </Slider>
-                </SliderWrapper>
-            </Container>
+                <div>
+                    <p className="product-card-container__container-label">
+                        Filter by price span:
+                    </p>
+                    <div className="btn btn--slider product-card-container__btn">
+                        <div className="slider-content">
+                            <RangeSlider
+                                onSliderChange={onSliderChange}
+                                values={productsFilterSliderValues}
+                                productsFilterSliderValues={
+                                    productsFilterSliderValues
+                                }
+                                currency={currency}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <ProductGrid>
+            <div className="product-card-container__product-grid">
                 {products.map((item) => {
                     return (
                         <ProductCard
@@ -138,7 +83,7 @@ function ProductCardContainer(props) {
                         />
                     );
                 })}
-            </ProductGrid>
+            </div>
         </div>
     );
 }

@@ -4,6 +4,7 @@ import BuyProductInterface from "./BuyProductInterface";
 function ProductPage(props) {
     const {
         product,
+        favorites,
         currency,
         buyProductInterface,
         onFavorite,
@@ -17,7 +18,22 @@ function ProductPage(props) {
 
     return (
         <div>
-            <h1>Product Page</h1>
+            <h1>{product.name}</h1>
+            <div>
+                <BuyProductInterface
+                    product={product}
+                    favorites={favorites}
+                    image={product["image-large"]}
+                    currency={currency}
+                    buyProductInterface={buyProductInterface}
+                    onFavorite={onFavorite}
+                    onIncrementProduct={onIncrementProduct}
+                    onInterfaceIncrementQuantity={onInterfaceIncrementQuantity}
+                    onInterfaceDecrementQuantity={onInterfaceDecrementQuantity}
+                    onInterfaceReset={onInterfaceReset}
+                    onInterfaceSelectChange={onInterfaceSelectChange}
+                />
+            </div>
             <ul>
                 {description.map((item) => {
                     return <li key={description.indexOf(item)}>{item}</li>;
@@ -25,18 +41,6 @@ function ProductPage(props) {
             </ul>
             <p>{materials}</p>
             <p>{cleaning}</p>
-            <BuyProductInterface
-                product={product}
-                image={product["image-large"]}
-                currency={currency}
-                buyProductInterface={buyProductInterface}
-                onFavorite={onFavorite}
-                onIncrementProduct={onIncrementProduct}
-                onInterfaceIncrementQuantity={onInterfaceIncrementQuantity}
-                onInterfaceDecrementQuantity={onInterfaceDecrementQuantity}
-                onInterfaceReset={onInterfaceReset}
-                onInterfaceSelectChange={onInterfaceSelectChange}
-            />
         </div>
     );
 }

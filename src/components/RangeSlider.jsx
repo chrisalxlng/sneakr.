@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 
-const SliderLabel = styled.span`
-    font-size: 12px;
-    line-height: 0;
-    margin: 0 10px;
-    width: 45px;
-`;
+const SliderLabel = {
+    fontSize: "12px",
+    lineHeight: "0",
+    margin: "0 10px",
+    width: "45px",
+};
 
 const Track = {
     backgroundColor: "black",
@@ -54,7 +53,9 @@ class RangeSlider extends Component {
 
         return (
             <>
-                <SliderLabel>{Math.floor(values[0]) + currency}</SliderLabel>
+                <span style={SliderLabel}>
+                    {Math.floor(values[0]) + currency}
+                </span>
                 <Range
                     max={180}
                     step={5}
@@ -65,7 +66,9 @@ class RangeSlider extends Component {
                     trackStyle={[Track]}
                     railStyle={Rail}
                 />
-                <SliderLabel>{Math.floor(values[1]) + currency}</SliderLabel>
+                <span style={SliderLabel}>
+                    {Math.floor(values[1]) + currency}
+                </span>
             </>
         );
     }

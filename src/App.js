@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import products from "./data/products.json";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyle from "./components/GlobalStyle";
+import "./App.scss";
 
 class App extends Component {
     constructor(props) {
@@ -401,7 +401,6 @@ class App extends Component {
 
         return (
             <div className="App">
-                <GlobalStyle />
                 <BrowserRouter>
                     <Navbar
                         cartItemsCount={cart.items
