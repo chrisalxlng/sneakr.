@@ -15,7 +15,7 @@ class App extends Component {
                 items: [],
                 total: 0,
             },
-            favorites: [{ favoriteID: 0, productID: 3 }],
+            favorites: [],
             categories: [],
             currency: "€",
             displayedProducts: products.map((product) => product.id),
