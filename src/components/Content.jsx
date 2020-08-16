@@ -53,6 +53,9 @@ function Content(props) {
                         <ShoppingCart
                             products={products}
                             cart={cart}
+                            cartItemsCount={cart.items
+                                .map((item) => item.quantity)
+                                .reduce((prev, next) => prev + next, 0)}
                             currency={currency}
                             onIncrementProduct={onIncrementProduct}
                             onDecrementProduct={onDecrementProduct}

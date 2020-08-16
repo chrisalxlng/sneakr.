@@ -26,6 +26,7 @@
         background-color: black;
         color: white;
         height: 40px;
+        width: 100%;
         padding: 10px 30px;
         border-radius: 10px;
         font-weight: 600;
@@ -130,6 +131,27 @@
             width: 40px;
             text-align: center;
             font-size: 14px;
+        }
+    }
+
+    &--icon-text {
+        position: relative;
+        padding: 0 13px 0 35px;
+        border-radius: 10px;
+        width: auto;
+
+        span {
+            color: red;
+            font-weight: 600;
+        }
+
+        img {
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            top: 50%;
+            left: 20px;
+            transform: translate(-50%, -50%);
         }
     }
 }
