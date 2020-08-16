@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import ShoppingCart from "./ShoppingCart";
-import Favorites from "./Favorites";
 import ProductPage from "./ProductPage";
 import ProductsOverview from "./ProductsOverview";
 
@@ -67,11 +66,35 @@ function Content(props) {
                 <Route
                     path="/favorites"
                     component={() => (
-                        <Favorites
-                            products={products}
+                        <ProductsOverview
+                            categorie="Favorites"
+                            products={products.filter((product) =>
+                                favorites
+                                    .map((item) => item.productID)
+                                    .includes(product.id)
+                            )}
                             favorites={favorites}
                             currency={currency}
+                            displayedProducts={displayedProducts}
+                            productsSortBy={productsSortBy}
+                            productsFilterSliderValues={
+                                productsFilterSliderValues
+                            }
+                            popupOnBuyProduct={popupOnBuyProduct}
+                            buyProductInterface={buyProductInterface}
+                            onIncrementProduct={onIncrementProduct}
                             onFavorite={onFavorite}
+                            onSort={onSort}
+                            onSliderChange={onSliderChange}
+                            onTogglePopup={onTogglePopup}
+                            onInterfaceIncrementQuantity={
+                                onInterfaceIncrementQuantity
+                            }
+                            onInterfaceDecrementQuantity={
+                                onInterfaceDecrementQuantity
+                            }
+                            onInterfaceReset={onInterfaceReset}
+                            onInterfaceSelectChange={onInterfaceSelectChange}
                         />
                     )}
                 />
