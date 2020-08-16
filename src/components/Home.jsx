@@ -2,15 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Home(props) {
-    const { categories } = props;
+    const { categories, products } = props;
 
     return (
         <div>
             <h2>Browse in Categories:</h2>
-            {categories.map((categorie) => {
+            {categories.map((item) => {
                 return (
-                    <Link key={categorie} to={`/${categorie}`}>
-                        <h3>{categorie}</h3>
+                    <Link key={item.categorie} to={`/${item.categorie}`}>
+                        <h3>
+                            {item.categorie} ({item.productCount})
+                        </h3>
                     </Link>
                 );
             })}

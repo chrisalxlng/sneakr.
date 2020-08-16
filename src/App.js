@@ -40,7 +40,7 @@ class App extends Component {
         this.setState({ products: products });
 
         // Merging the categorie arrays from products and removing duplicats
-        const categories = [
+        const categorieSet = [
             ...new Set(
                 [].concat.apply(
                     [],
@@ -49,8 +49,23 @@ class App extends Component {
             ),
         ];
 
+        // Creating an array of objects consisting of the categories from categorieSet and their respective productCount
+        const categories = categorieSet.map((item) => {
+            return {
+                categorie: item,
+                productCount: products.filter((product) =>
+                    product.categories.includes(item)
+                ).length,
+            };
+        });
+
+        // Sorting categories by their productCount
+        const categoriesSorted = categories.sort((prev, next) =>
+            prev.productCount < next.productCount ? 1 : -1
+        );
+
         // Setting the state for categories
-        this.setState({ categories: categories });
+        this.setState({ categories: categoriesSorted });
     }
 
     handleIncrementProduct = (

@@ -38,12 +38,7 @@ function Content(props) {
                     exact
                     path="/"
                     component={() => (
-                        <Home
-                            products={products}
-                            categories={categories}
-                            onIncrementProduct={onIncrementProduct}
-                            onFavorite={onFavorite}
-                        />
+                        <Home products={products} categories={categories} />
                     )}
                 />
                 <Route
@@ -161,18 +156,24 @@ function Content(props) {
                     render={(routerProps) => (
                         <ProductsOverview
                             categorie={
-                                categories.filter(
-                                    (c) =>
-                                        c === routerProps.match.params.categorie
-                                )[0]
-                            }
-                            products={products.filter((product) =>
-                                product.categories.includes(
-                                    categories.filter(
+                                categories
+                                    .map((item) => item.categorie)
+                                    .filter(
                                         (c) =>
                                             c ===
                                             routerProps.match.params.categorie
                                     )[0]
+                            }
+                            products={products.filter((product) =>
+                                product.categories.includes(
+                                    categories
+                                        .map((item) => item.categorie)
+                                        .filter(
+                                            (c) =>
+                                                c ===
+                                                routerProps.match.params
+                                                    .categorie
+                                        )[0]
                                 )
                             )}
                             favorites={favorites}
