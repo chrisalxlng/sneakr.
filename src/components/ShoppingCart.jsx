@@ -37,50 +37,85 @@ class ShoppingCart extends Component {
         const { items, total } = cart;
 
         return (
-            <div>
+            <>
                 <h2>Shopping Cart</h2>
-                <button onClick={() => onRemoveAllProducts()}>
-                    Remove all items
-                </button>
-                {items.map((item) => {
-                    return (
-                        <CartItem
-                            key={item.cartID}
-                            item={item}
-                            product={
-                                products.filter(
-                                    (p) => p.id === item.productID
-                                )[0]
-                            }
-                            currency={currency}
-                            onIncrementProduct={onIncrementProduct}
-                            onDecrementProduct={onDecrementProduct}
-                            onRemoveProduct={onRemoveProduct}
+                <div>
+                    <div>
+                        <h3>{items.length} Items</h3>
+                        <button onClick={() => onRemoveAllProducts()}>
+                            Remove all items
+                        </button>
+                    </div>
+                    <div>
+                        {items.map((item) => {
+                            return (
+                                <CartItem
+                                    key={item.cartID}
+                                    item={item}
+                                    product={
+                                        products.filter(
+                                            (p) => p.id === item.productID
+                                        )[0]
+                                    }
+                                    image={
+                                        products.filter(
+                                            (p) => p.id === item.productID
+                                        )[0]["image-small"]
+                                    }
+                                    currency={currency}
+                                    onIncrementProduct={onIncrementProduct}
+                                    onDecrementProduct={onDecrementProduct}
+                                    onRemoveProduct={onRemoveProduct}
+                                />
+                            );
+                        })}
+                    </div>
+                </div>
+                <div>
+                    <h3>Checkout</h3>
+                    <div>
+                        <div>
+                            <p>Subotal:</p>
+                            <p>
+                                {total.toFixed(2).replace("-0", "0") + currency}
+                            </p>
+                        </div>
+                        <div>
+                            <p>Delivery:</p>
+                            <p>
+                                {(0).toFixed(2).replace("-0", "0") + currency}
+                            </p>
+                        </div>
+                        <div>
+                            <p>Total:</p>
+                            <p>
+                                {total.toFixed(2).replace("-0", "0") + currency}
+                            </p>
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={() => {
+                            this.handleTogglePopup();
+                            //onRemoveAllProducts();
+                        }}
+                    >
+                        Buy {items.length} items
+                    </button>
+                    {showPopup ? (
+                        <OnCheckoutPopup
+                            products={products.filter((product) =>
+                                items
+                                    .map((item) => item.productID)
+                                    .includes(product.id)
+                            )}
+                            cart={cart}
+                            showPopup={showPopup}
+                            onTogglePopup={this.handleTogglePopup}
                         />
-                    );
-                })}
-                <h3>Total: {total.toFixed(2).replace("-0", "0") + currency}</h3>
-                <button
-                    onClick={() => {
-                        this.handleTogglePopup();
-                        //onRemoveAllProducts();
-                    }}
-                >
-                    Checkout
-                </button>
-                {showPopup ? (
-                    <OnCheckoutPopup
-                        products={products.filter((product) =>
-                            items
-                                .map((item) => item.productID)
-                                .includes(product.id)
-                        )}
-                        cart={cart}
-                        showPopup={showPopup}
-                        onTogglePopup={this.handleTogglePopup}
-                    />
-                ) : null}
-            </div>
+                    ) : null}
+                </div>
+            </>
         );
     }
 }

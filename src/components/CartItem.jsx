@@ -5,6 +5,7 @@ function CartItem(props) {
     const {
         item,
         product,
+        image,
         currency,
         onIncrementProduct,
         onDecrementProduct,
@@ -14,33 +15,66 @@ function CartItem(props) {
     const { id, name, price, sale } = product;
 
     return (
-        <div>
-            <p>{quantity}</p>
+        <div className="cart-item-card">
             <Link to={`/product=${id}`}>
-                <p>{name}</p>
+                <div className="cart-item-card__image">
+                    <div>
+                        <img src={"/img/" + image + ".jpg"} alt="Product" />
+                    </div>
+                </div>
             </Link>
-            <p>{selectedValue}</p>
-            {sale ? (
-                <p className="sale-strike-through">
-                    {(price * quantity).toFixed(2) + currency}
-                </p>
-            ) : (
-                <p>{(price * quantity).toFixed(2) + currency}</p>
-            )}
-            {sale ? (
-                <p className="sale">
-                    {(sale * quantity).toFixed(2) + currency}
-                </p>
-            ) : null}
-            <button onClick={() => onIncrementProduct(product, selectedValue)}>
-                +
+
+            <div className="cart-item-card__body">
+                <Link to={`/product=${id}`}>
+                    <p className="cart-item-card__name">{name}</p>
+                </Link>
+                <div className="cart-item-card__price-size-container">
+                    <div className="cart-item-card__price">
+                        {sale ? (
+                            <p className="cart-item-card__price--sale">
+                                {sale + currency}
+                            </p>
+                        ) : null}
+                        {sale ? (
+                            <p className="cart-item-card__price--strike-through">
+                                {price + currency}
+                            </p>
+                        ) : (
+                            <p className="cart-item-card__price">
+                                {price + currency}
+                            </p>
+                        )}
+                    </div>
+                    <p className="cart-item-card__size">
+                        Size: {selectedValue}
+                    </p>
+                </div>
+            </div>
+            <button
+                className="btn btn--circular cart-item-card__remove-btn"
+                onClick={() => onRemoveProduct(product, selectedValue)}
+            >
+                <img alt="Remove item" src="/icons/trash.svg" />
             </button>
-            <button onClick={() => onDecrementProduct(product, selectedValue)}>
-                -
-            </button>
-            <button onClick={() => onRemoveProduct(product, selectedValue)}>
-                Remove
-            </button>
+            <div className="btn btn--plus-minus cart-item-card__plus-minus-btn">
+                <div>
+                    <button
+                        onClick={() =>
+                            onDecrementProduct(product, selectedValue)
+                        }
+                    >
+                        <img alt="Decrement Quantity" src="/icons/remove.svg" />
+                    </button>
+                    <p>{quantity}</p>
+                    <button
+                        onClick={() =>
+                            onIncrementProduct(product, selectedValue)
+                        }
+                    >
+                        <img alt="Increment Quantity" src="/icons/plus.svg" />
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }
