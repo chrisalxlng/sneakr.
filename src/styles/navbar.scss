@@ -25,6 +25,7 @@
         display: flex;
         align-items: center;
         position: relative;
+        padding-right: 17px;
     }
 
     &__link {
@@ -50,7 +51,7 @@
     &__item-indicator {
         position: absolute;
         top: -7px;
-        right: -17px;
+        right: 0px;
         height: 18px;
         width: 18px;
         border-radius: 50%;
