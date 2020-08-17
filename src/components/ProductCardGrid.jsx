@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import RangeSlider from "./RangeSlider";
 
-function ProductCardContainer(props) {
+function ProductCardGrid(props) {
     const {
         products,
         favorites,
@@ -17,13 +17,13 @@ function ProductCardContainer(props) {
 
     return (
         <div>
-            <div className="product-card-container__btn-container">
+            <div className="product-card-grid__btn-container">
                 <div>
-                    <p className="product-card-container__container-label">
+                    <p className="product-card-grid__container-label">
                         Sort by:
                     </p>
 
-                    <div className="btn btn--select product-card-container__btn">
+                    <div className="btn btn--select product-card-grid__btn">
                         <select
                             onChange={(event) => onSort(event.target.value)}
                             name="sort"
@@ -52,10 +52,10 @@ function ProductCardContainer(props) {
                 </div>
 
                 <div>
-                    <p className="product-card-container__container-label">
+                    <p className="product-card-grid__container-label">
                         Filter by price span:
                     </p>
-                    <div className="btn btn--slider product-card-container__btn">
+                    <div className="btn btn--slider product-card-grid__btn">
                         <div className="slider-content">
                             <RangeSlider
                                 onSliderChange={onSliderChange}
@@ -70,7 +70,7 @@ function ProductCardContainer(props) {
                 </div>
             </div>
 
-            <div className="product-card-container__product-grid">
+            <div className="product-card-grid__product-grid">
                 {products.map((item) => {
                     return (
                         <ProductCard
@@ -88,4 +88,4 @@ function ProductCardContainer(props) {
     );
 }
 
-export default ProductCardContainer;
+export default ProductCardGrid;

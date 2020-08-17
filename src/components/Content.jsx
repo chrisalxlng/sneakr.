@@ -38,7 +38,25 @@ function Content(props) {
                     exact
                     path="/"
                     component={() => (
-                        <Home products={products} categories={categories} />
+                        <Home
+                            products={products}
+                            categories={categories}
+                            favorites={favorites}
+                            currency={currency}
+                            popupOnBuyProduct={popupOnBuyProduct}
+                            buyProductInterface={buyProductInterface}
+                            onTogglePopup={onTogglePopup}
+                            onFavorite={onFavorite}
+                            onIncrementProduct={onIncrementProduct}
+                            onInterfaceIncrementQuantity={
+                                onInterfaceIncrementQuantity
+                            }
+                            onInterfaceDecrementQuantity={
+                                onInterfaceDecrementQuantity
+                            }
+                            onInterfaceReset={onInterfaceReset}
+                            onInterfaceSelectChange={onInterfaceSelectChange}
+                        />
                     )}
                 />
                 <Route
@@ -157,7 +175,7 @@ function Content(props) {
                         <ProductsOverview
                             categorie={
                                 categories
-                                    .map((item) => item.categorie)
+                                    .map((categorie) => categorie.name)
                                     .filter(
                                         (c) =>
                                             c ===
@@ -167,7 +185,7 @@ function Content(props) {
                             products={products.filter((product) =>
                                 product.categories.includes(
                                     categories
-                                        .map((item) => item.categorie)
+                                        .map((categorie) => categorie.name)
                                         .filter(
                                             (c) =>
                                                 c ===

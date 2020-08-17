@@ -52,7 +52,7 @@ class App extends Component {
         // Creating an array of objects consisting of the categories from categorieSet and their respective productCount
         const categories = categorieSet.map((item) => {
             return {
-                categorie: item,
+                name: item,
                 productCount: products.filter((product) =>
                     product.categories.includes(item)
                 ).length,

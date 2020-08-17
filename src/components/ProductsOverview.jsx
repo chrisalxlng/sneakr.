@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCardContainer from "./ProductCardContainer";
+import ProductCardGrid from "./ProductCardGrid";
 import OnBuyPopup from "./OnBuyPopup";
 
 function ProductsOverview(props) {
@@ -34,7 +34,7 @@ function ProductsOverview(props) {
     return (
         <div>
             <h2>{categorie}</h2>
-            <ProductCardContainer
+            <ProductCardGrid
                 products={products.filter((product) =>
                     displayedProducts.includes(product.id)
                 )}
