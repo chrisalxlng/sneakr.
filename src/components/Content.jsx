@@ -155,7 +155,9 @@ function Content(props) {
                             }
                             currency={currency}
                             favorites={favorites}
+                            products={products}
                             buyProductInterface={buyProductInterface}
+                            popupOnBuyProduct={popupOnBuyProduct}
                             onFavorite={onFavorite}
                             onIncrementProduct={onIncrementProduct}
                             onInterfaceIncrementQuantity={
@@ -166,6 +168,7 @@ function Content(props) {
                             }
                             onInterfaceReset={onInterfaceReset}
                             onInterfaceSelectChange={onInterfaceSelectChange}
+                            onTogglePopup={onTogglePopup}
                         />
                     )}
                 />

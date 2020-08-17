@@ -1,20 +1,32 @@
 import React from "react";
 import BuyProductInterface from "./BuyProductInterface";
+import ProductCardScrollContainer from "./ProductCardScrollContainer";
+import OnBuyPopup from "./OnBuyPopup";
 
 function ProductPage(props) {
     const {
         product,
         favorites,
+        products,
         currency,
         buyProductInterface,
+        popupOnBuyProduct,
         onFavorite,
         onIncrementProduct,
         onInterfaceIncrementQuantity,
         onInterfaceDecrementQuantity,
         onInterfaceReset,
         onInterfaceSelectChange,
+        onTogglePopup,
     } = props;
-    const { description, materials, cleaning } = product;
+    const { description, materials, cleaning, categories } = product;
+
+    // Prevent scrolling of app if popup is open
+    if (popupOnBuyProduct.showPopup) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "unset";
+    }
 
     return (
         <div>
@@ -59,6 +71,29 @@ function ProductPage(props) {
                     </div>
                 </div>
             </div>
+            <ProductCardScrollContainer
+                categorie={categories[0]}
+                products={products.filter((p) => p !== product)}
+                favorites={favorites}
+                currency={currency}
+                onTogglePopup={onTogglePopup}
+                onFavorite={onFavorite}
+            />
+            {popupOnBuyProduct.showPopup ? (
+                <OnBuyPopup
+                    product={popupOnBuyProduct.product}
+                    favorites={favorites}
+                    currency={currency}
+                    buyProductInterface={buyProductInterface}
+                    onFavorite={onFavorite}
+                    onIncrementProduct={onIncrementProduct}
+                    onTogglePopup={onTogglePopup}
+                    onInterfaceIncrementQuantity={onInterfaceIncrementQuantity}
+                    onInterfaceDecrementQuantity={onInterfaceDecrementQuantity}
+                    onInterfaceReset={onInterfaceReset}
+                    onInterfaceSelectChange={onInterfaceSelectChange}
+                />
+            ) : null}
         </div>
     );
 }

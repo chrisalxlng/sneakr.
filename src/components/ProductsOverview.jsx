@@ -31,7 +31,7 @@ function ProductsOverview(props) {
         document.body.style.overflow = "unset";
     }
 
-    return (
+    return products.length === 0 ? null : (
         <div>
             <h2>{categorie}</h2>
             <ProductCardGrid

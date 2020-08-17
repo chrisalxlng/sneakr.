@@ -35,7 +35,7 @@ function Home(props) {
                     return (
                         <ProductCardScrollContainer
                             key={index}
-                            categorie={categorie}
+                            categorie={categorie.name}
                             products={products}
                             favorites={favorites}
                             currency={currency}
