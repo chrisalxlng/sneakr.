@@ -39,7 +39,7 @@ class App extends Component {
         // Setting the new state
         this.setState({ products: products });
 
-        // Merging the categorie arrays from products and removing duplicats
+        // Merging the category arrays from products and removing duplicats
         const categorieSet = [
             ...new Set(
                 [].concat.apply(

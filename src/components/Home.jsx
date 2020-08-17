@@ -30,12 +30,12 @@ function Home(props) {
     return (
         <div>
             <h2>Browse in Categories:</h2>
-            {categories.map((categorie, index) => {
-                if (categorie.name !== null && index < 3) {
+            {categories.map((category, index) => {
+                if (category.name !== null && index < 3) {
                     return (
                         <ProductCardScrollContainer
                             key={index}
-                            categorie={categorie.name}
+                            category={category.name}
                             products={products}
                             favorites={favorites}
                             currency={currency}

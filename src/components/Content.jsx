@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
+import Categories from "./Categories";
 import ShoppingCart from "./ShoppingCart";
 import ProductPage from "./ProductPage";
 import ProductsOverview from "./ProductsOverview";
@@ -60,6 +61,16 @@ function Content(props) {
                     )}
                 />
                 <Route
+                    exact
+                    path="/categories"
+                    component={() => (
+                        <Categories
+                            products={products}
+                            categories={categories}
+                        />
+                    )}
+                />
+                <Route
                     path="/cart"
                     component={() => (
                         <ShoppingCart
@@ -80,7 +91,7 @@ function Content(props) {
                     path="/favorites"
                     component={() => (
                         <ProductsOverview
-                            categorie="Favorites"
+                            category="Favorites"
                             products={products.filter((product) =>
                                 favorites
                                     .map((item) => item.productID)
@@ -115,7 +126,7 @@ function Content(props) {
                     path="/products"
                     component={() => (
                         <ProductsOverview
-                            categorie="All Products"
+                            category="All Products"
                             products={products}
                             favorites={favorites}
                             currency={currency}
@@ -173,27 +184,27 @@ function Content(props) {
                     )}
                 />
                 <Route
-                    path="/:categorie"
+                    path="/:category"
                     render={(routerProps) => (
                         <ProductsOverview
-                            categorie={
+                            category={
                                 categories
-                                    .map((categorie) => categorie.name)
+                                    .map((category) => category.name)
                                     .filter(
                                         (c) =>
                                             c ===
-                                            routerProps.match.params.categorie
+                                            routerProps.match.params.category
                                     )[0]
                             }
                             products={products.filter((product) =>
                                 product.categories.includes(
                                     categories
-                                        .map((categorie) => categorie.name)
+                                        .map((category) => category.name)
                                         .filter(
                                             (c) =>
                                                 c ===
                                                 routerProps.match.params
-                                                    .categorie
+                                                    .category
                                         )[0]
                                 )
                             )}

@@ -16,7 +16,7 @@ function Navbar(props) {
                 <NavLink to="/Sale">
                     <span className="nav__link">Sale</span>
                 </NavLink>
-                <NavLink to="/">
+                <NavLink to="/categories">
                     <span className="nav__link">Categories</span>
                 </NavLink>
             </div>

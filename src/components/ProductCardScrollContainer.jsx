@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 
 function ProductCardScrollContainer(props) {
     const {
-        categorie,
+        category,
         products,
         favorites,
         currency,
@@ -12,21 +12,21 @@ function ProductCardScrollContainer(props) {
         onFavorite,
     } = props;
 
-    return products.filter((product) => product.categories.includes(categorie))
+    return products.filter((product) => product.categories.includes(category))
         .length === 0 ? null : (
         <div className="product-card-scroll-container">
             <div className="product-card-scroll-container__label-link-container">
-                <h3>{categorie}</h3>
-                <Link to={`/${categorie}`}>
+                <h3>{category}</h3>
+                <Link to={`/${category}`}>
                     <button className="btn btn--container product-card-scroll-container product-card-scroll-container__see-all-btn">
-                        See all products in {categorie}
+                        See all products in {category}
                     </button>
                 </Link>
             </div>
 
             <div className="product-card-scroll-container__scroll-grid">
                 {products
-                    .filter((product) => product.categories.includes(categorie))
+                    .filter((product) => product.categories.includes(category))
                     .map((product, index) => {
                         if (index < 5) {
                             return (

@@ -72,7 +72,7 @@ function ProductPage(props) {
                 </div>
             </div>
             <ProductCardScrollContainer
-                categorie={categories[0]}
+                category={categories[0]}
                 products={products.filter((p) => p !== product)}
                 favorites={favorites}
                 currency={currency}

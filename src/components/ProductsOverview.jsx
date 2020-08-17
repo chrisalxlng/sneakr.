@@ -6,7 +6,7 @@ function ProductsOverview(props) {
     const {
         products,
         favorites,
-        categorie,
+        category,
         currency,
         displayedProducts,
         productsSortBy,
@@ -33,7 +33,7 @@ function ProductsOverview(props) {
 
     return products.length === 0 ? null : (
         <div>
-            <h2>{categorie}</h2>
+            <h2>{category}</h2>
             <ProductCardGrid
                 products={products.filter((product) =>
                     displayedProducts.includes(product.id)
