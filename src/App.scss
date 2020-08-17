@@ -4,7 +4,7 @@
 @import "styles/cards";
 @import "styles/navbar";
 
-.product-card-container {
+.product-card-grid {
     &__product-grid {
         margin-top: 30px;
         display: grid;
@@ -24,6 +24,42 @@
 
     &__btn {
         height: 40px;
+    }
+}
+
+.product-card-scroll-container {
+    --flex-gap: 20px;
+
+    position: relative;
+
+    &__scroll-grid {
+        display: flex;
+        overflow-x: auto;
+        padding: 5px 0;
+        margin: 0 calc(-1 * var(--page-padding-x));
+
+        &::before,
+        &::after {
+            content: "";
+            flex: 0 0 var(--page-padding-x);
+        }
+
+        & > :not(:last-child) {
+            padding-right: var(--flex-gap);
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__label-link-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__see-all-btn {
+        cursor: pointer;
     }
 }
 
