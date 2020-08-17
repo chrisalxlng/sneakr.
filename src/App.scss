@@ -64,6 +64,15 @@
     }
 }
 
+.categories {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-gap: 20px;
+        justify-content: space-between;
+    }
+}
+
 .popup {
     position: fixed;
     z-index: 1000;

@@ -3,7 +3,7 @@
 .product-card {
     width: 230px;
     height: 300px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: $box-shadow;
     overflow: hidden;
     position: relative;
@@ -153,5 +153,46 @@
         position: absolute;
         bottom: 15px;
         right: 15px;
+    }
+}
+
+.category-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__name {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        z-index: 20;
+    }
+
+    &__name-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.3) 30%,
+            rgba(255, 255, 255, 0) 80%
+        );
     }
 }

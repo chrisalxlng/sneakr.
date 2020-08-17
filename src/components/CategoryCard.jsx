@@ -5,13 +5,17 @@ function CategorieCard(props) {
     const { category, image, link } = props;
 
     return (
-        <Link to={`/${link}`}>
-            <div>
-                <img src={"/img/" + image + ".jp"} alt={category + " image"} />
-                <div />
-                <p>{category}</p>
-            </div>
-        </Link>
+        <div className="category-card">
+            <Link to={`/${link}`}>
+                <img
+                    className="category-card__image"
+                    src={"/img/" + image + ".jpg"}
+                    alt={category + " image"}
+                />
+                <div className="category-card__name-bg" />
+                <p className="category-card__name">{category}</p>
+            </Link>
+        </div>
     );
 }
 
