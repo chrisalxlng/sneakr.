@@ -10,3 +10,33 @@
 a {
     text-decoration: none;
 }
+
+body {
+    background-color: var(--bg-color);
+}
+
+.text-styles {
+    color: black;
+
+    &--h1 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: var(--space-l);
+    }
+
+    &--h2 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    &--h3 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &--label {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: var(--space-s);
+    }
+}

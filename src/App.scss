@@ -6,10 +6,10 @@
 
 .product-card-grid {
     &__product-grid {
-        margin-top: 30px;
+        margin-top: var(--space-m);
         display: grid;
         grid-template-columns: repeat(auto-fit, 230px);
-        grid-gap: 20px;
+        grid-gap: var(--space-m);
         justify-content: space-between;
     }
 
@@ -19,7 +19,7 @@
     }
 
     &__container-label {
-        padding-bottom: 5px;
+        //padding-bottom: var(--space-s);
     }
 
     &__btn {
@@ -57,6 +57,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: var(--space-s);
     }
 
     &__see-all-btn {
@@ -82,11 +83,10 @@
     background-color: #f5f4f4;
     overflow: scroll;
     border-radius: 10px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: $box-shadow;
     padding: 30px;
 
     h1 {
-        margin-bottom: 30px;
         line-height: 20px;
     }
 
@@ -119,8 +119,12 @@
         grid-template-columns: 100%;
     }
 
+    &__label-btn-container {
+        margin-bottom: var(--space-m);
+    }
+
     &__label {
-        margin-bottom: 5px;
+        //margin-bottom: 5px;
     }
 
     &__image {
@@ -134,7 +138,7 @@
             bottom: 0;
             right: 0;
             border-radius: 10px;
-            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+            box-shadow: $box-shadow;
             overflow: hidden;
 
             img {
@@ -169,34 +173,57 @@
         display: flex;
         align-items: flex-end;
     }
+
+    &__buy-btn {
+        margin-top: var(--space-m);
+        width: fit-content;
+    }
+
+    &__form-btn {
+        margin-right: var(--space-m);
+    }
 }
 
 .content {
-    padding: 0 40px;
-    padding-top: 50px;
-    background-color: #f5f4f4;
+    padding: calc(var(--navbar-height) + var(--space-m)) 40px var(--space-l)
+        40px;
+    background-color: var(--bg-color);
 }
 
 .shopping-cart {
     &__card-checkout-container {
-        display: grid;
-        grid-template-columns: 45% 45%;
-        grid-gap: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__items-checkout-container {
+        margin-right: calc(var(--space-l) / 2);
     }
 
     &__items-count-remove-container {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: var(--space-s);
+        height: 35px;
     }
 
     &__item-card-container {
         display: grid;
         grid-template-columns: 100%;
-        grid-gap: 15px;
+        grid-gap: var(--space-s);
     }
 
     &__checkout {
         width: 200px;
+        margin-left: calc(var(--space-l) / 2);
+    }
+
+    &__h2 {
+        height: 35px;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: var(--space-s);
     }
 
     &__totals-container {
@@ -215,18 +242,70 @@
     &__total {
         font-weight: 600;
     }
+
+    &__buy-btn {
+        margin-top: var(--space-m);
+    }
 }
 
-.product-info {
-    &__grid {
+.empty-state {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    &__inner-container {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__btn {
+        margin-top: 30px;
+        width: fit-content;
+    }
+}
+
+.home__scroll-container {
+    margin-bottom: var(--space-l);
+}
+
+.product-page {
+    &__buy-interface-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: var(--space-l);
+    }
+
+    &__info {
+        margin-bottom: var(--space-l);
+    }
+
+    &__info-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         background-color: white;
+        box-shadow: $box-shadow;
         border-radius: 10px;
         padding: 15px 0;
     }
 
-    &__element {
+    &__info-element {
         padding: 0 15px;
 
         h3 {
@@ -237,5 +316,9 @@
             padding-inline-start: 0px;
             list-style-type: none;
         }
+    }
+
+    &__h2 {
+        margin-bottom: var(--space-s);
     }
 }

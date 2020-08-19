@@ -31,9 +31,9 @@ function ProductsOverview(props) {
         document.body.style.overflow = "unset";
     }
 
-    return products.length === 0 ? null : (
+    return (
         <div>
-            <h2>{category}</h2>
+            <h1 className="text-styles text-styles--h1">{category}</h1>
             <ProductCardGrid
                 products={products.filter((product) =>
                     displayedProducts.includes(product.id)

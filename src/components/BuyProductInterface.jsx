@@ -25,8 +25,10 @@ function BuyProductInterface(props) {
                 </div>
             </div>
             <div>
-                <div>
-                    <p className="buy-interface__label">Price:</p>
+                <div className="buy-interface__label-btn-container">
+                    <p className="buy-interface__label text-styles text-styles--label">
+                        Price:
+                    </p>
                     <div className="btn btn--container">
                         {sale ? (
                             <p className="buy-interface__price--sale">
@@ -44,9 +46,11 @@ function BuyProductInterface(props) {
                         )}
                     </div>
                 </div>
-                <div className="buy-interface__container">
-                    <div>
-                        <p className="buy-interface__label">Size:</p>
+                <div className="buy-interface__container buy-interface__label-btn-container">
+                    <div className="buy-interface__form-btn">
+                        <p className="buy-interface__label text-styles text-styles--label">
+                            Size:
+                        </p>
                         <div className="btn btn--select">
                             <select
                                 onChange={(event) =>
@@ -63,8 +67,10 @@ function BuyProductInterface(props) {
                             <img src="/icons/down-arrow.svg" alt="" />
                         </div>
                     </div>
-                    <div>
-                        <p className="buy-interface__label">Quantity:</p>
+                    <div className="buy-interface__form-btn">
+                        <p className="buy-interface__label text-styles text-styles--label">
+                            Quantity:
+                        </p>
                         <div className="btn btn--plus-minus">
                             <div>
                                 <button onClick={onInterfaceDecrementQuantity}>
@@ -101,7 +107,7 @@ function BuyProductInterface(props) {
                 </div>
 
                 <button
-                    className="btn btn--primary"
+                    className="btn btn--primary buy-interface__label-btn-container buy-interface__buy-btn"
                     onClick={() => {
                         onIncrementProduct(product, selectedValue, quantity);
                         onInterfaceReset();

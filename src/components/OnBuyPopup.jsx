@@ -20,7 +20,7 @@ function OnBuyPopup(props) {
     return ReactDom.createPortal(
         <div className="popup__bg" onClick={onTogglePopup}>
             <div className="popup" onClick={(event) => event.stopPropagation()}>
-                <h1>{product.name}</h1>
+                <h1 className="text-styles text-styles--h1">{product.name}</h1>
                 <div>
                     <BuyProductInterface
                         product={product}

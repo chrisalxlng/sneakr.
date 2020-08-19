@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import RangeSlider from "./RangeSlider";
+import EmptyState from "./EmptyState";
 
 function ProductCardGrid(props) {
     const {
@@ -19,7 +20,7 @@ function ProductCardGrid(props) {
         <div>
             <div className="product-card-grid__btn-container">
                 <div>
-                    <p className="product-card-grid__container-label">
+                    <p className="product-card-grid__container-label text-styles text-styles--label">
                         Sort by:
                     </p>
 
@@ -52,7 +53,7 @@ function ProductCardGrid(props) {
                 </div>
 
                 <div>
-                    <p className="product-card-grid__container-label">
+                    <p className="product-card-grid__container-label text-styles text-styles--label">
                         Filter by price span:
                     </p>
                     <div className="btn btn--slider product-card-grid__btn">
@@ -70,20 +71,29 @@ function ProductCardGrid(props) {
                 </div>
             </div>
 
-            <div className="product-card-grid__product-grid">
-                {products.map((item) => {
-                    return (
-                        <ProductCard
-                            key={item.id}
-                            product={item}
-                            favorites={favorites}
-                            currency={currency}
-                            onTogglePopup={onTogglePopup}
-                            onFavorite={onFavorite}
-                        />
-                    );
-                })}
-            </div>
+            {products.length === 0 ? (
+                <EmptyState
+                    heading="There were no products found in this price span"
+                    description="Adjust the price span to discover new products!"
+                    buttonText={null}
+                    buttonLink={null}
+                />
+            ) : (
+                <div className="product-card-grid__product-grid">
+                    {products.map((item) => {
+                        return (
+                            <ProductCard
+                                key={item.id}
+                                product={item}
+                                favorites={favorites}
+                                currency={currency}
+                                onTogglePopup={onTogglePopup}
+                                onFavorite={onFavorite}
+                            />
+                        );
+                    })}
+                </div>
+            )}
         </div>
     );
 }

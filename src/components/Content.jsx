@@ -5,6 +5,7 @@ import Categories from "./Categories";
 import ShoppingCart from "./ShoppingCart";
 import ProductPage from "./ProductPage";
 import ProductsOverview from "./ProductsOverview";
+import EmptyState from "./EmptyState";
 
 function Content(props) {
     const {
@@ -89,38 +90,49 @@ function Content(props) {
                 />
                 <Route
                     path="/favorites"
-                    component={() => (
-                        <ProductsOverview
-                            category="Favorites"
-                            products={products.filter((product) =>
-                                favorites
-                                    .map((item) => item.productID)
-                                    .includes(product.id)
-                            )}
-                            favorites={favorites}
-                            currency={currency}
-                            displayedProducts={displayedProducts}
-                            productsSortBy={productsSortBy}
-                            productsFilterSliderValues={
-                                productsFilterSliderValues
-                            }
-                            popupOnBuyProduct={popupOnBuyProduct}
-                            buyProductInterface={buyProductInterface}
-                            onIncrementProduct={onIncrementProduct}
-                            onFavorite={onFavorite}
-                            onSort={onSort}
-                            onSliderChange={onSliderChange}
-                            onTogglePopup={onTogglePopup}
-                            onInterfaceIncrementQuantity={
-                                onInterfaceIncrementQuantity
-                            }
-                            onInterfaceDecrementQuantity={
-                                onInterfaceDecrementQuantity
-                            }
-                            onInterfaceReset={onInterfaceReset}
-                            onInterfaceSelectChange={onInterfaceSelectChange}
-                        />
-                    )}
+                    component={() =>
+                        favorites.length === 0 ? (
+                            <EmptyState
+                                heading="You have no favorite items yet"
+                                description="Mark items as favorites."
+                                buttonText="Browse in categories"
+                                buttonLink="/categories"
+                            />
+                        ) : (
+                            <ProductsOverview
+                                category="Favorites"
+                                products={products.filter((product) =>
+                                    favorites
+                                        .map((item) => item.productID)
+                                        .includes(product.id)
+                                )}
+                                favorites={favorites}
+                                currency={currency}
+                                displayedProducts={displayedProducts}
+                                productsSortBy={productsSortBy}
+                                productsFilterSliderValues={
+                                    productsFilterSliderValues
+                                }
+                                popupOnBuyProduct={popupOnBuyProduct}
+                                buyProductInterface={buyProductInterface}
+                                onIncrementProduct={onIncrementProduct}
+                                onFavorite={onFavorite}
+                                onSort={onSort}
+                                onSliderChange={onSliderChange}
+                                onTogglePopup={onTogglePopup}
+                                onInterfaceIncrementQuantity={
+                                    onInterfaceIncrementQuantity
+                                }
+                                onInterfaceDecrementQuantity={
+                                    onInterfaceDecrementQuantity
+                                }
+                                onInterfaceReset={onInterfaceReset}
+                                onInterfaceSelectChange={
+                                    onInterfaceSelectChange
+                                }
+                            />
+                        )
+                    }
                 />
                 <Route
                     path="/products"

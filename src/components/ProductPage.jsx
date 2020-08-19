@@ -30,8 +30,8 @@ function ProductPage(props) {
 
     return (
         <div>
-            <h1>{product.name}</h1>
-            <div>
+            <h1 className="text-styles text-styles--h1">{product.name}</h1>
+            <div className="product-page__buy-interface-container">
                 <BuyProductInterface
                     product={product}
                     favorites={favorites}
@@ -46,11 +46,15 @@ function ProductPage(props) {
                     onInterfaceSelectChange={onInterfaceSelectChange}
                 />
             </div>
-            <div className="product-info">
-                <h2>More information</h2>
-                <div className="product-info__grid">
-                    <div className="product-info__element">
-                        <h3>Description:</h3>
+            <div className="product-page__info">
+                <h2 className="text-styles text-styles--h2 product-page__h2">
+                    More information
+                </h2>
+                <div className="product-page__info-grid">
+                    <div className="product-page__info-element">
+                        <h3 className="text-styles text-styles--h3">
+                            Description:
+                        </h3>
                         <ul>
                             {description.map((item) => {
                                 return (
@@ -61,12 +65,16 @@ function ProductPage(props) {
                             })}
                         </ul>
                     </div>
-                    <div className="product-info__element">
-                        <h3>Materials:</h3>
+                    <div className="product-page__info-element">
+                        <h3 className="text-styles text-styles--h3">
+                            Materials:
+                        </h3>
                         <p>{materials}</p>
                     </div>
-                    <div className="product-info__element">
-                        <h3>How to clean:</h3>
+                    <div className="product-page__info-element">
+                        <h3 className="text-styles text-styles--h3">
+                            How to clean:
+                        </h3>
                         <p>{cleaning}</p>
                     </div>
                 </div>

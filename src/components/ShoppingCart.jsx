@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CartItem from "./CartItem";
 import OnCheckoutPopup from "./OnCheckoutPopup";
+import EmptyState from "./EmptyState";
 
 class ShoppingCart extends Component {
     constructor(props) {
@@ -26,20 +27,27 @@ class ShoppingCart extends Component {
             onDecrementProduct,
             onRemoveProduct,
             onRemoveAllProducts,
-            showPopup,
         } = this.props;
+        const { showPopup } = this.state;
         const { items, total } = cart;
 
-        return (
+        return items.length === 0 ? (
+            <EmptyState
+                heading="Your cart is empty"
+                description="Add items to your cart."
+                buttonText="Browse in categories"
+                buttonLink="/categories"
+            />
+        ) : (
             <div className="shopping-cart">
-                <h2>Shopping Cart</h2>
+                <h1 className="text-styles text-styles--h1">Shopping Cart</h1>
                 <div className="shopping-cart__card-checkout-container">
-                    <div>
+                    <div className="shopping-cart__items-checkout-container">
                         <div className="shopping-cart__items-count-remove-container">
-                            <h3>
+                            <h2 className="text-styles text-styles--h2">
                                 {cartItemsCount}{" "}
                                 {cartItemsCount > 1 ? "Items" : "Item"}
-                            </h3>
+                            </h2>
                             <button
                                 className="btn btn--icon-text"
                                 onClick={() => onRemoveAllProducts()}
@@ -74,24 +82,35 @@ class ShoppingCart extends Component {
                         </div>
                     </div>
                     <div className="shopping-cart__checkout">
-                        <h3>Checkout</h3>
+                        <div className="shopping-cart__h2">
+                            <h2 className="text-styles text-styles--h2">
+                                Checkout
+                            </h2>
+                        </div>
+
                         <div className="shopping-cart__totals-container">
                             <div className="shopping-cart__total-value-container">
-                                <p>Subotal:</p>
+                                <h3 className="text-styles text-styles--h3">
+                                    Subotal:
+                                </h3>
                                 <p>
                                     {total.toFixed(2).replace("-0", "0") +
                                         currency}
                                 </p>
                             </div>
                             <div className="shopping-cart__total-value-container">
-                                <p>Delivery:</p>
+                                <h3 className="text-styles text-styles--h3">
+                                    Delivery:
+                                </h3>
                                 <p>
                                     {(0).toFixed(2).replace("-0", "0") +
                                         currency}
                                 </p>
                             </div>
                             <div className="shopping-cart__total-value-container">
-                                <p className="shopping-cart__total">Total:</p>
+                                <h3 className="shopping-cart__total text-styles text-styles--h3">
+                                    Total:
+                                </h3>
                                 <p className="shopping-cart__total">
                                     {total.toFixed(2).replace("-0", "0") +
                                         currency}
@@ -100,7 +119,7 @@ class ShoppingCart extends Component {
                         </div>
 
                         <button
-                            className="btn btn--primary"
+                            className="btn btn--primary shopping-cart__buy-btn"
                             onClick={() => {
                                 this.handleTogglePopup();
                                 //onRemoveAllProducts();

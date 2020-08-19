@@ -29,23 +29,29 @@ function Home(props) {
 
     return (
         <div>
-            <h2>Browse in Categories:</h2>
+            <h1 className="text-styles text-styles--h1">
+                Browse in Categories
+            </h1>
+
             {categories.map((category, index) => {
                 if (category.name !== null && index < 3) {
                     return (
-                        <ProductCardScrollContainer
-                            key={index}
-                            category={category.name}
-                            products={products}
-                            favorites={favorites}
-                            currency={currency}
-                            onTogglePopup={onTogglePopup}
-                            onFavorite={onFavorite}
-                        />
+                        <div className="home__scroll-container">
+                            <ProductCardScrollContainer
+                                key={index}
+                                category={category.name}
+                                products={products}
+                                favorites={favorites}
+                                currency={currency}
+                                onTogglePopup={onTogglePopup}
+                                onFavorite={onFavorite}
+                            />
+                        </div>
                     );
                 }
                 return null;
             })}
+
             <Link key="All Products" to="/products">
                 <h3>All Products</h3>
             </Link>

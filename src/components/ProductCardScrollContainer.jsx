@@ -16,7 +16,7 @@ function ProductCardScrollContainer(props) {
         .length === 0 ? null : (
         <div className="product-card-scroll-container">
             <div className="product-card-scroll-container__label-link-container">
-                <h3>{category}</h3>
+                <h2 className="text-styles text-styles--h2">{category}</h2>
                 <Link to={`/${category}`}>
                     <button className="btn btn--container product-card-scroll-container product-card-scroll-container__see-all-btn">
                         See all products in {category}

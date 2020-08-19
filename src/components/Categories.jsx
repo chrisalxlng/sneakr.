@@ -10,7 +10,7 @@ function Categories(props) {
 
     return (
         <div className="categories">
-            <h2>Categories:</h2>
+            <h1 className="text-styles text-styles--h1">Categories</h1>
             <div className="categories__grid">
                 <CategorieCard
                     key={"products"}

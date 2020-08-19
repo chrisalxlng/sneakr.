@@ -14,14 +14,26 @@ function OnCheckoutPopup(props) {
     return ReactDom.createPortal(
         <div className="popup__bg" onClick={onTogglePopup}>
             <div className="popup" onClick={(event) => event.stopPropagation()}>
-                <h2>Checkout successful!</h2>
+                <h1 className="text-styles text-styles--h1">
+                    Checkout successful!
+                </h1>
                 <p>You have bought:</p>
                 <ul>
                     {products.map((product) => {
                         return (
                             <li key={product.id}>
                                 <p>{product.name}</p>
-                                <p>{product.quantity}</p>
+                                <p>
+                                    {
+                                        cart.items
+                                            .filter(
+                                                (item) =>
+                                                    item.productID ===
+                                                    product.id
+                                            )
+                                            .map((item) => item.quantity)[0]
+                                    }
+                                </p>
                             </li>
                         );
                     })}

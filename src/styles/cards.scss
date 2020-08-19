@@ -71,7 +71,8 @@
 .cart-item-card {
     display: flex;
     position: relative;
-    width: 100%;
+    width: 450px;
+    max-width: 500px;
     height: 130px;
     border-radius: 10px;
     box-shadow: $box-shadow;
