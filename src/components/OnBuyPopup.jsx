@@ -25,7 +25,7 @@ function OnBuyPopup(props) {
                     <BuyProductInterface
                         product={product}
                         favorites={favorites}
-                        image={product["image-small"]}
+                        image={product["image-large"]}
                         currency={currency}
                         buyProductInterface={buyProductInterface}
                         onFavorite={onFavorite}
