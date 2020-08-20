@@ -17,20 +17,22 @@ function ProductCard(props) {
                     />
                     <div className="product-card__body">
                         <p className="product-card__name">{name}</p>
-                        {sale ? (
-                            <p className="product-card__price--sale">
-                                {sale + currency}
-                            </p>
-                        ) : null}
-                        {sale ? (
-                            <p className="product-card__price--strike-through">
-                                {price + currency}
-                            </p>
-                        ) : (
-                            <p className="product-card__price">
-                                {price + currency}
-                            </p>
-                        )}
+                        <div className="product-card__price-sale-container">
+                            {sale ? (
+                                <p className="product-card__price--sale">
+                                    {sale + currency}
+                                </p>
+                            ) : null}
+                            {sale ? (
+                                <p className="product-card__price--strike-through">
+                                    {price + currency}
+                                </p>
+                            ) : (
+                                <p className="product-card__price">
+                                    {price + currency}
+                                </p>
+                            )}
+                        </div>
                     </div>
                 </Link>
                 <button

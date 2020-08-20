@@ -1,8 +1,8 @@
 @import "styles/_config";
 
 .product-card {
-    width: 230px;
-    height: 300px;
+    width: var(--product-card-width);
+    height: var(--product-card-height);
     border-radius: 10px;
     box-shadow: $box-shadow;
     overflow: hidden;
@@ -19,8 +19,13 @@
         bottom: 5%;
         left: 5%;
         max-width: 65%;
+        min-height: 35px;
         border-radius: 10px;
         padding: 0.5em 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         background-color: $btn-color;
         box-shadow: $box-shadow;
     }
@@ -32,6 +37,11 @@
     &__name {
         font-weight: 600;
         color: black;
+    }
+
+    &__price-sale-container {
+        margin-top: 2px;
+        margin-bottom: 2px;
     }
 
     &__price {

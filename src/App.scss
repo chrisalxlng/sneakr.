@@ -8,7 +8,7 @@
     &__product-grid {
         margin-top: var(--space-m);
         display: grid;
-        grid-template-columns: repeat(auto-fit, 230px);
+        grid-template-columns: repeat(auto-fit, var(--product-card-width));
         grid-gap: var(--space-m);
         justify-content: space-between;
     }
