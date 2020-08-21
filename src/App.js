@@ -66,6 +66,18 @@ class App extends Component {
 
         // Setting the state for categories
         this.setState({ categories: categoriesSorted });
+
+        // If cart is set in storage, update cart in state with data out of localStorage
+        if (localStorage.getItem("cart") !== null) {
+            this.setState({ cart: JSON.parse(localStorage.getItem("cart")) });
+        }
+
+        // If favorites is set in storage, update favorites in state with data out of localStorage
+        if (localStorage.getItem("favorites") !== null) {
+            this.setState({
+                favorites: JSON.parse(localStorage.getItem("favorites")),
+            });
+        }
     }
 
     handleIncrementProduct = (
@@ -144,8 +156,10 @@ class App extends Component {
         cart.total = cartTotal;
         /* END - Adjusting value of cart.total */
 
-        // Setting the new state
-        this.setState({ cart: cart });
+        // Setting the new state and saving cart in localStorage
+        this.setState({ cart: cart }, () => {
+            localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        });
     };
 
     handleDecrementProduct = (product, selectedValue) => {
@@ -188,8 +202,10 @@ class App extends Component {
         cart.total = cartTotal;
         /* END - Adjusting value of cart.total */
 
-        // Setting the new state
-        this.setState({ cart: cart });
+        // Setting the new state and saving cart in localStorage
+        this.setState({ cart: cart }, () => {
+            localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        });
     };
 
     handleRemoveProduct = (product, selectedValue) => {
@@ -230,8 +246,10 @@ class App extends Component {
         cart.total = cartTotal;
         /* END - Adjusting value of cart.total */
 
-        // Setting the new state
-        this.setState({ cart: cart });
+        // Setting the new state and saving cart in localStorage
+        this.setState({ cart: cart }, () => {
+            localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        });
     };
 
     handleRemoveAllProducts = () => {
@@ -255,8 +273,10 @@ class App extends Component {
         cart.total = cartTotal;
         /* END - Adjusting value of cart.total */
 
-        // Setting the new state
-        this.setState({ cart: cart });
+        // Setting the new state and saving cart in localStorage
+        this.setState({ cart: cart }, () => {
+            localStorage.setItem("cart", JSON.stringify(this.state.cart));
+        });
     };
 
     handleFavorite = (product) => {
@@ -266,7 +286,6 @@ class App extends Component {
         // If an item isn't already a favorite, create one and push it to the array; otherwise remove it from the array
         if (favorites.filter((p) => p.productID === product.id).length !== 1) {
             favorites.push({
-                favoriteID: favorites.length,
                 productID: product.id,
             });
         } else {
@@ -276,8 +295,13 @@ class App extends Component {
             favorites.splice(index, 1);
         }
 
-        // Setting the new state
-        this.setState({ favorites });
+        // Setting the new state and saving favorites in localStorage
+        this.setState({ favorites: favorites }, () => {
+            localStorage.setItem(
+                "favorites",
+                JSON.stringify(this.state.favorites)
+            );
+        });
     };
 
     handleSort = (sortBy) => {
