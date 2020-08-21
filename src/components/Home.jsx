@@ -34,7 +34,7 @@ function Home(props) {
             </h1>
 
             {categories.map((category, index) => {
-                if (category.name !== null && index < 3) {
+                if (category.name !== null && index < 5) {
                     return (
                         <div className="home__scroll-container">
                             <ProductCardScrollContainer

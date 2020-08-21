@@ -28,7 +28,7 @@ function ProductCardScrollContainer(props) {
                 {products
                     .filter((product) => product.categories.includes(category))
                     .map((product, index) => {
-                        if (index < 5) {
+                        if (index < 10) {
                             return (
                                 <div
                                     className="product-card-scroll-container__scroll-grid-element"

@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "Outdoor Boots in Beige",
+        "name": "Nike Air Max White/Pink",
         "description": [
             "High-top design",
             "Slip-on style",
@@ -15,12 +15,12 @@
         "image-large": "product-large-0",
         "price": 144.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": ["Outdoor", "Boots"]
+        "sizes": [37, 38, 41, 42, 44, 45],
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 1,
-        "name": "Nike AirMax Blue",
+        "name": "Nike Air Max Blue",
         "description": [
             "Waffle-textured tread",
             "Padded cuff",
@@ -33,8 +33,8 @@
         "image-large": "product-large-1",
         "price": 130.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": ["Sneaker", "Nike"]
+        "sizes": [37, 40, 41, 42, 43, 45],
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 2,
@@ -51,12 +51,12 @@
         "image-large": "product-large-2",
         "price": 91.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": ["Nike"]
+        "sizes": [41, 42, 43, 44, 46],
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 3,
-        "name": "AirJordan 1 Blue/Black",
+        "name": "Acne Studios Off-White",
         "description": [
             "That ‘new shoe’ feeling",
             "Classic design",
@@ -68,12 +68,12 @@
         "image-large": "product-large-3",
         "price": 173.99,
         "sale": 162.99,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": ["Nike", "Jordan"]
+        "sizes": [37, 38, 41, 42, 43, 44],
+        "categories": ["Acne Studios", "Low Top"]
     },
     {
         "id": 4,
-        "name": "Leather High Heels",
+        "name": "Yeezy Boost 350 Grey",
         "description": ["High-top design", "Lugged tread", "Chunky sole"],
         "materials": "80% Textile, 20% other materials",
         "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
@@ -82,11 +82,11 @@
         "price": 33.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": ["High Heels"]
+        "categories": ["Adidas", "Yeezy", "Low Top"]
     },
     {
         "id": 5,
-        "name": null,
+        "name": "Nike Air Max 270 Black/Red",
         "description": [
             "Waffle-textured tread",
             "Chunky sole",
@@ -99,12 +99,12 @@
         "image-large": "product-large-5",
         "price": 102.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [39, 40, 41, 42, 45, 46],
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 6,
-        "name": null,
+        "name": "Nike Air Jordan 5 Fire Red",
         "description": [
             "You'll want to take care of these",
             "Waffle-textured tread",
@@ -117,11 +117,11 @@
         "price": 140.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 7,
-        "name": null,
+        "name": "Yeezy Boost 350 Black",
         "description": [
             "Switch up your rotation",
             "Lace-up fastening",
@@ -134,11 +134,11 @@
         "price": 151.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Adidas", "Yeezy", "Low Top"]
     },
     {
         "id": 8,
-        "name": null,
+        "name": "Toy Sneaker",
         "description": [
             "Signature branding",
             "Pull tabs for easy entry",
@@ -150,12 +150,12 @@
         "image-large": "product-large-8",
         "price": 41.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [41, 42, 43, 44, 45, 46],
+        "categories": ["Multicolor", "Low Top"]
     },
     {
         "id": 9,
-        "name": null,
+        "name": "Adidas Run Blue/Orange",
         "description": [
             "High-top design",
             "You'll want to take care of these",
@@ -168,12 +168,12 @@
         "image-large": "product-large-9",
         "price": 34.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [39, 40, 41, 42, 43, 44, 45, 46],
+        "categories": ["Adidas", "Low Top"]
     },
     {
         "id": 10,
-        "name": null,
+        "name": "Nike Air Jordan 5 Black/Orange",
         "description": [
             "So fresh and so clean",
             "Padded cuff",
@@ -186,12 +186,12 @@
         "image-large": "product-large-10",
         "price": 29.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "sizes": [38, 39, 40, 41, 42],
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 11,
-        "name": null,
+        "name": "Yeezy Boost 350 Triple Black",
         "description": [
             "Signature branding",
             "Waffle-textured tread",
@@ -203,12 +203,12 @@
         "image-large": "product-large-11",
         "price": 175.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [37, 40, 41, 42, 45, 46],
+        "categories": ["Adidas", "Yeezy", "Low Top"]
     },
     {
         "id": 12,
-        "name": null,
+        "name": "Yeezy Boost 350 Coral",
         "description": [
             "Lugged tread",
             "Classic design",
@@ -221,12 +221,12 @@
         "image-large": "product-large-12",
         "price": 34.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "sizes": [37, 38, 39, 40, 41, 42],
+        "categories": ["Adidas", "Yeezy", "Low Top"]
     },
     {
         "id": 13,
-        "name": null,
+        "name": "Nike Air Max 90 Yellow",
         "description": [
             "High-top design",
             "Classic design",
@@ -241,11 +241,11 @@
         "price": 89.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Nike", "Multicolor", "Air Max", "Low Top"]
     },
     {
         "id": 14,
-        "name": null,
+        "name": "Nike Air Max 97 G",
         "description": [
             "Switch up your rotation",
             "You'll want to take care of these",
@@ -258,11 +258,11 @@
         "price": 93.99,
         "sale": 81.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "categories": ["Nike", "Multicolor", "Air Max", "Low Top"]
     },
     {
         "id": 15,
-        "name": null,
+        "name": "Breathable Red Sneakers",
         "description": [
             "Padded cuff",
             "Lugged tread",
@@ -275,11 +275,11 @@
         "price": 93.99,
         "sale": 82.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "categories": ["Low Top"]
     },
     {
         "id": 16,
-        "name": null,
+        "name": "Nike Air Force 1 High White",
         "description": [
             "Classic design",
             "High-top design",
@@ -291,12 +291,12 @@
         "image-large": "product-large-16",
         "price": 32.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [39, 40, 41, 42, 43],
+        "categories": ["Nike", "Air Force", "High Top"]
     },
     {
         "id": 17,
-        "name": null,
+        "name": "Adidas Puremotion Light Grey",
         "description": ["Slip-on style", "Padded cuff", "Signature branding"],
         "materials": "70% Suede, 30% other materials",
         "cleaning": "Remove light marks with a clean damp sponge",
@@ -305,11 +305,11 @@
         "price": 96.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Adidas", "Low Top"]
     },
     {
         "id": 18,
-        "name": null,
+        "name": "Converse Chuck Taylor 70 Yellow",
         "description": [
             "That ‘new shoe’ feeling",
             "Lugged tread",
@@ -322,11 +322,11 @@
         "price": 145.99,
         "sale": 139.99,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Converse", "High Top"]
     },
     {
         "id": 19,
-        "name": null,
+        "name": "Adidas NMD_R1 Grey",
         "description": [
             "Switch up your rotation",
             "Waffle-textured tread",
@@ -340,12 +340,12 @@
         "image-large": "product-large-19",
         "price": 136.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "sizes": [39, 40, 41, 42],
+        "categories": ["Adidas", "NMD", "Low Top"]
     },
     {
         "id": 20,
-        "name": null,
+        "name": "Nike Air Force 1 Low Black",
         "description": [
             "High-top design",
             "Round toe",
@@ -359,11 +359,11 @@
         "price": 75.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Nike", "Air Force", "Low Top"]
     },
     {
         "id": 21,
-        "name": null,
+        "name": "Nike Air Jordan 1 White/Blue",
         "description": [
             "Padded cuff",
             "High-top design",
@@ -376,11 +376,11 @@
         "price": 53.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 22,
-        "name": null,
+        "name": "Nike Air Force 1 High '07 Beige",
         "description": [
             "Waffle-textured tread",
             "Pull tabs for easy entry",
@@ -393,12 +393,12 @@
         "image-large": "product-large-22",
         "price": 89.99,
         "sale": 77.99,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [37, 38, 43],
+        "categories": ["Nike", "Air Force", "High Top"]
     },
     {
         "id": 23,
-        "name": null,
+        "name": "Nike Pure Running White/Green",
         "description": [
             "Lugged tread",
             "Signature branding",
@@ -410,12 +410,12 @@
         "image-large": "product-large-23",
         "price": 114.99,
         "sale": 106.99,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "sizes": [37, 41, 42, 43, 44, 45],
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 24,
-        "name": null,
+        "name": "Nike Air Max Sport Light Grey",
         "description": [
             "You'll want to take care of these",
             "Pull tabs for easy entry",
@@ -428,12 +428,12 @@
         "image-large": "product-large-24",
         "price": 62.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "sizes": [38, 39, 40, 41, 42, 43, 44, 45],
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 25,
-        "name": null,
+        "name": "Nike Air Force 1 Khaki",
         "description": [
             "Slip-on style",
             "Pull tabs for easy entry",
@@ -446,12 +446,12 @@
         "image-large": "product-large-25",
         "price": 147.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [40, 41, 42, 43],
+        "categories": ["Nike", "Air Force", "High Top"]
     },
     {
         "id": 26,
-        "name": null,
+        "name": "Nike Air Jordan 1 Grey",
         "description": [
             "Slip-on style",
             "Round toe",
@@ -464,11 +464,11 @@
         "price": 35.99,
         "sale": 29.99,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 27,
-        "name": null,
+        "name": "Converse Chuck Taylor High Black",
         "description": ["Classic design", "Lace-up fastening", "Lugged tread"],
         "materials": "60% Rubber, 40% other materials",
         "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
@@ -477,11 +477,11 @@
         "price": 104.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Converse", "High Top"]
     },
     {
         "id": 28,
-        "name": null,
+        "name": "FORT System Grey/Black",
         "description": [
             "Lace-up fastening",
             "Round toe",
@@ -495,11 +495,11 @@
         "price": 143.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "categories": ["FORT", "Low Top"]
     },
     {
         "id": 29,
-        "name": null,
+        "name": "Nike Air Jordan 1 Orange/Black",
         "description": [
             "That ‘new shoe’ feeling",
             "Signature branding",
@@ -513,11 +513,11 @@
         "price": 113.99,
         "sale": 105.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 30,
-        "name": null,
+        "name": "Nike Air Jordan 1 Red/Black",
         "description": [
             "That ‘new shoe’ feeling",
             "You'll want to take care of these",
@@ -530,12 +530,12 @@
         "image-large": "product-large-30",
         "price": 131.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [39, 40, 41, 42, 43],
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 31,
-        "name": null,
+        "name": "Timberland Boots Brown",
         "description": [
             "Classic design",
             "Signature branding",
@@ -548,11 +548,11 @@
         "price": 108.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Timberland", "High Top"]
     },
     {
         "id": 32,
-        "name": null,
+        "name": "Yeezy Boost 350 Triple White",
         "description": ["Padded cuff", "Waffle-textured tread", "Chunky sole"],
         "materials": "70% Suede, 30% other materials",
         "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
@@ -560,12 +560,12 @@
         "image-large": "product-large-32",
         "price": 41.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [37, 38, 42, 43],
+        "categories": ["Adidas", "Yeezy", "Low Top"]
     },
     {
         "id": 33,
-        "name": null,
+        "name": "Converse Chuck Taylor Low Black",
         "description": [
             "Slip-on style",
             "You'll want to take care of these",
@@ -578,11 +578,11 @@
         "price": 75.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Converse", "Low Top"]
     },
     {
         "id": 34,
-        "name": null,
+        "name": "Saucony 1 Autumn",
         "description": [
             "Padded cuff",
             "Lugged tread",
@@ -597,11 +597,11 @@
         "price": 61.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "categories": ["Saucony", "Multicolor", "Low Top"]
     },
     {
         "id": 35,
-        "name": null,
+        "name": "Nike Air Jordan 1 Red/White",
         "description": [
             "You'll want to take care of these",
             "That ‘new shoe’ feeling",
@@ -613,12 +613,12 @@
         "image-large": "product-large-35",
         "price": 143.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "sizes": [37, 38, 39, 44, 45],
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 36,
-        "name": null,
+        "name": "Nike Knits White",
         "description": [
             "Round toe",
             "High-top design",
@@ -633,11 +633,11 @@
         "price": 55.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 37,
-        "name": null,
+        "name": "Adidas Classic Superstar White",
         "description": ["Lugged tread", "Round toe", "Switch up your rotation"],
         "materials": "80% Rubber, 20% other materials",
         "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
@@ -646,11 +646,11 @@
         "price": 45.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Adidas", "Low Top"]
     },
     {
         "id": 38,
-        "name": null,
+        "name": "Nike Air Force 1 Low Just Do It White",
         "description": [
             "Slip-on style",
             "So fresh and so clean",
@@ -665,11 +665,11 @@
         "price": 150.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Air Force", "Low Top"]
     },
     {
         "id": 39,
-        "name": null,
+        "name": "Reebok Low Autumn",
         "description": ["Classic design", "Slip-on style", "Lugged tread"],
         "materials": "80% Textile, 20% other materials",
         "cleaning": "Remove light marks with a clean damp sponge",
@@ -677,12 +677,12 @@
         "image-large": "product-large-39",
         "price": 32.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [41, 42, 43, 44, 45, 46],
+        "categories": ["Reebok", "Low Top"]
     },
     {
         "id": 40,
-        "name": null,
+        "name": "Nike Air Max 97 Yellow/Green",
         "description": [
             "Signature branding",
             "Waffle-textured tread",
@@ -696,11 +696,11 @@
         "price": 85.99,
         "sale": 68.99,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Multicolor", "Air Max", "Low Top"]
     },
     {
         "id": 41,
-        "name": null,
+        "name": "Asics Low Brown",
         "description": [
             "So fresh and so clean",
             "Switch up your rotation",
@@ -715,11 +715,11 @@
         "price": 71.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Asics", "Multicolor", "Low Top"]
     },
     {
         "id": 42,
-        "name": null,
+        "name": "Nike Air Jordan 1 Blue/White",
         "description": [
             "So fresh and so clean",
             "Pull tabs for easy entry",
@@ -733,12 +733,12 @@
         "image-large": "product-large-42",
         "price": 115.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "sizes": [40, 41, 42],
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 43,
-        "name": null,
+        "name": "Adidas Running Black",
         "description": [
             "Pull tabs for easy entry",
             "You'll want to take care of these",
@@ -753,11 +753,11 @@
         "price": 103.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Adidas", "Low Top"]
     },
     {
         "id": 44,
-        "name": null,
+        "name": "Nike Air Max Running Black/Red",
         "description": [
             "Signature branding",
             "Lugged tread",
@@ -771,12 +771,12 @@
         "image-large": "product-large-44",
         "price": 95.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [37, 38, 43],
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 45,
-        "name": null,
+        "name": "Adidas Low Forest Green",
         "description": [
             "Round toe",
             "Padded cuff",
@@ -790,11 +790,11 @@
         "price": 170.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "categories": ["Adidas", "Low Top"]
     },
     {
         "id": 46,
-        "name": null,
+        "name": "Fresh Foam Low White",
         "description": [
             "Lugged tread",
             "Signature branding",
@@ -809,11 +809,11 @@
         "price": 139.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Fresh Foam", "Low Top"]
     },
     {
         "id": 47,
-        "name": null,
+        "name": "Nike Low Beige",
         "description": [
             "Lace-up fastening",
             "Slip-on style",
@@ -826,11 +826,11 @@
         "price": 91.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 48,
-        "name": null,
+        "name": "Nike Air Max Motion 2 Yellow",
         "description": [
             "That ‘new shoe’ feeling",
             "Classic design",
@@ -844,11 +844,11 @@
         "price": 62.99,
         "sale": 48.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 49,
-        "name": null,
+        "name": "Nike ISPA Grey",
         "description": [
             "Chunky sole",
             "Lace-up fastening",
@@ -862,12 +862,12 @@
         "image-large": "product-large-49",
         "price": 172.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [38, 39, 40, 41, 42, 43],
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 50,
-        "name": null,
+        "name": "Vans Old Skool Brown",
         "description": [
             "Chunky sole",
             "Round toe",
@@ -881,11 +881,11 @@
         "price": 154.99,
         "sale": 134.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Vans", "Low Top"]
     },
     {
         "id": 51,
-        "name": null,
+        "name": "Nike Air Max 270 White",
         "description": [
             "Lugged tread",
             "So fresh and so clean",
@@ -900,11 +900,11 @@
         "price": 49.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 52,
-        "name": null,
+        "name": "Nike Air Max 95 Black",
         "description": [
             "Switch up your rotation",
             "Waffle-textured tread",
@@ -917,11 +917,11 @@
         "price": 42.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 53,
-        "name": null,
+        "name": "Adidas Ultraboost Black",
         "description": [
             "High-top design",
             "So fresh and so clean",
@@ -936,11 +936,11 @@
         "price": 179.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "categories": ["Adidas", "Ultraboost", "Low Top"]
     },
     {
         "id": 54,
-        "name": null,
+        "name": "Nike Air Max 97 Brown/Black",
         "description": [
             "Chunky sole",
             "Signature branding",
@@ -954,11 +954,11 @@
         "price": 138.99,
         "sale": 119.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 55,
-        "name": null,
+        "name": "Adidas Ultraboost Red",
         "description": [
             "Padded cuff",
             "Lace-up fastening",
@@ -972,12 +972,12 @@
         "image-large": "product-large-55",
         "price": 62.99,
         "sale": 52.99,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "sizes": [37, 42, 43, 44, 45],
+        "categories": ["Adidas", "Ultraboost", "Low Top"]
     },
     {
         "id": 56,
-        "name": null,
+        "name": "Asics Low White/Yellow",
         "description": [
             "Slip-on style",
             "High-top design",
@@ -992,11 +992,11 @@
         "price": 36.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Asics", "Low Top"]
     },
     {
         "id": 57,
-        "name": null,
+        "name": "Nike Cortex High White",
         "description": [
             "Pull tabs for easy entry",
             "Padded cuff",
@@ -1009,11 +1009,11 @@
         "price": 149.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Nike", "High Top"]
     },
     {
         "id": 58,
-        "name": null,
+        "name": "Nike Air Max 720 White",
         "description": [
             "Chunky sole",
             "Classic design",
@@ -1025,12 +1025,12 @@
         "image-large": "product-large-58",
         "price": 154.99,
         "sale": 140.99,
-        "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "sizes": [39, 40, 41, 42],
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 59,
-        "name": null,
+        "name": "Nike Air Max Low Green",
         "description": [
             "Chunky sole",
             "You'll want to take care of these",
@@ -1043,11 +1043,11 @@
         "price": 157.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 60,
-        "name": null,
+        "name": "Nike Air Max 270 Multi",
         "description": [
             "Chunky sole",
             "Switch up your rotation",
@@ -1060,12 +1060,12 @@
         "image-large": "product-large-60",
         "price": 49.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "sizes": [37, 42, 43, 44],
+        "categories": ["Nike", "Multicolor", "Air Max", "Low Top"]
     },
     {
         "id": 61,
-        "name": null,
+        "name": "Nike React Vision White/Red",
         "description": [
             "High-top design",
             "Pull tabs for easy entry",
@@ -1078,11 +1078,11 @@
         "price": 138.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Multicolor", "Low Top"]
     },
     {
         "id": 62,
-        "name": null,
+        "name": "Adidas Ultraboost Dark Blue",
         "description": [
             "Signature branding",
             "Lace-up fastening",
@@ -1097,11 +1097,11 @@
         "price": 51.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Adidas", "Ultraboost", "Low Top"]
     },
     {
         "id": 63,
-        "name": null,
+        "name": "Nike React Vision Triple White",
         "description": [
             "Lace-up fastening",
             "Lugged tread",
@@ -1115,12 +1115,12 @@
         "image-large": "product-large-63",
         "price": 127.99,
         "sale": 117.99,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [37, 39, 40, 41, 42, 43],
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 64,
-        "name": null,
+        "name": "Nike Air Force 1 Low White/Red",
         "description": [
             "Signature branding",
             "So fresh and so clean",
@@ -1135,11 +1135,11 @@
         "price": 140.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "categories": ["Nike", "Air Force", "Low Top"]
     },
     {
         "id": 65,
-        "name": null,
+        "name": "Nike React Vision Black",
         "description": [
             "High-top design",
             "So fresh and so clean",
@@ -1153,12 +1153,12 @@
         "image-large": "product-large-65",
         "price": 165.99,
         "sale": 152.99,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "sizes": [37, 39, 40, 41, 44],
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 66,
-        "name": null,
+        "name": "Nike Air Max 1 Bright",
         "description": [
             "Round toe",
             "Switch up your rotation",
@@ -1173,11 +1173,11 @@
         "price": 60.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "categories": ["Nike", "Multicolor", "Air Max", "Low Top"]
     },
     {
         "id": 67,
-        "name": null,
+        "name": "Nike Air Max Low Blue/White",
         "description": [
             "High-top design",
             "Round toe",
@@ -1192,11 +1192,11 @@
         "price": 129.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 68,
-        "name": null,
+        "name": "Nike MX 720 White/Red",
         "description": [
             "Waffle-textured tread",
             "You'll want to take care of these",
@@ -1210,12 +1210,12 @@
         "image-large": "product-large-68",
         "price": 112.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "sizes": [37, 41, 42],
+        "categories": ["Nike", "Low Top"]
     },
     {
         "id": 69,
-        "name": null,
+        "name": "Puma RS-350 White/Black",
         "description": [
             "Signature branding",
             "Pull tabs for easy entry",
@@ -1230,11 +1230,11 @@
         "price": 176.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Puma", "Low Top"]
     },
     {
         "id": 70,
-        "name": null,
+        "name": "Nike Running Orange/Black",
         "description": ["Round toe", "So fresh and so clean", "Classic design"],
         "materials": "80% Textile, 20% other materials",
         "cleaning": "Wipe clean with a damp cloth or sponge",
@@ -1243,11 +1243,11 @@
         "price": 153.99,
         "sale": 147.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": [null]
+        "categories": ["Nike", "Multicolor", "Low Top"]
     },
     {
         "id": 71,
-        "name": null,
+        "name": "Nike Air Jordan High Purple",
         "description": [
             "Pull tabs for easy entry",
             "Switch up your rotation",
@@ -1261,11 +1261,11 @@
         "price": 88.99,
         "sale": 76.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 72,
-        "name": null,
+        "name": "Adidas Running All Red",
         "description": [
             "Lace-up fastening",
             "You'll want to take care of these",
@@ -1277,12 +1277,12 @@
         "image-large": "product-large-72",
         "price": 45.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [40, 41, 42, 43, 44, 45, 46],
+        "categories": ["Adidas", "Low Top"]
     },
     {
         "id": 73,
-        "name": null,
+        "name": "FILA Disruptor Triple White",
         "description": [
             "Chunky sole",
             "Switch up your rotation",
@@ -1297,11 +1297,11 @@
         "price": 121.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["FILA", "Low Top"]
     },
     {
         "id": 74,
-        "name": null,
+        "name": "Nike Air Force 1 Pride White",
         "description": [
             "Waffle-textured tread",
             "High-top design",
@@ -1313,12 +1313,12 @@
         "image-large": "product-large-74",
         "price": 133.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "sizes": [37, 42, 43, 44, 45, 46],
+        "categories": ["Nike", "Air Force", "Low Top"]
     },
     {
         "id": 75,
-        "name": null,
+        "name": "Puma Low Black",
         "description": [
             "Chunky sole",
             "Padded cuff",
@@ -1333,11 +1333,11 @@
         "price": 174.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Puma", "Low Top"]
     },
     {
         "id": 76,
-        "name": null,
+        "name": "Nike Air Max 2090 Green",
         "description": [
             "High-top design",
             "Slip-on style",
@@ -1350,11 +1350,11 @@
         "price": 75.99,
         "sale": 55.99,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 77,
-        "name": null,
+        "name": "Nike Air Max 1 Camouflage",
         "description": [
             "High-top design",
             "Signature branding",
@@ -1368,12 +1368,12 @@
         "image-large": "product-large-77",
         "price": 173.99,
         "sale": 158.99,
-        "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": [null]
+        "sizes": [39, 40, 41, 42, 45],
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 78,
-        "name": null,
+        "name": "Nike Air Jordan 1 Black/White",
         "description": [
             "Slip-on style",
             "Waffle-textured tread",
@@ -1386,11 +1386,11 @@
         "price": 175.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": [null]
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 79,
-        "name": null,
+        "name": "Nike Air Max MX-720 Silver",
         "description": [
             "Slip-on style",
             "That ‘new shoe’ feeling",
@@ -1405,101 +1405,61 @@
         "price": 41.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "categories": ["Nike", "Air Max", "Low Top"]
     },
     {
         "id": 80,
-        "name": null,
+        "name": "Nike Air Force 1 Low Candy",
         "description": [
-            "Slip-on style",
-            "That ‘new shoe’ feeling",
             "Classic design",
+            "Lace-up fastening",
+            "You'll want to take care of these",
             "Padded cuff",
             "So fresh and so clean"
         ],
-        "materials": "80% Rubber, 20% other materials",
-        "cleaning": "Remove light marks with a clean damp sponge",
+        "materials": "55% Rubber, 45% other materials",
+        "cleaning": "Treat with a suitable leather protector and avoid contact with liquids",
         "image-small": "product-small-80",
         "image-large": "product-large-80",
-        "price": 41.99,
-        "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "price": 99.99,
+        "sale": 89.99,
+        "sizes": [38, 40, 41, 43],
+        "categories": ["Nike", "Multicolor", "Air Force", "Low Top"]
     },
     {
         "id": 81,
-        "name": null,
+        "name": "Nike Air Jordan 1 Blue/Red",
         "description": [
             "Slip-on style",
             "That ‘new shoe’ feeling",
-            "Classic design",
-            "Padded cuff",
-            "So fresh and so clean"
+            "Waffle-textured tread",
+            "Chunky sole"
         ],
-        "materials": "80% Rubber, 20% other materials",
-        "cleaning": "Remove light marks with a clean damp sponge",
+        "materials": "70% Leather, 30% other materials",
+        "cleaning": "Wipe clean with a damp cloth or sponge",
         "image-small": "product-small-81",
         "image-large": "product-large-81",
-        "price": 41.99,
+        "price": 35.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "categories": ["Nike", "Air Jordan", "High Top"]
     },
     {
         "id": 82,
-        "name": null,
+        "name": "Nike Air Max Low Neon Black",
         "description": [
             "Slip-on style",
-            "That ‘new shoe’ feeling",
-            "Classic design",
-            "Padded cuff",
+            "High-top design",
+            "Pull tabs for easy entry",
             "So fresh and so clean"
         ],
-        "materials": "80% Rubber, 20% other materials",
+        "materials": "60% Rubber, 40% other materials",
         "cleaning": "Remove light marks with a clean damp sponge",
         "image-small": "product-small-82",
         "image-large": "product-large-82",
-        "price": 41.99,
+        "price": 58.99,
         "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
-    },
-    {
-        "id": 83,
-        "name": null,
-        "description": [
-            "Slip-on style",
-            "That ‘new shoe’ feeling",
-            "Classic design",
-            "Padded cuff",
-            "So fresh and so clean"
-        ],
-        "materials": "80% Rubber, 20% other materials",
-        "cleaning": "Remove light marks with a clean damp sponge",
-        "image-small": "product-small-83",
-        "image-large": "product-large-83",
-        "price": 41.99,
-        "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
-    },
-    {
-        "id": 84,
-        "name": null,
-        "description": [
-            "Slip-on style",
-            "That ‘new shoe’ feeling",
-            "Classic design",
-            "Padded cuff",
-            "So fresh and so clean"
-        ],
-        "materials": "80% Rubber, 20% other materials",
-        "cleaning": "Remove light marks with a clean damp sponge",
-        "image-small": "product-small-84",
-        "image-large": "product-large-84",
-        "price": 41.99,
-        "sale": null,
-        "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": [null]
+        "sizes": [37, 38, 43],
+        "categories": ["Nike", "Air Max", "Low Top"]
     }
 ]
