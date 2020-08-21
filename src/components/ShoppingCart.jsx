@@ -22,6 +22,7 @@ class ShoppingCart extends Component {
             products,
             cart,
             cartItemsCount,
+            favorites,
             currency,
             onIncrementProduct,
             onDecrementProduct,
@@ -31,12 +32,18 @@ class ShoppingCart extends Component {
         const { showPopup } = this.state;
         const { items, total } = cart;
 
+        const btnText =
+            favorites.length > 0
+                ? "See your favorites"
+                : "Browse in categories";
+        const btnLink = favorites.length > 0 ? "/favorites" : "/categories";
+
         return items.length === 0 ? (
             <EmptyState
                 heading="Your cart is empty"
                 description="Add items to your cart."
-                buttonText="Browse in categories"
-                buttonLink="/categories"
+                buttonText={btnText}
+                buttonLink={btnLink}
             />
         ) : (
             <div className="shopping-cart">

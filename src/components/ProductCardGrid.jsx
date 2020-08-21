@@ -73,7 +73,7 @@ function ProductCardGrid(props) {
 
             {products.length === 0 ? (
                 <EmptyState
-                    heading="There were no products found in this price span"
+                    heading="No products found"
                     description="Adjust the price span to discover new products!"
                     buttonText={null}
                     buttonLink={null}

@@ -80,6 +80,7 @@ function Content(props) {
                             cartItemsCount={cart.items
                                 .map((item) => item.quantity)
                                 .reduce((prev, next) => prev + next, 0)}
+                            favorites={favorites}
                             currency={currency}
                             onIncrementProduct={onIncrementProduct}
                             onDecrementProduct={onDecrementProduct}
