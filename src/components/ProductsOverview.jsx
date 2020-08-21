@@ -53,6 +53,7 @@ function ProductsOverview(props) {
                     favorites={favorites}
                     currency={currency}
                     buyProductInterface={buyProductInterface}
+                    popupOnBuyProduct={popupOnBuyProduct}
                     onFavorite={onFavorite}
                     onIncrementProduct={onIncrementProduct}
                     onTogglePopup={onTogglePopup}

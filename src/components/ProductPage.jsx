@@ -38,6 +38,7 @@ function ProductPage(props) {
                     image={product["image-large"]}
                     currency={currency}
                     buyProductInterface={buyProductInterface}
+                    popupOnBuyProduct={popupOnBuyProduct}
                     onFavorite={onFavorite}
                     onIncrementProduct={onIncrementProduct}
                     onInterfaceIncrementQuantity={onInterfaceIncrementQuantity}
@@ -81,6 +82,7 @@ function ProductPage(props) {
             </div>
             <ProductCardScrollContainer
                 category={categories[0]}
+                label="Similar Products"
                 products={products.filter((p) => p !== product)}
                 favorites={favorites}
                 currency={currency}

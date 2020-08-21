@@ -36,10 +36,10 @@ function Home(props) {
             {categories.map((category, index) => {
                 if (category.name !== null && index < 5) {
                     return (
-                        <div className="home__scroll-container">
+                        <div key={index} className="home__scroll-container">
                             <ProductCardScrollContainer
-                                key={index}
                                 category={category.name}
+                                label={category.name}
                                 products={products}
                                 favorites={favorites}
                                 currency={currency}
@@ -61,6 +61,7 @@ function Home(props) {
                     favorites={favorites}
                     currency={currency}
                     buyProductInterface={buyProductInterface}
+                    popupOnBuyProduct={popupOnBuyProduct}
                     onFavorite={onFavorite}
                     onIncrementProduct={onIncrementProduct}
                     onTogglePopup={onTogglePopup}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 function BuyProductInterface(props) {
     const {
@@ -7,15 +8,21 @@ function BuyProductInterface(props) {
         image,
         currency,
         buyProductInterface,
+        popupOnBuyProduct,
         onFavorite,
         onIncrementProduct,
         onInterfaceIncrementQuantity,
         onInterfaceDecrementQuantity,
         onInterfaceSelectChange,
         onInterfaceReset,
+        onTogglePopup,
     } = props;
     const { price, sale, sizes } = product;
     const { quantity, selectedValue } = buyProductInterface;
+
+    useEffect(() => {
+        if (selectedValue === null) onInterfaceSelectChange(sizes[0]);
+    });
 
     return (
         <div className="buy-interface">
@@ -111,6 +118,9 @@ function BuyProductInterface(props) {
                     onClick={() => {
                         onIncrementProduct(product, selectedValue, quantity);
                         onInterfaceReset();
+                        if (popupOnBuyProduct.showPopup) {
+                            onTogglePopup();
+                        }
                     }}
                 >
                     Add {quantity} {quantity > 1 ? "items" : "item"} to cart

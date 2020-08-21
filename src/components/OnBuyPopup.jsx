@@ -8,6 +8,7 @@ function OnBuyPopup(props) {
         favorites,
         currency,
         buyProductInterface,
+        popupOnBuyProduct,
         onFavorite,
         onIncrementProduct,
         onTogglePopup,
@@ -28,6 +29,7 @@ function OnBuyPopup(props) {
                         image={product["image-large"]}
                         currency={currency}
                         buyProductInterface={buyProductInterface}
+                        popupOnBuyProduct={popupOnBuyProduct}
                         onFavorite={onFavorite}
                         onIncrementProduct={onIncrementProduct}
                         onInterfaceIncrementQuantity={
@@ -38,6 +40,7 @@ function OnBuyPopup(props) {
                         }
                         onInterfaceReset={onInterfaceReset}
                         onInterfaceSelectChange={onInterfaceSelectChange}
+                        onTogglePopup={onTogglePopup}
                     />
                 </div>
                 <button
