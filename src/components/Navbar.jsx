@@ -13,7 +13,10 @@ function Navbar(props) {
                 <NavLink to="/">
                     <span className="nav__link">Home</span>
                 </NavLink>
-                <NavLink to="/Sale">
+                <NavLink to="/products">
+                    <span className="nav__link">Products</span>
+                </NavLink>
+                <NavLink to="/sale">
                     <span className="nav__link">Sale</span>
                 </NavLink>
                 <NavLink to="/categories">

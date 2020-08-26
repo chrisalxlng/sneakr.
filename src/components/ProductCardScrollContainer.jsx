@@ -38,7 +38,7 @@ function ProductCardScrollContainer(props) {
         <div className="product-card-scroll-container">
             <div className="product-card-scroll-container__label-link-container">
                 <h2 className="text-styles text-styles--h2">{label}</h2>
-                <Link to={`/${category}`}>
+                <Link to={`/${category.toLowerCase()}`}>
                     <button className="btn btn--container product-card-scroll-container product-card-scroll-container__see-all-btn">
                         See all products in {category}
                     </button>

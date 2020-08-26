@@ -69,7 +69,7 @@
         "price": 173.99,
         "sale": 162.99,
         "sizes": [37, 38, 41, 42, 43, 44],
-        "categories": ["Acne Studios", "Low Top"]
+        "categories": ["Low Top", "Acne Studios"]
     },
     {
         "id": 4,
@@ -495,7 +495,7 @@
         "price": 143.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44],
-        "categories": ["FORT", "Low Top"]
+        "categories": ["Low Top", "FORT"]
     },
     {
         "id": 29,
@@ -548,7 +548,7 @@
         "price": 108.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": ["Timberland", "High Top"]
+        "categories": ["High Top", "Timberland"]
     },
     {
         "id": 32,
@@ -597,7 +597,7 @@
         "price": 61.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43],
-        "categories": ["Saucony", "Multicolor", "Low Top"]
+        "categories": ["Multicolor", "Saucony", "Low Top"]
     },
     {
         "id": 35,
@@ -678,7 +678,7 @@
         "price": 32.99,
         "sale": null,
         "sizes": [41, 42, 43, 44, 45, 46],
-        "categories": ["Reebok", "Low Top"]
+        "categories": ["Low Top", "Reebok"]
     },
     {
         "id": 40,
@@ -809,7 +809,7 @@
         "price": 139.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-        "categories": ["Fresh Foam", "Low Top"]
+        "categories": ["Low Top", "Fresh Foam"]
     },
     {
         "id": 47,
@@ -881,7 +881,7 @@
         "price": 154.99,
         "sale": 134.99,
         "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45],
-        "categories": ["Vans", "Low Top"]
+        "categories": ["Low Top", "Vans"]
     },
     {
         "id": 51,
@@ -1297,7 +1297,7 @@
         "price": 121.99,
         "sale": null,
         "sizes": [37, 38, 39, 40, 41, 42],
-        "categories": ["FILA", "Low Top"]
+        "categories": ["Low Top", "FILA"]
     },
     {
         "id": 74,

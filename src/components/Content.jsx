@@ -211,7 +211,7 @@ function Content(props) {
                                     .map((category) => category.name)
                                     .filter(
                                         (c) =>
-                                            c ===
+                                            c.toLowerCase() ===
                                             routerProps.match.params.category
                                     )[0]
                             }
@@ -221,7 +221,7 @@ function Content(props) {
                                         .map((category) => category.name)
                                         .filter(
                                             (c) =>
-                                                c ===
+                                                c.toLowerCase() ===
                                                 routerProps.match.params
                                                     .category
                                         )[0]
