@@ -19,6 +19,7 @@ function Content(props) {
         productsFilterSliderValues,
         popupOnBuyProduct,
         buyProductInterface,
+        containerScrollPosition,
         onIncrementProduct,
         onDecrementProduct,
         onFavorite,
@@ -31,6 +32,7 @@ function Content(props) {
         onInterfaceDecrementQuantity,
         onInterfaceReset,
         onInterfaceSelectChange,
+        onStoreScrollPosition,
     } = props;
 
     return (
@@ -47,6 +49,7 @@ function Content(props) {
                             currency={currency}
                             popupOnBuyProduct={popupOnBuyProduct}
                             buyProductInterface={buyProductInterface}
+                            containerScrollPosition={containerScrollPosition}
                             onTogglePopup={onTogglePopup}
                             onFavorite={onFavorite}
                             onIncrementProduct={onIncrementProduct}
@@ -58,6 +61,7 @@ function Content(props) {
                             }
                             onInterfaceReset={onInterfaceReset}
                             onInterfaceSelectChange={onInterfaceSelectChange}
+                            onStoreScrollPosition={onStoreScrollPosition}
                         />
                     )}
                 />
@@ -182,6 +186,7 @@ function Content(props) {
                             products={products}
                             buyProductInterface={buyProductInterface}
                             popupOnBuyProduct={popupOnBuyProduct}
+                            containerScrollPosition={containerScrollPosition}
                             onFavorite={onFavorite}
                             onIncrementProduct={onIncrementProduct}
                             onInterfaceIncrementQuantity={
@@ -193,6 +198,7 @@ function Content(props) {
                             onInterfaceReset={onInterfaceReset}
                             onInterfaceSelectChange={onInterfaceSelectChange}
                             onTogglePopup={onTogglePopup}
+                            onStoreScrollPosition={onStoreScrollPosition}
                         />
                     )}
                 />

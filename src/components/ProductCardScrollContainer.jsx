@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 function ProductCardScrollContainer(props) {
     const {
+        id,
         label,
         category,
         products,
         favorites,
         currency,
+        scrollPosition,
         onTogglePopup,
         onFavorite,
+        onStoreScrollPosition,
     } = props;
+
+    const containerRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const currentContainerRef = containerRef.current;
+        if (currentContainerRef !== null)
+            currentContainerRef.scrollLeft = scrollPosition;
+
+        return () => {
+            if (
+                currentContainerRef !== null &&
+                currentContainerRef.scrollLeft !== scrollPosition
+            ) {
+                onStoreScrollPosition(id, currentContainerRef.scrollLeft);
+            }
+        };
+    });
 
     return products.filter((product) => product.categories.includes(category))
         .length === 0 ? null : (
@@ -25,7 +45,10 @@ function ProductCardScrollContainer(props) {
                 </Link>
             </div>
 
-            <div className="product-card-scroll-container__scroll-grid">
+            <div
+                ref={containerRef}
+                className="product-card-scroll-container__scroll-grid"
+            >
                 {products
                     .filter((product) => product.categories.includes(category))
                     .map((product, index) => {

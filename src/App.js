@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
+import ScrollToTop from "./components/ScrollToTop";
 import products from "./data/products.json";
 import { BrowserRouter } from "react-router-dom";
 import "./App.scss";
@@ -23,6 +24,7 @@ class App extends Component {
             productsFilterSliderValues: [0, 180],
             popupOnBuyProduct: { showPopup: false, product: null },
             buyProductInterface: { quantity: 1, selectedValue: null },
+            containerScrollPosition: [0, 0, 0, 0, 0, 0],
         };
     }
 
@@ -424,6 +426,17 @@ class App extends Component {
         this.setState({ buyProductInterface: buyProductInterface });
     };
 
+    handleStoreScrollPosition = (scrollContainerID, scrollPos) => {
+        // Copying containerScrollPosition from current state
+        const containerScrollPosition = [...this.state.containerScrollPosition];
+
+        // Setting containerScrollPosition to the changed value
+        containerScrollPosition[scrollContainerID] = scrollPos;
+
+        // Setting the new state
+        this.setState({ containerScrollPosition: containerScrollPosition });
+    };
+
     render() {
         const {
             products,
@@ -436,11 +449,13 @@ class App extends Component {
             productsFilterSliderValues,
             popupOnBuyProduct,
             buyProductInterface,
+            containerScrollPosition,
         } = this.state;
 
         return (
             <div className="App">
                 <BrowserRouter>
+                    <ScrollToTop />
                     <Navbar
                         cartItemsCount={cart.items
                             .map((item) => item.quantity)
@@ -457,6 +472,7 @@ class App extends Component {
                         productsFilterSliderValues={productsFilterSliderValues}
                         popupOnBuyProduct={popupOnBuyProduct}
                         buyProductInterface={buyProductInterface}
+                        containerScrollPosition={containerScrollPosition}
                         onIncrementProduct={this.handleIncrementProduct}
                         onDecrementProduct={this.handleDecrementProduct}
                         onRemoveProduct={this.handleRemoveProduct}
@@ -475,6 +491,7 @@ class App extends Component {
                         onInterfaceSelectChange={
                             this.handleInterfaceSelectChange
                         }
+                        onStoreScrollPosition={this.handleStoreScrollPosition}
                     />
                 </BrowserRouter>
             </div>

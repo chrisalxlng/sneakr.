@@ -1,15 +1,15 @@
 @import "styles/_config";
 
 .btn {
-    background-color: $btn-color;
-    box-shadow: $box-shadow;
+    background-color: var(--btn-color);
+    box-shadow: var(--box-shadow);
     height: 35px;
     width: min-content;
     border: none;
     cursor: pointer;
 
     &:hover {
-        background-color: rgba(255, 255, 255, 1);
+        background-color: var(--btn-hover-color);
     }
 
     &--container {
@@ -20,6 +20,10 @@
         align-items: center;
         padding: 15px;
         cursor: default;
+
+        &:hover {
+            background-color: var(--btn-color);
+        }
     }
 
     &--primary {
@@ -32,7 +36,7 @@
         font-weight: 600;
 
         &:hover {
-            background-color: black;
+            background-color: rgb(39, 39, 39);
         }
     }
 
@@ -60,11 +64,15 @@
         overflow: hidden;
 
         select {
-            background-color: $btn-color;
+            background-color: var(--btn-color);
             appearance: none;
             border: none;
             padding: 10px 40px 10px 20px;
             cursor: pointer;
+
+            &:hover {
+                background-color: var(--btn-hover-color);
+            }
         }
 
         img {
@@ -83,7 +91,7 @@
         border-radius: 10px;
         cursor: default;
         overflow: hidden;
-        background-color: $btn-color;
+        background-color: var(--btn-color);
 
         .slider-content {
             display: flex;

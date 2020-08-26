@@ -11,6 +11,7 @@ function Home(props) {
         currency,
         popupOnBuyProduct,
         buyProductInterface,
+        containerScrollPosition,
         onTogglePopup,
         onFavorite,
         onIncrementProduct,
@@ -18,6 +19,7 @@ function Home(props) {
         onInterfaceDecrementQuantity,
         onInterfaceReset,
         onInterfaceSelectChange,
+        onStoreScrollPosition,
     } = props;
 
     // Prevent scrolling of app if popup is open
@@ -38,13 +40,18 @@ function Home(props) {
                     return (
                         <div key={index} className="home__scroll-container">
                             <ProductCardScrollContainer
+                                id={index + 1}
                                 category={category.name}
                                 label={category.name}
                                 products={products}
                                 favorites={favorites}
                                 currency={currency}
+                                scrollPosition={
+                                    containerScrollPosition[index + 1]
+                                }
                                 onTogglePopup={onTogglePopup}
                                 onFavorite={onFavorite}
+                                onStoreScrollPosition={onStoreScrollPosition}
                             />
                         </div>
                     );

@@ -11,6 +11,7 @@ function ProductPage(props) {
         currency,
         buyProductInterface,
         popupOnBuyProduct,
+        containerScrollPosition,
         onFavorite,
         onIncrementProduct,
         onInterfaceIncrementQuantity,
@@ -18,6 +19,7 @@ function ProductPage(props) {
         onInterfaceReset,
         onInterfaceSelectChange,
         onTogglePopup,
+        onStoreScrollPosition,
     } = props;
     const { description, materials, cleaning, categories } = product;
 
@@ -81,13 +83,16 @@ function ProductPage(props) {
                 </div>
             </div>
             <ProductCardScrollContainer
+                id={0}
                 category={categories[0]}
                 label="Similar Products"
                 products={products.filter((p) => p !== product)}
                 favorites={favorites}
                 currency={currency}
+                scrollPosition={containerScrollPosition[0]}
                 onTogglePopup={onTogglePopup}
                 onFavorite={onFavorite}
+                onStoreScrollPosition={onStoreScrollPosition}
             />
             {popupOnBuyProduct.showPopup ? (
                 <OnBuyPopup
