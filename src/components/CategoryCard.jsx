@@ -6,7 +6,12 @@ function CategorieCard(props) {
 
     return (
         <div className="category-card">
-            <Link to={`/categories/${link.toLowerCase()}`}>
+            <Link
+                to={`/categories/${link
+                    .toLowerCase()
+                    .split(/[_\s]/)
+                    .join("-")}`}
+            >
                 <img
                     className="category-card__image"
                     src={"/img/" + image + ".jpg"}
