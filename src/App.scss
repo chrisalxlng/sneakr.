@@ -89,9 +89,11 @@
     border-radius: 10px;
     box-shadow: var(--box-shadow);
     padding: 30px;
+    max-height: 80vh;
 
     h1 {
-        line-height: 20px;
+        line-height: 40px;
+        padding-right: 45px;
     }
 
     &__bg {
@@ -230,6 +232,11 @@
         margin-bottom: var(--space-s);
     }
 
+    &__totals-btn-container {
+        position: sticky;
+        top: 70px;
+    }
+
     &__totals-container {
         background-color: white;
         box-shadow: var(--box-shadow);
@@ -324,5 +331,11 @@
 
     &__h2 {
         margin-bottom: var(--space-s);
+    }
+}
+
+.checkout-popup {
+    &__heading {
+        margin-bottom: var(--space-l);
     }
 }

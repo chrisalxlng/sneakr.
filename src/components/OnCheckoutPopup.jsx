@@ -1,46 +1,61 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDom from "react-dom";
 
 function OnCheckoutPopup(props) {
-    const { products, cart, showPopup, onTogglePopup } = props;
+    const {
+        cart,
+        cartItemsCount,
+        currency,
+        onTogglePopup,
+        onRemoveAllProducts,
+    } = props;
 
     // Prevent scrolling of app if popup is open
-    if (showPopup) {
+    useEffect(() => {
         document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "unset";
-    }
+
+        return () => (document.body.style.overflow = "unset");
+    });
 
     return ReactDom.createPortal(
-        <div className="popup__bg" onClick={onTogglePopup}>
+        <div
+            className="popup__bg"
+            onClick={() => {
+                onRemoveAllProducts();
+                onTogglePopup();
+            }}
+        >
             <div className="popup" onClick={(event) => event.stopPropagation()}>
                 <h1 className="text-styles text-styles--h1">
                     Checkout successful!
                 </h1>
-                <p>You have bought:</p>
-                <ul>
-                    {products.map((product) => {
-                        return (
-                            <li key={product.id}>
-                                <p>{product.name}</p>
-                                <p>
-                                    {
-                                        cart.items
-                                            .filter(
-                                                (item) =>
-                                                    item.productID ===
-                                                    product.id
-                                            )
-                                            .map((item) => item.quantity)[0]
-                                    }
-                                </p>
-                            </li>
-                        );
-                    })}
-                </ul>
+                <div className="checkout-popup">
+                    <p className="checkout-popup__heading text-styles text-styles-p">
+                        {"You have bought " +
+                            cartItemsCount +
+                            " " +
+                            (cartItemsCount > 1 ? "items" : "item") +
+                            " for a total of " +
+                            cart.total.toFixed(2).replace("-0", "0") +
+                            currency +
+                            "."}
+                    </p>
+                    <button
+                        className="btn btn--primary"
+                        onClick={() => {
+                            onRemoveAllProducts();
+                            onTogglePopup();
+                        }}
+                    >
+                        Dismiss
+                    </button>
+                </div>
                 <button
                     className="btn btn--circular popup__close-btn"
-                    onClick={onTogglePopup}
+                    onClick={() => {
+                        onRemoveAllProducts();
+                        onTogglePopup();
+                    }}
                 >
                     <img src="/icons/cancel.svg" alt="Cancel" />
                 </button>

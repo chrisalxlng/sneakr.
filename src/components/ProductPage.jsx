@@ -23,13 +23,6 @@ function ProductPage(props) {
     } = props;
     const { description, materials, cleaning, categories } = product;
 
-    // Prevent scrolling of app if popup is open
-    if (popupOnBuyProduct.showPopup) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "unset";
-    }
-
     return (
         <div>
             <h1 className="text-styles text-styles--h1">{product.name}</h1>

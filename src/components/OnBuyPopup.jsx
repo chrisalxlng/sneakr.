@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDom from "react-dom";
 import BuyProductInterface from "./BuyProductInterface";
 
@@ -17,6 +17,13 @@ function OnBuyPopup(props) {
         onInterfaceReset,
         onInterfaceSelectChange,
     } = props;
+
+    // Prevent scrolling of app if popup is open
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+
+        return () => (document.body.style.overflow = "unset");
+    });
 
     return ReactDom.createPortal(
         <div className="popup__bg" onClick={onTogglePopup}>

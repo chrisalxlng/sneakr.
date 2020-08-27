@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ProductCardScrollContainer from "./ProductCardScrollContainer";
 import OnBuyPopup from "./OnBuyPopup";
 
@@ -21,13 +20,6 @@ function Home(props) {
         onInterfaceSelectChange,
         onStoreScrollPosition,
     } = props;
-
-    // Prevent scrolling of app if popup is open
-    if (popupOnBuyProduct.showPopup) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "unset";
-    }
 
     return (
         <div>
@@ -59,9 +51,6 @@ function Home(props) {
                 return null;
             })}
 
-            <Link key="All Products" to="/products">
-                <h3>All Products</h3>
-            </Link>
             {popupOnBuyProduct.showPopup ? (
                 <OnBuyPopup
                     product={popupOnBuyProduct.product}

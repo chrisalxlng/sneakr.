@@ -94,57 +94,56 @@ class ShoppingCart extends Component {
                                 Checkout
                             </h2>
                         </div>
+                        <div className="shopping-cart__totals-btn-container">
+                            <div className="shopping-cart__totals-container">
+                                <div className="shopping-cart__total-value-container">
+                                    <h3 className="text-styles text-styles--h3">
+                                        Subotal:
+                                    </h3>
+                                    <p>
+                                        {total.toFixed(2).replace("-0", "0") +
+                                            currency}
+                                    </p>
+                                </div>
+                                <div className="shopping-cart__total-value-container">
+                                    <h3 className="text-styles text-styles--h3">
+                                        Delivery:
+                                    </h3>
+                                    <p>
+                                        {(0).toFixed(2).replace("-0", "0") +
+                                            currency}
+                                    </p>
+                                </div>
+                                <div className="shopping-cart__total-value-container">
+                                    <h3 className="shopping-cart__total text-styles text-styles--h3">
+                                        Total:
+                                    </h3>
+                                    <p className="shopping-cart__total">
+                                        {total.toFixed(2).replace("-0", "0") +
+                                            currency}
+                                    </p>
+                                </div>
+                            </div>
 
-                        <div className="shopping-cart__totals-container">
-                            <div className="shopping-cart__total-value-container">
-                                <h3 className="text-styles text-styles--h3">
-                                    Subotal:
-                                </h3>
-                                <p>
-                                    {total.toFixed(2).replace("-0", "0") +
-                                        currency}
-                                </p>
-                            </div>
-                            <div className="shopping-cart__total-value-container">
-                                <h3 className="text-styles text-styles--h3">
-                                    Delivery:
-                                </h3>
-                                <p>
-                                    {(0).toFixed(2).replace("-0", "0") +
-                                        currency}
-                                </p>
-                            </div>
-                            <div className="shopping-cart__total-value-container">
-                                <h3 className="shopping-cart__total text-styles text-styles--h3">
-                                    Total:
-                                </h3>
-                                <p className="shopping-cart__total">
-                                    {total.toFixed(2).replace("-0", "0") +
-                                        currency}
-                                </p>
-                            </div>
+                            <button
+                                className="btn btn--primary shopping-cart__buy-btn"
+                                onClick={() => {
+                                    this.handleTogglePopup();
+                                }}
+                            >
+                                Buy {cartItemsCount}{" "}
+                                {cartItemsCount > 1 ? "Items" : "Item"}
+                            </button>
                         </div>
 
-                        <button
-                            className="btn btn--primary shopping-cart__buy-btn"
-                            onClick={() => {
-                                this.handleTogglePopup();
-                                //onRemoveAllProducts();
-                            }}
-                        >
-                            Buy {cartItemsCount}{" "}
-                            {cartItemsCount > 1 ? "Items" : "Item"}
-                        </button>
                         {showPopup ? (
                             <OnCheckoutPopup
-                                products={products.filter((product) =>
-                                    items
-                                        .map((item) => item.productID)
-                                        .includes(product.id)
-                                )}
                                 cart={cart}
+                                cartItemsCount={cartItemsCount}
+                                currency={currency}
                                 showPopup={showPopup}
                                 onTogglePopup={this.handleTogglePopup}
+                                onRemoveAllProducts={onRemoveAllProducts}
                             />
                         ) : null}
                     </div>
