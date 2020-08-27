@@ -67,15 +67,6 @@ function Content(props) {
                 />
                 <Route
                     exact
-                    path="/categories"
-                    component={() => (
-                        <Categories
-                            products={products}
-                            categories={categories}
-                        />
-                    )}
-                />
-                <Route
                     path="/cart"
                     component={() => (
                         <ShoppingCart
@@ -94,6 +85,7 @@ function Content(props) {
                     )}
                 />
                 <Route
+                    exact
                     path="/favorites"
                     component={() =>
                         favorites.length === 0 ? (
@@ -140,70 +132,17 @@ function Content(props) {
                     }
                 />
                 <Route
-                    path="/products"
+                    exact
+                    path="/categories"
                     component={() => (
-                        <ProductsOverview
-                            category="All Products"
+                        <Categories
                             products={products}
-                            favorites={favorites}
-                            currency={currency}
-                            displayedProducts={displayedProducts}
-                            productsSortBy={productsSortBy}
-                            productsFilterSliderValues={
-                                productsFilterSliderValues
-                            }
-                            popupOnBuyProduct={popupOnBuyProduct}
-                            buyProductInterface={buyProductInterface}
-                            onIncrementProduct={onIncrementProduct}
-                            onFavorite={onFavorite}
-                            onSort={onSort}
-                            onSliderChange={onSliderChange}
-                            onTogglePopup={onTogglePopup}
-                            onInterfaceIncrementQuantity={
-                                onInterfaceIncrementQuantity
-                            }
-                            onInterfaceDecrementQuantity={
-                                onInterfaceDecrementQuantity
-                            }
-                            onInterfaceReset={onInterfaceReset}
-                            onInterfaceSelectChange={onInterfaceSelectChange}
+                            categories={categories}
                         />
                     )}
                 />
                 <Route
-                    path="/product=:productID"
-                    render={(routerProps) => (
-                        <ProductPage
-                            product={
-                                products.filter(
-                                    (p) =>
-                                        p.id.toString() ===
-                                        routerProps.match.params.productID.toString()
-                                )[0]
-                            }
-                            currency={currency}
-                            favorites={favorites}
-                            products={products}
-                            buyProductInterface={buyProductInterface}
-                            popupOnBuyProduct={popupOnBuyProduct}
-                            containerScrollPosition={containerScrollPosition}
-                            onFavorite={onFavorite}
-                            onIncrementProduct={onIncrementProduct}
-                            onInterfaceIncrementQuantity={
-                                onInterfaceIncrementQuantity
-                            }
-                            onInterfaceDecrementQuantity={
-                                onInterfaceDecrementQuantity
-                            }
-                            onInterfaceReset={onInterfaceReset}
-                            onInterfaceSelectChange={onInterfaceSelectChange}
-                            onTogglePopup={onTogglePopup}
-                            onStoreScrollPosition={onStoreScrollPosition}
-                        />
-                    )}
-                />
-                <Route
-                    path="/:category"
+                    path="/categories/:category"
                     render={(routerProps) => (
                         <ProductsOverview
                             category={
@@ -249,6 +188,70 @@ function Content(props) {
                             }
                             onInterfaceReset={onInterfaceReset}
                             onInterfaceSelectChange={onInterfaceSelectChange}
+                        />
+                    )}
+                />
+                <Route
+                    exact
+                    path="/products"
+                    component={() => (
+                        <ProductsOverview
+                            category="All Products"
+                            products={products}
+                            favorites={favorites}
+                            currency={currency}
+                            displayedProducts={displayedProducts}
+                            productsSortBy={productsSortBy}
+                            productsFilterSliderValues={
+                                productsFilterSliderValues
+                            }
+                            popupOnBuyProduct={popupOnBuyProduct}
+                            buyProductInterface={buyProductInterface}
+                            onIncrementProduct={onIncrementProduct}
+                            onFavorite={onFavorite}
+                            onSort={onSort}
+                            onSliderChange={onSliderChange}
+                            onTogglePopup={onTogglePopup}
+                            onInterfaceIncrementQuantity={
+                                onInterfaceIncrementQuantity
+                            }
+                            onInterfaceDecrementQuantity={
+                                onInterfaceDecrementQuantity
+                            }
+                            onInterfaceReset={onInterfaceReset}
+                            onInterfaceSelectChange={onInterfaceSelectChange}
+                        />
+                    )}
+                />
+                <Route
+                    path="/products/id=:productID"
+                    render={(routerProps) => (
+                        <ProductPage
+                            product={
+                                products.filter(
+                                    (p) =>
+                                        p.id.toString() ===
+                                        routerProps.match.params.productID.toString()
+                                )[0]
+                            }
+                            currency={currency}
+                            favorites={favorites}
+                            products={products}
+                            buyProductInterface={buyProductInterface}
+                            popupOnBuyProduct={popupOnBuyProduct}
+                            containerScrollPosition={containerScrollPosition}
+                            onFavorite={onFavorite}
+                            onIncrementProduct={onIncrementProduct}
+                            onInterfaceIncrementQuantity={
+                                onInterfaceIncrementQuantity
+                            }
+                            onInterfaceDecrementQuantity={
+                                onInterfaceDecrementQuantity
+                            }
+                            onInterfaceReset={onInterfaceReset}
+                            onInterfaceSelectChange={onInterfaceSelectChange}
+                            onTogglePopup={onTogglePopup}
+                            onStoreScrollPosition={onStoreScrollPosition}
                         />
                     )}
                 />

@@ -16,7 +16,7 @@ function CartItem(props) {
 
     return (
         <div className="cart-item-card">
-            <Link to={`/product=${id}`}>
+            <Link to={`/products/id=${id}`}>
                 <div className="cart-item-card__image">
                     <div>
                         <img src={"/img/" + image + ".jpg"} alt="Product" />
@@ -25,7 +25,7 @@ function CartItem(props) {
             </Link>
 
             <div className="cart-item-card__body">
-                <Link to={`/product=${id}`}>
+                <Link to={`/products/id=${id}`}>
                     <p className="cart-item-card__name">{name}</p>
                 </Link>
                 <div className="cart-item-card__price-size-container">

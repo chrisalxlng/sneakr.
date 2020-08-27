@@ -16,7 +16,7 @@ function Navbar(props) {
                 <NavLink to="/products">
                     <span className="nav__link">Products</span>
                 </NavLink>
-                <NavLink to="/sale">
+                <NavLink to="/categories/sale">
                     <span className="nav__link">Sale</span>
                 </NavLink>
                 <NavLink to="/categories">
@@ -25,7 +25,7 @@ function Navbar(props) {
             </div>
 
             <div className="nav__links">
-                <NavLink to="favorites">
+                <NavLink to="/favorites">
                     <img
                         className="nav__icon"
                         src="/icons/heart.svg"
@@ -33,7 +33,7 @@ function Navbar(props) {
                     />
                 </NavLink>
 
-                <NavLink to="cart">
+                <NavLink to="/cart">
                     <div className="nav__cart">
                         <img
                             className="nav__icon"
