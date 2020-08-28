@@ -14,42 +14,48 @@
         height: 100%;
     }
 
-    &__body {
+    &__content {
+        margin: 1px 0;
+    }
+
+    &__name {
+        font-weight: 500;
+        line-height: 15px;
+        font-size: 15px;
+        color: black;
         position: absolute;
         bottom: 5%;
         left: 5%;
         max-width: 65%;
         min-height: 35px;
         border-radius: 10px;
-        padding: 0.5em 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
         background-color: var(--btn-color);
         box-shadow: var(--box-shadow);
-    }
-
-    &__content {
-        margin: 1px 0;
-    }
-
-    &__name {
-        font-weight: 600;
-        color: black;
-        display: none;
-        margin-bottom: 5px;
+        padding: 0.7em 1em;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
     }
 
     &:hover .product-card__name {
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
     }
 
     &__price-sale-container {
+        position: absolute;
+        top: 5%;
+        left: 5%;
         height: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: var(--btn-color);
+        box-shadow: var(--box-shadow);
+        min-height: 35px;
+        border-radius: 10px;
+        padding: 0.5em 1em;
     }
 
     &__price {
@@ -83,7 +89,16 @@
 
         &--buy {
             bottom: 5%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
         }
+    }
+
+    &:hover .product-card__btn--buy {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
     }
 }
 
@@ -99,7 +114,6 @@
     padding: 15px;
 
     &__image {
-        //padding-top: 100%;
         width: 100px;
         height: 100px;
         position: relative;
@@ -171,6 +185,7 @@
 
     &__plus-minus-btn {
         position: absolute;
+        width: auto;
         bottom: 15px;
         right: 15px;
     }

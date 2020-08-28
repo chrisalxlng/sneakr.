@@ -90,8 +90,8 @@ function Content(props) {
                     component={() =>
                         favorites.length === 0 ? (
                             <EmptyState
-                                heading="You have no favorite items yet"
-                                description="Mark items as favorites."
+                                heading="You have no favorite items yet."
+                                description="Mark items as favorites to have them displayed here."
                                 buttonText="Browse in categories"
                                 buttonLink="/categories"
                             />

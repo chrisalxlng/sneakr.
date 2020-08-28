@@ -13,14 +13,14 @@ function Navbar(props) {
                 <NavLink to="/">
                     <span className="nav__link">Home</span>
                 </NavLink>
+                <NavLink to="/categories">
+                    <span className="nav__link">Categories</span>
+                </NavLink>
                 <NavLink to="/products">
                     <span className="nav__link">Products</span>
                 </NavLink>
                 <NavLink to="/categories/sale">
                     <span className="nav__link">Sale</span>
-                </NavLink>
-                <NavLink to="/categories">
-                    <span className="nav__link">Categories</span>
                 </NavLink>
             </div>
 

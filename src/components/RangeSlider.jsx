@@ -5,7 +5,7 @@ import "rc-slider/assets/index.css";
 const SliderLabel = {
     fontSize: "12px",
     lineHeight: "0",
-    margin: "0 10px",
+    margin: "0 15px",
     width: "45px",
 };
 

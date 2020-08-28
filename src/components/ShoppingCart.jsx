@@ -40,8 +40,8 @@ class ShoppingCart extends Component {
 
         return items.length === 0 ? (
             <EmptyState
-                heading="Your cart is empty"
-                description="Add items to your cart."
+                heading="Your cart is empty."
+                description="Add items to your cart to have them displayed here."
                 buttonText={btnText}
                 buttonLink={btnLink}
             />
@@ -97,7 +97,7 @@ class ShoppingCart extends Component {
                         <div className="shopping-cart__totals-btn-container">
                             <div className="shopping-cart__totals-container">
                                 <div className="shopping-cart__total-value-container">
-                                    <h3 className="text-styles text-styles--h3">
+                                    <h3 className="shopping-cart__total text-styles text-styles--h3">
                                         Subotal:
                                     </h3>
                                     <p>
@@ -106,7 +106,7 @@ class ShoppingCart extends Component {
                                     </p>
                                 </div>
                                 <div className="shopping-cart__total-value-container">
-                                    <h3 className="text-styles text-styles--h3">
+                                    <h3 className="shopping-cart__total text-styles text-styles--h3">
                                         Delivery:
                                     </h3>
                                     <p>

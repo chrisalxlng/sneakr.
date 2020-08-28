@@ -18,8 +18,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 15px;
+        padding: 0 15px;
         cursor: default;
+
+        span {
+            font-size: var(--btn-text-size);
+        }
 
         &:hover {
             background-color: var(--btn-color);
@@ -34,6 +38,7 @@
         padding: 10px 30px;
         border-radius: 10px;
         font-weight: 600;
+        font-size: var(--btn-text-size);
 
         &:hover {
             background-color: rgb(39, 39, 39);
@@ -69,6 +74,7 @@
             border: none;
             padding: 10px 40px 10px 20px;
             cursor: pointer;
+            font-size: var(--btn-text-size);
 
             &:hover {
                 background-color: var(--btn-hover-color);
@@ -138,7 +144,7 @@
         p {
             width: 40px;
             text-align: center;
-            font-size: 14px;
+            font-size: var(--btn-text-size);
         }
     }
 
@@ -151,6 +157,7 @@
         span {
             color: red;
             font-weight: 600;
+            font-size: var(--btn-text-size);
         }
 
         img {

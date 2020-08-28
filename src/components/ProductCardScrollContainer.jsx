@@ -45,7 +45,7 @@ function ProductCardScrollContainer(props) {
                         .join("-")}`}
                 >
                     <button className="btn btn--container product-card-scroll-container product-card-scroll-container__see-all-btn">
-                        See all products in {category}
+                        <span>See all products in {category}</span>
                     </button>
                 </Link>
             </div>
