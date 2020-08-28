@@ -3,6 +3,7 @@
 @import "styles/buttons";
 @import "styles/cards";
 @import "styles/navbar";
+@import "styles/footer";
 
 .product-card-grid {
     &__product-grid {
@@ -194,6 +195,7 @@
     padding: calc(var(--navbar-height) + var(--space-m)) 40px var(--space-l)
         40px;
     background-color: var(--bg-color);
+    min-height: calc(100vh - var(--footer-height));
 }
 
 .shopping-cart {

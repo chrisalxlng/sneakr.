@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
+import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import products from "./data/products.json";
 import { BrowserRouter } from "react-router-dom";
@@ -493,6 +494,7 @@ class App extends Component {
                         }
                         onStoreScrollPosition={this.handleStoreScrollPosition}
                     />
+                    <Footer />
                 </BrowserRouter>
             </div>
         );
