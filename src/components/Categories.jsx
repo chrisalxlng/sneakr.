@@ -1,5 +1,5 @@
 import React from "react";
-import CategorieCard from "./CategoryCard";
+import CategoryCard from "./CategoryCard";
 
 function Categories(props) {
     const { categories, products } = props;
@@ -12,11 +12,11 @@ function Categories(props) {
         <div className="categories">
             <h1 className="text-styles text-styles--h1">Categories</h1>
             <div className="categories__grid">
-                <CategorieCard
+                <CategoryCard
                     key={"products"}
                     category={"All Products"}
                     image={products[productRandomInt]["image-small"]}
-                    link={"products"}
+                    link={"/products"}
                 />
                 {categories.map((category) => {
                     if (category.name !== null) {
@@ -25,7 +25,7 @@ function Categories(props) {
                         );
 
                         return (
-                            <CategorieCard
+                            <CategoryCard
                                 key={category.name}
                                 category={category.name}
                                 image={
@@ -39,7 +39,7 @@ function Categories(props) {
                                             (product) => product["image-small"]
                                         )[randomInt]
                                 }
-                                link={category.name}
+                                link={"/categories/" + category.name}
                             />
                         );
                     }
