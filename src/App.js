@@ -1,11 +1,17 @@
+// App Component
+// Root Component
+// Contains all handle methods of the app
+
 import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
+
+import "./App.scss";
+
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import products from "./data/products.json";
-import { BrowserRouter } from "react-router-dom";
-import "./App.scss";
 
 class App extends Component {
     constructor(props) {
@@ -374,6 +380,7 @@ class App extends Component {
     };
 
     handleTogglePopup = (product = null) => {
+        // Setting the new state with boolean whether popup is open or not
         this.setState({
             popupOnBuyProduct: {
                 showPopup: !this.state.popupOnBuyProduct.showPopup,

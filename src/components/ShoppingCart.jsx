@@ -1,4 +1,8 @@
+// ShoppingCart Component
+// Shopping cart page of the app
+
 import React, { Component } from "react";
+
 import CartItem from "./CartItem";
 import OnCheckoutPopup from "./OnCheckoutPopup";
 import EmptyState from "./EmptyState";

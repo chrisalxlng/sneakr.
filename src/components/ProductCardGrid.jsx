@@ -1,4 +1,8 @@
+// ProductCardGrid Component
+// Includes the product grid and sorting + filtering
+
 import React from "react";
+
 import ProductCard from "./ProductCard";
 import RangeSlider from "./RangeSlider";
 import EmptyState from "./EmptyState";

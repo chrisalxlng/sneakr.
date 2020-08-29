@@ -1,4 +1,9 @@
+// ProductsOverview Component
+// Product grid page of the app
+// Connects product grid and onBuyPopup
+
 import React from "react";
+
 import ProductCardGrid from "./ProductCardGrid";
 import OnBuyPopup from "./OnBuyPopup";
 

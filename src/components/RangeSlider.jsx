@@ -1,3 +1,6 @@
+// RangeSlider Component
+// Handles styling and initialization of third-party rc-slider component
+
 import React, { Component } from "react";
 import { Range } from "rc-slider";
 import "rc-slider/assets/index.css";

@@ -1,3 +1,6 @@
+// CategoryCard Component
+// Returns a single category card
+
 import React from "react";
 import { Link } from "react-router-dom";
 

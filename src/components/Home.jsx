@@ -1,4 +1,8 @@
+// Home Component
+// Home page of the app
+
 import React from "react";
+
 import ProductCardScrollContainer from "./ProductCardScrollContainer";
 import OnBuyPopup from "./OnBuyPopup";
 

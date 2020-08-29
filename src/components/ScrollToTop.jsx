@@ -1,3 +1,6 @@
+// ScrollToTop Component
+// Handles scrolling to the top when a new route is entered
+
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 

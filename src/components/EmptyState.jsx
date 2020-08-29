@@ -1,3 +1,6 @@
+// EmptyState Component
+// Handles displaying of an empty state message
+
 import React from "react";
 import { Link } from "react-router-dom";
 

@@ -1,3 +1,6 @@
+// ProductCard Component
+// Returns a single product card
+
 import React from "react";
 import { Link } from "react-router-dom";
 

@@ -1,4 +1,8 @@
+// ProductPage Component
+// Represents the product page of the app
+
 import React from "react";
+
 import BuyProductInterface from "./BuyProductInterface";
 import ProductCardScrollContainer from "./ProductCardScrollContainer";
 import OnBuyPopup from "./OnBuyPopup";

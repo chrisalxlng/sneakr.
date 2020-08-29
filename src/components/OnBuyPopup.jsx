@@ -1,5 +1,9 @@
+// OnBuyPopup Component
+// Returns a popup when buy button is clicked
+
 import React, { useEffect } from "react";
 import ReactDom from "react-dom";
+
 import BuyProductInterface from "./BuyProductInterface";
 
 function OnBuyPopup(props) {

@@ -1,9 +1,9 @@
-@import "styles/_config";
+@import "styles/_config"; // Variables
 @import "styles/global"; //Global styles
-@import "styles/buttons";
-@import "styles/cards";
-@import "styles/navbar";
-@import "styles/footer";
+@import "styles/buttons"; // Button styles
+@import "styles/cards"; // Card styles
+@import "styles/navbar"; // Navbar styles
+@import "styles/footer"; // Footer styles
 
 .product-card-grid {
     &__product-grid {

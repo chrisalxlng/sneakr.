@@ -1,5 +1,9 @@
+// ProductCardScrollContainer Component
+// Scroll container of products
+
 import React, { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
 import ProductCard from "./ProductCard";
 
 function ProductCardScrollContainer(props) {
@@ -16,6 +20,7 @@ function ProductCardScrollContainer(props) {
         onStoreScrollPosition,
     } = props;
 
+    // Handles remembering previous scroll position
     const containerRef = useRef(null);
 
     useLayoutEffect(() => {

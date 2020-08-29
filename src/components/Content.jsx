@@ -1,5 +1,9 @@
+// Content Component
+// Handles distribution of props and routes
+
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+
 import Home from "./Home";
 import Categories from "./Categories";
 import ShoppingCart from "./ShoppingCart";

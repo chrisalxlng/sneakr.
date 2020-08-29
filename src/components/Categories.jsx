@@ -1,4 +1,8 @@
+// Categories Component
+// Categories page of the app
+
 import React from "react";
+
 import CategoryCard from "./CategoryCard";
 
 function Categories(props) {

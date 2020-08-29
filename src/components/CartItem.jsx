@@ -1,3 +1,6 @@
+// CartItem Component
+// Returns a single cart item card
+
 import React from "react";
 import { Link } from "react-router-dom";
 

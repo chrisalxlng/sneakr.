@@ -1,3 +1,6 @@
+// OnCheckoutPopup Component
+// Returns a popup, handling the checkout process when checkout button is clicked
+
 import React, { useEffect } from "react";
 import ReactDom from "react-dom";
 

@@ -1,3 +1,6 @@
+// BuyProductInterface Component
+// Returns the interface for buying a product
+
 import React from "react";
 import { useEffect } from "react";
 
