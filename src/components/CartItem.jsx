@@ -22,7 +22,15 @@ function CartItem(props) {
             <Link to={`/products/id=${id}`}>
                 <div className="cart-item-card__image">
                     <div>
-                        <img src={"/img/" + image + ".jpg"} alt="Product" />
+                        <img
+                            src={
+                                process.env.PUBLIC_URL +
+                                "/img/" +
+                                image +
+                                ".jpg"
+                            }
+                            alt="Product"
+                        />
                     </div>
                 </div>
             </Link>
@@ -57,7 +65,10 @@ function CartItem(props) {
                 className="btn btn--circular cart-item-card__remove-btn"
                 onClick={() => onRemoveProduct(product, selectedValue)}
             >
-                <img alt="Remove item" src="/icons/trash.svg" />
+                <img
+                    alt="Remove item"
+                    src={process.env.PUBLIC_URL + "/icons/trash.svg"}
+                />
             </button>
             <div className="btn btn--plus-minus cart-item-card__plus-minus-btn">
                 <div>
@@ -66,7 +77,10 @@ function CartItem(props) {
                             onDecrementProduct(product, selectedValue)
                         }
                     >
-                        <img alt="Decrement Quantity" src="/icons/remove.svg" />
+                        <img
+                            alt="Decrement Quantity"
+                            src={process.env.PUBLIC_URL + "/icons/remove.svg"}
+                        />
                     </button>
                     <p>{quantity}</p>
                     <button
@@ -74,7 +88,10 @@ function CartItem(props) {
                             onIncrementProduct(product, selectedValue)
                         }
                     >
-                        <img alt="Increment Quantity" src="/icons/plus.svg" />
+                        <img
+                            alt="Increment Quantity"
+                            src={process.env.PUBLIC_URL + "/icons/plus.svg"}
+                        />
                     </button>
                 </div>
             </div>

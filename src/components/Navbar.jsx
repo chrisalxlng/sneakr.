@@ -20,7 +20,9 @@ function Navbar(props) {
                 <label className="nav__hamburger-icon" htmlFor="hamburger">
                     <img
                         className="nav__hamburger-img"
-                        src="/icons/left-alignment.svg"
+                        src={
+                            process.env.PUBLIC_URL + "/icons/left-alignment.svg"
+                        }
                         alt=""
                     />
                 </label>
@@ -53,7 +55,7 @@ function Navbar(props) {
                 <NavLink onClick={closeNavbar} to="/favorites">
                     <img
                         className="nav__icon"
-                        src="/icons/heart.svg"
+                        src={process.env.PUBLIC_URL + "/icons/heart.svg"}
                         alt="Favorites"
                     />
                 </NavLink>
@@ -62,7 +64,7 @@ function Navbar(props) {
                     <div className="nav__cart">
                         <img
                             className="nav__icon"
-                            src="/icons/cart.svg"
+                            src={process.env.PUBLIC_URL + "/icons/cart.svg"}
                             alt="Cart"
                         />
                         <div className="nav__item-indicator">

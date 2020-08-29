@@ -31,7 +31,10 @@ function BuyProductInterface(props) {
         <div className="buy-interface">
             <div className="buy-interface__image">
                 <div>
-                    <img src={"/img/" + image + ".jpg"} alt="Product" />
+                    <img
+                        src={process.env.PUBLIC_URL + "/img/" + image + ".jpg"}
+                        alt="Product"
+                    />
                 </div>
             </div>
             <div className="buy-interface__main-container">
@@ -74,7 +77,13 @@ function BuyProductInterface(props) {
                                     </option>
                                 ))}
                             </select>
-                            <img src="/icons/down-arrow.svg" alt="" />
+                            <img
+                                src={
+                                    process.env.PUBLIC_URL +
+                                    "/icons/down-arrow.svg"
+                                }
+                                alt=""
+                            />
                         </div>
                     </div>
                     <div className="buy-interface__form-btn">
@@ -86,14 +95,20 @@ function BuyProductInterface(props) {
                                 <button onClick={onInterfaceDecrementQuantity}>
                                     <img
                                         alt="Decrement Quantity"
-                                        src="/icons/remove.svg"
+                                        src={
+                                            process.env.PUBLIC_URL +
+                                            "/icons/remove.svg"
+                                        }
                                     />
                                 </button>
                                 <p>{quantity}</p>
                                 <button onClick={onInterfaceIncrementQuantity}>
                                     <img
                                         alt="Increment Quantity"
-                                        src="/icons/plus.svg"
+                                        src={
+                                            process.env.PUBLIC_URL +
+                                            "/icons/plus.svg"
+                                        }
                                     />
                                 </button>
                             </div>
@@ -108,10 +123,18 @@ function BuyProductInterface(props) {
                             .includes(product.id) ? (
                             <img
                                 alt="Remove Favorite"
-                                src="/icons/heart-full.svg"
+                                src={
+                                    process.env.PUBLIC_URL +
+                                    "/icons/heart-full.svg"
+                                }
                             />
                         ) : (
-                            <img alt="Add Favorite" src="/icons/heart.svg" />
+                            <img
+                                alt="Add Favorite"
+                                src={
+                                    process.env.PUBLIC_URL + "/icons/heart.svg"
+                                }
+                            />
                         )}
                     </button>
                 </div>

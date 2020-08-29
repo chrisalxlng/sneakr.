@@ -60,7 +60,10 @@ function OnCheckoutPopup(props) {
                         onTogglePopup();
                     }}
                 >
-                    <img src="/icons/cancel.svg" alt="Cancel" />
+                    <img
+                        src={process.env.PUBLIC_URL + "/icons/cancel.svg"}
+                        alt="Cancel"
+                    />
                 </button>
             </div>
         </div>,

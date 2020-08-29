@@ -64,7 +64,13 @@ class ShoppingCart extends Component {
                                 onClick={() => onRemoveAllProducts()}
                             >
                                 <span>Remove all items</span>
-                                <img alt="Remove item" src="/icons/trash.svg" />
+                                <img
+                                    alt="Remove item"
+                                    src={
+                                        process.env.PUBLIC_URL +
+                                        "/icons/trash.svg"
+                                    }
+                                />
                             </button>
                         </div>
                         <div className="shopping-cart__item-card-container">

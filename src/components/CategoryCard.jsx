@@ -12,7 +12,7 @@ function CategorieCard(props) {
             <Link to={`${link.toLowerCase().split(/[_\s]/).join("-")}`}>
                 <img
                     className="category-card__image"
-                    src={"/img/" + image + ".jpg"}
+                    src={process.env.PUBLIC_URL + "/img/" + image + ".jpg"}
                     alt={category + " image"}
                 />
                 <div className="category-card__name-bg" />

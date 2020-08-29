@@ -15,7 +15,7 @@ function ProductCard(props) {
                 <Link to={`/products/id=${id}`}>
                     <img
                         className="product-card__image"
-                        src={"/img/" + image + ".jpg"}
+                        src={process.env.PUBLIC_URL + "/img/" + image + ".jpg"}
                         alt="Product"
                     />
                     <p className="product-card__name">{name}</p>
@@ -40,7 +40,10 @@ function ProductCard(props) {
                     className="btn btn--circular product-card__btn product-card__btn--buy"
                     onClick={() => onTogglePopup(product)}
                 >
-                    <img alt="Buy" src="/icons/cart.svg" />
+                    <img
+                        alt="Buy"
+                        src={process.env.PUBLIC_URL + "/icons/cart.svg"}
+                    />
                 </button>
                 <button
                     className="btn btn--circular product-card__btn product-card__btn--favorite"
@@ -51,10 +54,15 @@ function ProductCard(props) {
                         .includes(product.id) ? (
                         <img
                             alt="Remove Favorite"
-                            src="/icons/heart-full.svg"
+                            src={
+                                process.env.PUBLIC_URL + "/icons/heart-full.svg"
+                            }
                         />
                     ) : (
-                        <img alt="Add Favorite" src="/icons/heart.svg" />
+                        <img
+                            alt="Add Favorite"
+                            src={process.env.PUBLIC_URL + "/icons/heart.svg"}
+                        />
                     )}
                 </button>
             </div>

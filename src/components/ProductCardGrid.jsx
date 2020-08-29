@@ -52,7 +52,12 @@ function ProductCardGrid(props) {
                             </option>
                             ))
                         </select>
-                        <img src="/icons/down-arrow.svg" alt="" />
+                        <img
+                            src={
+                                process.env.PUBLIC_URL + "/icons/down-arrow.svg"
+                            }
+                            alt=""
+                        />
                     </div>
                 </div>
 

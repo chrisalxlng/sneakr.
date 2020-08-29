@@ -58,7 +58,10 @@ function OnBuyPopup(props) {
                     className="btn btn--circular popup__close-btn"
                     onClick={onTogglePopup}
                 >
-                    <img src="/icons/cancel.svg" alt="Cancel" />
+                    <img
+                        src={process.env.PUBLIC_URL + "/icons/cancel.svg"}
+                        alt="Cancel"
+                    />
                 </button>
             </div>
         </div>,
