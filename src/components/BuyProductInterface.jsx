@@ -31,7 +31,7 @@ function BuyProductInterface(props) {
                     <img src={"/img/" + image + ".jpg"} alt="Product" />
                 </div>
             </div>
-            <div>
+            <div className="buy-interface__main-container">
                 <div className="buy-interface__label-btn-container">
                     <p className="buy-interface__label text-styles text-styles--label">
                         Price:

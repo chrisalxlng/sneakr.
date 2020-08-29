@@ -98,7 +98,7 @@ class ShoppingCart extends Component {
                             <div className="shopping-cart__totals-container">
                                 <div className="shopping-cart__total-value-container">
                                     <h3 className="shopping-cart__total text-styles text-styles--h3">
-                                        Subotal:
+                                        Subtotal:
                                     </h3>
                                     <p>
                                         {total.toFixed(2).replace("-0", "0") +

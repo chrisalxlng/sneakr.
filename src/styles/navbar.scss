@@ -9,8 +9,24 @@
     justify-content: space-between;
     width: 100vw;
     height: 50px;
-    padding: 0 30px;
+    padding: 0 calc(var(--page-padding-x) - 10px);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+
+    &__hamburger {
+        display: none;
+    }
+
+    &__hamburger-checkbox {
+        display: none;
+    }
+
+    &__hamburger-img {
+        display: none;
+    }
+
+    &__hamburger-icon {
+        display: none;
+    }
 
     &__links {
         display: flex;
@@ -41,6 +57,7 @@
         color: black;
         font-weight: 600;
         font-size: 18px;
+        margin: 0;
 
         span {
             color: red;
@@ -68,6 +85,59 @@
             font-size: 10px;
             color: white;
             line-height: 0;
+        }
+    }
+
+    @media (max-width: 510px) {
+        width: 100vw;
+        position: fixed;
+
+        &__hamburger {
+            display: block;
+        }
+
+        &__hamburger-checkbox {
+            cursor: pointer;
+        }
+
+        &__hamburger-checkbox:checked ~ .nav__text-links {
+            visibility: visible;
+            transform: translateY(1);
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        &__hamburger-img {
+            display: block;
+            height: 20px;
+        }
+
+        &__hamburger-icon {
+            display: block;
+        }
+
+        &__text-links {
+            visibility: hidden;
+            transform: translateY(0);
+            opacity: 0;
+            transition: 0.3s;
+            position: absolute;
+            top: 49px;
+            left: 0;
+            flex-direction: column;
+            width: 100vw;
+            background-color: white;
+            margin: 0;
+            padding: 10px 0;
+            box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.4);
+
+            > * {
+                padding: 10px 0;
+            }
+        }
+
+        &__link {
+            font-size: 14px;
         }
     }
 }
