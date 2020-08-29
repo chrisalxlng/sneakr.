@@ -51,7 +51,7 @@ function Navbar(props) {
                     </NavLink>
                 </div>
             </div>
-            <div className="nav__links">
+            <div className="nav__icons">
                 <NavLink onClick={closeNavbar} to="/favorites">
                     <img
                         className="nav__icon"

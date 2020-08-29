@@ -24,14 +24,27 @@ const Rail = {
     top: "7px",
 };
 
-const Handle = {
-    backgroundColor: "white",
-    border: "1px solid black",
-    height: "10px",
-    width: "10px",
-    top: "7px",
-    boxShadow: "0 0 0 .4px black",
-};
+let Handle = {};
+
+if (window.matchMedia("(min-width: 700px)").matches) {
+    Handle = {
+        backgroundColor: "white",
+        border: "1px solid black",
+        height: "10px",
+        width: "10px",
+        top: "7px",
+        boxShadow: "0 0 0 .4px black",
+    };
+} else {
+    Handle = {
+        backgroundColor: "white",
+        border: "1px solid black",
+        height: "15px",
+        width: "15px",
+        top: "5px",
+        boxShadow: "0 0 0 .4px black",
+    };
+}
 
 class RangeSlider extends Component {
     constructor(props) {

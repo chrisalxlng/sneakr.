@@ -37,6 +37,14 @@
         }
     }
 
+    &__icons {
+        display: flex;
+
+        > * {
+            margin: 0 10px;
+        }
+    }
+
     &__cart {
         display: flex;
         align-items: center;
@@ -96,10 +104,6 @@
             display: block;
         }
 
-        &__hamburger-checkbox {
-            cursor: pointer;
-        }
-
         &__hamburger-checkbox:checked ~ .nav__text-links {
             visibility: visible;
             transform: translateY(1);
@@ -109,7 +113,9 @@
 
         &__hamburger-img {
             display: block;
-            height: 20px;
+            height: 40px;
+            padding: 10px;
+            cursor: pointer;
         }
 
         &__hamburger-icon {
