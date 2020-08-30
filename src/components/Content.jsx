@@ -44,7 +44,7 @@ function Content(props) {
             <Switch>
                 <Route
                     exact
-                    path="/"
+                    path={process.env.PUBLIC_URL + "/"}
                     component={() => (
                         <Home
                             products={products}
@@ -71,7 +71,7 @@ function Content(props) {
                 />
                 <Route
                     exact
-                    path="/cart"
+                    path={process.env.PUBLIC_URL + "/cart"}
                     component={() => (
                         <ShoppingCart
                             products={products}
@@ -90,7 +90,7 @@ function Content(props) {
                 />
                 <Route
                     exact
-                    path="/favorites"
+                    path={process.env.PUBLIC_URL + "/favorites"}
                     component={() =>
                         favorites.length === 0 ? (
                             <EmptyState
@@ -137,7 +137,7 @@ function Content(props) {
                 />
                 <Route
                     exact
-                    path="/categories"
+                    path={process.env.PUBLIC_URL + "/categories"}
                     component={() => (
                         <Categories
                             products={products}
@@ -146,7 +146,7 @@ function Content(props) {
                     )}
                 />
                 <Route
-                    path="/categories/:category"
+                    path={process.env.PUBLIC_URL + "/categories/:category"}
                     render={(routerProps) => (
                         <ProductsOverview
                             category={
@@ -203,7 +203,7 @@ function Content(props) {
                 />
                 <Route
                     exact
-                    path="/products"
+                    path={process.env.PUBLIC_URL + "/products"}
                     component={() => (
                         <ProductsOverview
                             category="All Products"
@@ -234,7 +234,7 @@ function Content(props) {
                     )}
                 />
                 <Route
-                    path="/products/id=:productID"
+                    path={process.env.PUBLIC_URL + "/products/id=:productID"}
                     render={(routerProps) => (
                         <ProductPage
                             product={

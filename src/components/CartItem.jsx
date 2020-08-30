@@ -19,7 +19,7 @@ function CartItem(props) {
 
     return (
         <div className="cart-item-card">
-            <Link to={`/products/id=${id}`}>
+            <Link to={`${process.env.PUBLIC_URL}/products/id=${id}`}>
                 <div className="cart-item-card__image">
                     <div>
                         <img
@@ -36,7 +36,7 @@ function CartItem(props) {
             </Link>
 
             <div className="cart-item-card__body">
-                <Link to={`/products/id=${id}`}>
+                <Link to={`${process.env.PUBLIC_URL}/products/id=${id}`}>
                     <p className="cart-item-card__name">{name}</p>
                 </Link>
                 <div className="cart-item-card__price-size-container">

@@ -30,29 +30,44 @@ function Navbar(props) {
                 <NavLink
                     onClick={closeNavbar}
                     className="nav__logo-link"
-                    to="/"
+                    to={process.env.PUBLIC_URL + "/"}
                 >
                     <span className="nav__logo">
                         sneakr<span>.</span>
                     </span>
                 </NavLink>
                 <div className="nav__links nav__text-links">
-                    <NavLink onClick={closeNavbar} to="/">
+                    <NavLink
+                        onClick={closeNavbar}
+                        to={process.env.PUBLIC_URL + "/"}
+                    >
                         <span className="nav__link">Home</span>
                     </NavLink>
-                    <NavLink onClick={closeNavbar} to="/categories">
+                    <NavLink
+                        onClick={closeNavbar}
+                        to={process.env.PUBLIC_URL + "/categories"}
+                    >
                         <span className="nav__link">Categories</span>
                     </NavLink>
-                    <NavLink onClick={closeNavbar} to="/products">
+                    <NavLink
+                        onClick={closeNavbar}
+                        to={process.env.PUBLIC_URL + "/products"}
+                    >
                         <span className="nav__link">Products</span>
                     </NavLink>
-                    <NavLink onClick={closeNavbar} to="/categories/sale">
+                    <NavLink
+                        onClick={closeNavbar}
+                        to={process.env.PUBLIC_URL + "/categories/sale"}
+                    >
                         <span className="nav__link">Sale</span>
                     </NavLink>
                 </div>
             </div>
             <div className="nav__icons">
-                <NavLink onClick={closeNavbar} to="/favorites">
+                <NavLink
+                    onClick={closeNavbar}
+                    to={process.env.PUBLIC_URL + "/favorites"}
+                >
                     <img
                         className="nav__icon"
                         src={process.env.PUBLIC_URL + "/icons/heart.svg"}
@@ -60,7 +75,10 @@ function Navbar(props) {
                     />
                 </NavLink>
 
-                <NavLink onClick={closeNavbar} to="/cart">
+                <NavLink
+                    onClick={closeNavbar}
+                    to={process.env.PUBLIC_URL + "/cart"}
+                >
                     <div className="nav__cart">
                         <img
                             className="nav__icon"

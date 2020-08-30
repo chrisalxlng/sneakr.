@@ -44,7 +44,9 @@ function ProductCardScrollContainer(props) {
             <div className="product-card-scroll-container__label-link-container">
                 <h2 className="text-styles text-styles--h2">{label}</h2>
                 <Link
-                    to={`/categories/${category
+                    to={`${
+                        process.env.PUBLIC_URL
+                    }/categories/${category
                         .toLowerCase()
                         .split(/[_\s]/)
                         .join("-")}`}

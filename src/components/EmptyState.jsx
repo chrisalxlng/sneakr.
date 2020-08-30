@@ -15,7 +15,7 @@ function EmptyState(props) {
                 </h1>
                 <p className="empty-state__description">{description}</p>
                 {(buttonLink || buttonText) === null ? null : (
-                    <Link to={buttonLink}>
+                    <Link to={process.env.PUBLIC_URL + buttonLink}>
                         <button className="btn btn--primary empty-state__btn">
                             {buttonText}
                         </button>

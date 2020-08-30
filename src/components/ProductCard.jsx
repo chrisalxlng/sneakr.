@@ -12,7 +12,7 @@ function ProductCard(props) {
     return (
         <>
             <div className="product-card">
-                <Link to={`/products/id=${id}`}>
+                <Link to={`${process.env.PUBLIC_URL}/products/id=${id}`}>
                     <img
                         className="product-card__image"
                         src={process.env.PUBLIC_URL + "/img/" + image + ".jpg"}
